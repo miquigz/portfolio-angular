@@ -1,0 +1,28 @@
+.animate-hover-svg:hover{
+    animation: swing;
+    animation-duration: .8s;
+    fill:white;
+    width: 45px;
+    height: 45px;
+    transition: .7s;
+    transition-property: fill, width, height;
+}
+
+.animate-hover-svg{
+    cursor: pointer;
+    transition: 1.2s;
+    transition-property: fill, width, height;
+}
+
+.animate-menu-svg{
+    cursor:pointer;
+    transition: 1.2s;
+    transition-property: background-color, fill;
+}
+
+.animate-menu-svg:hover{
+    fill: rgb(226, 215, 215);
+    background-color: rgb(41, 38, 38);
+    transition: .9s;
+    transition-property: background-color, fill;
+}

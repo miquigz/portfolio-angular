@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/animate.css/animate.min.css",
               "node_modules/aos/dist/aos.css",
               "src/styles.css"
             ],

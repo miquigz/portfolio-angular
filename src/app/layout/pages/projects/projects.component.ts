@@ -1,18 +1,18 @@
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html'
 })
-export class ProjectsComponent{
-  
-  @HostListener('scroll', ['$event'])
-
-  onScroll(event:any) {
-    console.log(event);
-  }
+export class ProjectsComponent implements OnInit{
 
   constructor() {
+  }
+
+  ngOnInit(){
+    AOS.init();
   }
 
 
