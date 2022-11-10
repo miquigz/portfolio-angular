@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~animate.css/animate.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.bg-common{
+    background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
+}

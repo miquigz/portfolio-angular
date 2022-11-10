@@ -30,11 +30,11 @@ import {
         animate('.8s')
       ]),
       transition('closed => open', [
-        animate('1020ms', keyframes([
+        animate('920ms', keyframes([
           style({ width: '24.666667%', height:'1.5rem' ,opacity: '0'}), //Offset automatico (omitido)
           style({ width: '34.666667%', height:'2.4rem', opacity: '.2'}),
-          style({ width: '54.666667%', height:'2.6rem', opacity: '.4'}),
-          style({ width: '66.666667%', height:'3rem', opacity: '.9'})
+          style({ width: '40%', height:'2.6rem', opacity: '.4'}),
+          style({ width: '50%', height:'2.75rem', opacity: '.9'})
         ]),
         )
       ]),
@@ -49,10 +49,33 @@ export class NavbarComponent implements OnInit {
   @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;
 
   isOpen = true;
+  mostrar:string = '';
+
+
+
 
   toggle() {
     this.isOpen = !this.isOpen;
-    console.log(this.menu.nativeElement.classList);
+    this.animateClickMenu(this.isOpen);
+  }
+
+  mouseEnter(sectionAct:string){
+    this.mostrar = sectionAct;
+  }
+
+  mouseLeave(){
+    this.mostrar = '';
+  }
+
+
+  animateClickMenu(openClose:boolean):void{
+    if(openClose){
+      this.menu.nativeElement.classList.add("animate__jello")
+    }else{
+      this.menu.nativeElement.classList.remove("animate__jello")
+      this.menu.nativeElement.classList.add("animate__rubberBand")
+    }
+    console.log(this.menu);
   }
 
   // animation: jello;

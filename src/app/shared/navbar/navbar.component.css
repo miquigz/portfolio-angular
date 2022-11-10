@@ -1,7 +1,8 @@
 .animate-hover-svg:hover{
-    animation: swing;
-    animation-duration: .8s;
-    fill:white;
+    animation: pulse;
+    animation-duration: .3s;
+    /* fill: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%); */
+    fill: url(#nav-gradient);
     width: 45px;
     height: 45px;
     transition: .7s;
@@ -21,8 +22,26 @@
 }
 
 .animate-menu-svg:hover{
-    fill: rgb(226, 215, 215);
-    background-color: rgb(41, 38, 38);
-    transition: .9s;
+    fill: #E1E1E1;
+    background: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%);
+    transition: .4s;
     transition-property: background-color, fill;
+}
+
+.bg-nav{
+    /* background: linear-gradient(93.37deg, #9c9090a6 -6.79%, #c0bbbb 107.27%); */
+    background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
+}
+
+.bg-nav-item{
+    background-color: #b8bac28f;
+    /* background-color: #D3CCE3; */
+}
+.bg-nav-text{
+    background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
+}
+
+#nav-gradient {
+    --color-stop: #ACB6E5;
+    --color-bot: #C9D6FF;
 }
