@@ -1,14 +1,19 @@
-<div class="flex justify-center align-center">
-    <div data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="rounded-lg text-black text-lg sm:text-2xl
-    bg-common h-full text-white w-full sm:w-8/12 md:6/12 lg:4/12
+<div #projectsdiv class="flex justify-center align-center project-body h-max">
+    <div
+    data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" 
+    class="rounded-lg text-black text-lg sm:text-2xl
+    h-full text-white w-full sm:w-8/12 md:6/12 lg:4/12 transparent-background
     flex justify-center items-center rounded-lg flex-wrap min-h-screen">
-        <div class="bg-gray-100 my-4 lg:px-32">
+        <div class="my-4 lg:px-32">
             <div class="mx-auto max-w-[7xl] px-4 sm:px-6 lg:px-8">
                 <div class="mx-auto max-w-[2xl] py-16 sm:py-24 lg:max-w-none lg:py-16">
                     <h2 class="text-2xl text-center font-bold text-gray-900">PROJECTS</h2>
                     <div class=" mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
-                        <app-project-item *ngFor="let project of projects"
-                        [project]="project" ></app-project-item>
+                        <app-project-item (posOnComponent)="changeActComponent($event)" [hoverActual]="hoverActual"
+                        *ngFor="let project of projects" [project]="project" ></app-project-item>
+                    </div>
+                    <div class="mt-4 py-4">
+                        <small class="mt-4 py-4">Actualmente me encuentro trabajando en muchos mas proyectos, si quiere ver mi: <a class="underline text-indigo-300" href="https://github.com/miquigz">actividad diaria</a>. </small>
                     </div>
                 </div>
             </div>

@@ -2,3 +2,23 @@
     letter-spacing: .1rem;
     font-family: 'Oswald', sans-serif;
 }
+
+.project-item-style{
+    transition: .9s;
+}
+
+.blured-project{
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    transition: .7s;
+    opacity: .8;
+    transition-property: filter, blur, opacity;
+}
+
+.project-animate:hover{
+    filter: blur(0px);
+    animation: pulse;
+    animation-duration: .7s;
+    background-color: #acb6e593;
+}
+

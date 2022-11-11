@@ -1,0 +1,12 @@
+.animate-button-download:hover{
+    animation: pulse;
+    animation-duration: 1s;
+    background-color: #ACB6E5;
+    opacity: .8;
+    transition: .7s;
+}
+
+h2{
+    font-family: "Oswald", sans-serif;
+    letter-spacing: .2rem;
+}

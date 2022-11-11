@@ -6,7 +6,9 @@ import { ProjectItem } from '../../interfaces/project-item';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styles: [`h2{letter-spacing: 2rem; font-family: 'Oswald', sans-serif; letter-spacing: 1rem;}`]
+  styles: [`
+      h2{letter-spacing: 2rem; font-family: 'Oswald', sans-serif; letter-spacing: 1rem;}
+  `]
 })
 export class ProjectsComponent implements OnInit{
 
@@ -40,7 +42,11 @@ export class ProjectsComponent implements OnInit{
       altImg:'Image of Search Gifs App'
     },
   ]
+  hoverActual:string = '';
 
+  changeActComponent(actComponent:string){
+    this.hoverActual = actComponent;
+  }
 
   constructor() {
   }

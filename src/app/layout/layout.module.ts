@@ -6,6 +6,7 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ProjectItemComponent } from './pages/projects/project-item/project-item.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { FormMailComponent } from './pages/form-mail/form-mail.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormMailComponent } from './pages/form-mail/form-mail.component';
     HomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class LayoutModule { }

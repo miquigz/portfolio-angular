@@ -4,12 +4,15 @@
     class="sm:p-2 lg:p-8 rounded-lg text-black text-lg sm:text-2xl
     bg-common text-white w-full sm:w-6/12 md:4/12 lg:2/12 h-full
     flex justify-center items-center rounded-lg flex-wrap">
-        <h2 class="mb-4 py-4">About me</h2>
-        <p class="p-1 sm:py-4 sm:px-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi inventore consectetur nisi accusantium autem expedita repudiandae cumque eum molestias, ratione et ad, similique incidunt deserunt iste ullam magnam. Sint, voluptate.</p>
-        <p>thanks for view :)</p>
-        <div  (mouseenter)="componentView()" (mouseleave)="componentLeave()"
-        class="w-full flex justify-center">
-            <p class="mt-4 bg-gray-200/75 p-2 rounded-lg cursor-pointer border-2 border-white"> Download CV</p>
+        <h2 class="my-2 py-4 font-semibold">Acerca de mí</h2>
+        <p class="p-1 sm:py-4 sm:px-2 text-base">
+            Hola! Soy Miqueas, me apasiona la tecnología y tener nuevos retos con la programación cada día. Actualmente estoy enfocándome en el stack MEAN, aprendiendo cada vez más de Angular y su ecosistema, e indagando y practicando la parte del back-end con nodeJS.</p>
+            <p class="my-3">Si quieres que programemos algo, no dudes en contactarme.</p>
+            <p class="w-full text-center mt-2">Gracias por ver mi portfolio!</p>
+            <p class="text-base">Les invito a descargar mi CV para mayor información:</p>
+        <div class="w-full flex justify-center">
+            <a href="" (mouseenter)="componentView()" (mouseleave)="componentLeave()" 
+            class="mt-4 bg-gray-100 p-2 rounded-lg border-2 border-white animate-button-download">Descargar CV</a>
         </div>
         
     </div>

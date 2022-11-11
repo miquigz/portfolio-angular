@@ -12,3 +12,13 @@
 .bg-common{
     background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
 }
+
+.transparent-background{
+    background: linear-gradient(93.37deg, #f1f1f1d5 -6.79%, #ececece1 107.27%);
+}
+
+body{
+    background-image: url('./assets/fondo2-.jpg');
+    background-repeat: repeat;
+    /* background-attachment: fixed; */
+}

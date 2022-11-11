@@ -40,9 +40,3 @@
 /* //bottom
 background-color: rgba(0, 0, 0, 0.281);
 -webkit-mask:radial-gradient(100% 150% at bottom, #fff 40%,transparent 60%); */
-
-@media screen and (max-width: 600px) {
-    div {
-      background-color: red;
-    }
-  }

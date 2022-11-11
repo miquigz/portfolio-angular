@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import {
   trigger,
   state,
@@ -8,16 +8,10 @@ import {
   keyframes
 } from '@angular/animations';
 
-// style({
-//   opacity: 1,
-//   width: '66.666667%',
-//   height: '50px'
-// })
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+  styleUrls: ['./navbar.component.css'],  
   animations: [
     trigger('openClose', [
       state('open', style({})),
@@ -47,12 +41,11 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;
+  
+  @Output() selectedSection:EventEmitter<string> = new EventEmitter();
 
   isOpen = true;
   mostrar:string = '';
-
-
-
 
   toggle() {
     this.isOpen = !this.isOpen;
@@ -78,67 +71,13 @@ export class NavbarComponent implements OnInit {
     console.log(this.menu);
   }
 
-  // animation: jello;
-  // animation-duration: .9s;
+  emitSection(section:string){
+    this.selectedSection.emit(section);
+  }
+
+
 
   ngOnInit(): void {
   }
 
 }
-
-// trigger('openClose', [
-//   state('open', style({
-//     height: '100px',
-//     width: '100px',
-//     display: 'fixed',
-//     opacity: 1
-//   })),
-//   state('closed', style({
-//     height: '10px',
-//     width: '10px',
-//     opacity: 0.8
-//   })),
-//   transition('open => closed', [
-//     animate('.8s')
-//   ]),
-//   transition('closed => open', [
-//     sequence([
-//       animate('100ms', style({
-//         opacity: 1,
-//         height: '300px'
-//       })),
-//       style({ opacity: 1 }),
-//       animate("1s", style({ opacity: 1 }))
-//     ])
-//   ]),
-//   // transition('closed => open', [
-//   //   animate('0.5s')
-//   // ])
-// ]),
-
-// transition('open => closed', [
-//   sequence([
-//     animate('500ms', style({
-//         opacity: 0,
-//         height: '5px'
-//       })),
-//       style({ opacity: 0 }),
-//       animate('1000ms', style({
-//         opacity: .8,
-//         height: '0px'
-//       }))
-//     ])         
-//   ]),
-//   transition('closed => open', [
-//     sequence([
-//       animate('500ms', style({
-//           opacity: .3,
-//           height: '125px'
-//         })),
-//         animate('3000ms', style({
-//           opacity: 1,
-//           height: '300px'
-//         }))
-//       ])         
-//     ])
-// ]),
