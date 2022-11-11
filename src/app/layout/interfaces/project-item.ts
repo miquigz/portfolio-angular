@@ -4,4 +4,5 @@ export interface ProjectItem {
     title:string;
     desc:string;
     smallDesc:string;
+    hrefLink:string;
 }

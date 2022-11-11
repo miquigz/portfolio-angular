@@ -15,31 +15,35 @@ export class ProjectsComponent implements OnInit{
   projects:ProjectItem[] = [
     {
       title:'Search Country App',
-      imgSrc:'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg',
+      imgSrc:'../../../../assets//paises.png',
       desc:'SPA Angular',
       smallDesc:'Consuming API with Angular',
-      altImg:'SPA Project'
+      altImg:'SPA Project',
+      hrefLink:'https://github.com/miquigz/searchCountryApp'
     },
     {
       title:'PostCard App',
-      imgSrc:'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg',
+      imgSrc:'../../../../assets/postcardApp.png',
       desc:'FullStack Back-End Project',
       smallDesc:'MVC CRUD, nodejs, hbs, mongodb, expressjs',
-      altImg:'PostCard App Image'
+      altImg:'PostCard App Image',
+      hrefLink:'https://github.com/miquigz/final-project'
     },
       {
       title:'Alice',
-      imgSrc:'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
+      imgSrc:'../../../../assets/alice.jpg',
       desc:'Adventure Graphic',
       smallDesc:'JS Vanilla',
-      altImg:'Alice Project'
+      altImg:'Alice Project',
+      hrefLink: 'https://github.com/miquigz/AliceProject'
     },
     {
       title:'Search Gifs App',
-      imgSrc:'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
+      imgSrc:'../../../../assets//gifsapp.png',
       desc:'Angular WebApp',
       smallDesc:'Consuming API with Angular',
-      altImg:'Image of Search Gifs App'
+      altImg:'Image of Search Gifs App',
+      hrefLink:'https://github.com/miquigz/buscarGifs'
     },
   ]
   hoverActual:string = '';
