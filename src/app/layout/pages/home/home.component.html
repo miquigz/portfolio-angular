@@ -1,23 +1,18 @@
-<div class="animate__fadeIn animate__slower animate__animated
-bg-transparent flex justify-center min-h-screen items-center">
-    <div class="rounded-lg text-black text-lg sm:text-2xl
-    bg-common h-full text-white w-full sm:w-8/12 md:6/12 lg:4/12
-    flex justify-center items-center rounded-lg flex-wrap">
-        <div class="w-full flex justify-center py-6 px-4">
-            <img class="animate__fadeIn animate__animated w-6/12 h-6/12 lg:w-3/12 lg:h-3/12 md:w-4/12 md:h-4/12 rounded-lg border border-white shadow-xl" src="../../../../assets/me.jpeg" alt="">
-        </div>
-        
-        
-        <h1 class="text-4xl sm:text-6xl lg:text-8xl py-8 text-center animate__fadeInUp animate__slower animate__animated">MIQUEAS GIMENEZ</h1>
-        <div class="text-md text-center">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga porro eum, dolores neque qui cupiditate debitis quaerat officiis quod, nulla ipsa fugiat reprehenderit. Voluptas veniam, facere delectus minima ab saepe.</p>
-        </div>
-        
-    </div>
+<div class="fixed z-20 md:h-24 w-full" [ngClass]="{
+	'animate-niebla-open-top': niebla,
+	'animate-niebla-close-top':!niebla 
+}">
 </div>
 
+<div class="fixed bottom-0 z-20 md:h-24  w-full" [ngClass]="{
+	'animate-niebla-open-bottom': niebla,
+	'animate-niebla-close-bottom':!niebla 
+}"
+>
+</div>
 
+<app-perfil (posOnComponent)="enComponente($event)" (posLeaveComponent)="enComponente($event)"></app-perfil>
 <!-- <app-projects (scroll)="scrollProjects($event)"></app-projects> -->
 <app-projects></app-projects>
 
-<app-skills></app-skills>
+<app-about-me (posOnComponent)="enComponente($event)" (posLeaveComponent)="enComponente($event)"></app-about-me>

@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
-import { SkillsComponent } from './pages/skills/skills.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { ProjectItemComponent } from './pages/projects/project-item/project-item.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { FormMailComponent } from './pages/form-mail/form-mail.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    SkillsComponent,
     ProjectsComponent,
-    HomeComponent
+    HomeComponent,
+    AboutMeComponent,
+    ProjectItemComponent,
+    PerfilComponent,
+    FormMailComponent
   ],exports:[
     HomeComponent
   ],

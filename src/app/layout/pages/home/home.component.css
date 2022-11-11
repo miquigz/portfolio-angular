@@ -1,0 +1,48 @@
+.animate-niebla-open-top{ 
+    /* background-color: rgba(0, 0, 0, 0.281); */
+    background-color: rgba(0, 0, 0, 0.178);
+    -webkit-mask:radial-gradient(100% 150% at top, #fff 40%,transparent 60%);
+    opacity: .5;
+    transition:1s; transition-property:height, background;
+}
+
+.animate-niebla-open-bottom{ 
+    animation: pulse;
+    animation-duration: .3s;
+    background-color: rgba(0, 0, 0, 0.178);
+    -webkit-mask:radial-gradient(100% 150% at bottom, #fff 40%,transparent 60%);
+    opacity: .5;
+    transition:1s; transition-property:height, background;
+}
+
+
+.animate-niebla-close-bottom{
+    animation: fadeOutDown;
+    animation-duration: 1s;
+    transition:1s;
+    background-color: rgba(0, 0, 0, 0.062);
+    -webkit-mask:radial-gradient(100% 150% at bottom, #fff 40%,transparent 60%);
+    height: 0px;
+    transition-property:height, background;
+}
+.animate-niebla-close-top{
+    transition:1s;
+    animation: fadeOutUp;
+    animation-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.062);
+    -webkit-mask:radial-gradient(100% 150% at top, #fff 40%,transparent 60%);
+    height: 0px;
+    transition-property:height, background;
+}
+
+
+/* background:url(http://api.thumbr.it/whitenoise-361x370.png) center/cover no-repeat;    */
+/* //bottom
+background-color: rgba(0, 0, 0, 0.281);
+-webkit-mask:radial-gradient(100% 150% at bottom, #fff 40%,transparent 60%); */
+
+@media screen and (max-width: 600px) {
+    div {
+      background-color: red;
+    }
+  }

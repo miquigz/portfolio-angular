@@ -8,7 +8,12 @@ module.exports = {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
+    corePlugins: {
+      aspectRatio: false,
+    },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }
