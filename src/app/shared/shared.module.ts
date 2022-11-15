@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SharedRoutingModule } from './shared-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    BrowserAnimationsModule
   ]
 })
 export class SharedModule { }
