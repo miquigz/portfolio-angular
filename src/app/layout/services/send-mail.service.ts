@@ -8,45 +8,40 @@ import { tap } from 'rxjs';
   providedIn: 'root'
 })
 export class SendMailService {
-
-  private sendGrid:string = "https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send";
-  private apiKey:string = "9dfb84395amshf7eaabb2358a934p1076a7jsn6c841a724491";
-  private rapidApiHost:string = "rapidprod-sendgrid-v1.p.rapidapi.com";
+  //https://rapidprod-sendgrid-v1.p.rapidapi.com
+  private endPoint:string = "https://api.emailjs.com/api/v1.0/email/send";
+  private serviceID:string = 'service_k1g0e4c';
+  private templateID: string = 'template_7u1yr9k';
+  private userID:string = 'qBNUm7nhPvMF8_4z-';
+  
 
   constructor(private http: HttpClient) { }
 
   sendMail(formValues:string[]){
 
-    const data = JSON.stringify({
-      "personalizations": [
-        {
-          "to": [
-            {
-              "email": "miquigz02@gmail.com",
-              "name":'Miqueas Gimenez'
-            }
-          ],
-          "subject": formValues[3]
-        }
-      ],
-      "from": {
-        "email": formValues[2]
-      },
-      "content": [
-        {
-          "type": "text/plain",
-          "value": formValues[4]
-        }
-      ]
+    const mailData = JSON.stringify({
+      service_id: this.serviceID,
+      template_id: this.templateID,
+      user_id: this.userID,
+      template_params:{
+        name:formValues[0],
+        lastname:formValues[1],
+        email:formValues[2],
+        subject:formValues[3],
+        message:formValues[4]
+      }  
     });
-  
-    console.log("body:", data);
-    let headers = new HttpHeaders();
-    headers = headers.append('Content-Type','application/json');
-    headers = headers.append("X-RapidAPI-Key", this.apiKey);
-    headers = headers.append("X-RapidAPI-Host", this.rapidApiHost);
-    console.log(headers);
-    this.http.post(this.sendGrid, data, { headers: headers, withCredentials:true}, )
+    // console.log(mailData);
+
+    // res.header('Access-Control-Allow-Origin', "*");
+    // res.header('Access-Control-Allow-Methods', 'POST');
+
+    let headers = new HttpHeaders({
+      'Content-Type':'application/json'
+    })
+    
+    // console.log(headers);
+    this.http.post<any>(this.endPoint, mailData, { headers: headers} )
     .subscribe({
         next: data => {
             console.log("Success Post", data);
@@ -54,6 +49,8 @@ export class SendMailService {
         error: error => {
             console.log(headers);
             console.error('Error in sendMail Post', error);
+            console.log('--');
+            console.log(JSON.stringify(error));
         }
     });
   }
@@ -90,7 +87,7 @@ export class SendMailService {
 
       if (formValues !== undefined){
         const errs = this.validarDatos(formValues!);
-        console.log(errs.length);
+        // console.log(errs.length);
 
         if(errs.length === 0){
           //mostrar envio exitoso
@@ -109,7 +106,7 @@ export class SendMailService {
     const errorsList:string[] = [];
     let voidArray:boolean = true;
     values!.forEach((ele)=>{if(ele !== '') voidArray = false;});
-    console.log(voidArray);
+    // console.log(voidArray);
     if(!voidArray){
         if(values[0].length < 3)
           errorsList.push('Nombre demasiado corto');
