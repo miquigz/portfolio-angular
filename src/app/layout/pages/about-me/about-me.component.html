@@ -1,23 +1,27 @@
-<div class="flex justify-center align-center mt-4 min-h-screen items-center">
+<div class=" flex justify-center align-center mt-4 min-h-screen items-center">
     <div
     data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" 
     class="sm:p-2 lg:p-8 rounded-lg text-black text-lg sm:text-2xl
     bg-common text-white w-full sm:w-6/12 md:4/12 lg:2/12 h-full
     flex justify-center items-center rounded-lg flex-wrap">
         <h2 class="my-2 py-4 font-semibold">Acerca de mí</h2>
-        <p class="p-1 sm:py-4 sm:px-2 text-base">
+        <p class="mx-2 p-1 sm:py-4 sm:px-2 text-base">
             Hola! Soy Miqueas, me apasiona la tecnología y tener nuevos retos con la programación cada día. Actualmente estoy enfocándome en el stack MEAN, aprendiendo cada vez más de Angular y su ecosistema, e indagando y practicando la parte del back-end con nodeJS.</p>
-            <p class="my-3">Si quieres que programemos algo, no dudes en contactarme.</p>
+            <p class="my-3 mx-2 ">Si quieres que programemos algo, no dudes en contactarme.</p>
             <p class="w-full text-center mt-2">Gracias por ver mi portfolio!</p>
-            <p class="text-base">Les invito a descargar mi CV para mayor información:</p>
+            <p class="text-center sm:text-base">Les invito a descargar mi CV para mayor información:</p>
         <div class="w-full flex justify-center">
-            <a href="./../../../assets/CV.pdf" download="CV Miqueas Gimenez"
-            (mouseenter)="componentView()" (mouseleave)="componentLeave()" 
+            <a href="./../../../assets/CV.pdf" download="CV Miqueas Gimenez" (click)="successDownload()"
             class="mt-4 bg-gray-100 p-2 rounded-lg border-2 border-white animate-button-download">Descargar CV</a>
         </div>
-        
+        <div class="w-full flex justify-center mb-4">
+            <a (click)="openFormMail()"
+            class="cursor-pointer mt-4 bg-gray-100 p-2 rounded-lg border-2 border-white animate-button-download">Enviarme un Mail</a>
+        </div>
     </div>
 </div>
-
-
+<!-- 
+<div class="swal2-container swal2-center swal2-backdrop-show" style="overflow-y: auto;">
+    <p>hi</p>
+</div> -->
 <!-- //TODO: Back To Top  Button-->

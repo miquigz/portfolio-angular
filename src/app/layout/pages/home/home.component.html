@@ -1,23 +1,14 @@
-<div class="fixed z-20 md:h-24 w-full" [ngClass]="{
-	'animate-niebla-open-top': niebla,
-	'animate-niebla-close-top':!niebla 
-}">
-</div>
+
 
 <app-navbar (selectedSection)="smoothScroll($event)"></app-navbar>
 <!-- <app-projects (scroll)="scrollProjects($event)"></app-projects> -->
-<app-perfil (posOnComponent)="enComponente($event)" (posLeaveComponent)="enComponente($event)" id="perfil"></app-perfil>
+<app-perfil id="perfil"></app-perfil>
 
 <app-projects id="projects"></app-projects>
 
-<app-about-me id="aboutme" (posOnComponent)="enComponente($event)" (posLeaveComponent)="enComponente($event)"></app-about-me>
+<app-about-me id="aboutme"></app-about-me>
 
 <app-footer></app-footer>
 
 
 
-<div class="fixed bottom-0 z-20 md:h-24  w-full" [ngClass]="{
-	'animate-niebla-open-bottom': niebla,
-	'animate-niebla-close-bottom':!niebla 
-}">
-</div>

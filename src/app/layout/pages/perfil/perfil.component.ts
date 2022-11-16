@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-perfil',
@@ -15,24 +15,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
       letter-spacing: .5rem;}`
   ]
 })
-export class PerfilComponent implements OnInit {
-
-  @Output() posOnComponent:EventEmitter<boolean> = new EventEmitter();
-  @Output() posLeaveComponent:EventEmitter<boolean> = new EventEmitter();
-
-
-  componentView(){
-    this.posOnComponent.emit(true);
-  }
-
-  componentLeave(){
-    this.posLeaveComponent.emit(false);
-  }
-
+export class PerfilComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
 import {
   trigger,
   state,
@@ -36,7 +36,7 @@ import {
   ]
 })
 
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
 
   constructor() { }
 
@@ -47,16 +47,16 @@ export class NavbarComponent implements OnInit {
   isOpen = true;
   mostrar:string = '';
 
-  toggle() {
+  toggle():void{
     this.isOpen = !this.isOpen;
     this.animateClickMenu(this.isOpen);
   }
 
-  mouseEnter(sectionAct:string){
+  mouseEnter(sectionAct:string):void{
     this.mostrar = sectionAct;
   }
 
-  mouseLeave(){
+  mouseLeave():void{
     this.mostrar = '';
   }
 
@@ -71,13 +71,15 @@ export class NavbarComponent implements OnInit {
     console.log(this.menu);
   }
 
-  emitSection(section:string){
+  emitSection(section:string):void{
     this.selectedSection.emit(section);
   }
 
-
-
-  ngOnInit(): void {
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    if(!this.isOpen && window.innerWidth < 1025){
+      this.isOpen = true;
+    }
   }
 
 }

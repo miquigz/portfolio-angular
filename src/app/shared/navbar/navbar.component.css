@@ -5,19 +5,19 @@
     fill: url(#nav-gradient);
     width: 45px;
     height: 45px;
-    transition: .7s;
+    transition: .5s;
     transition-property: fill, width, height;
 }
 
 .animate-hover-svg{
     cursor: pointer;
-    transition: 1.2s;
+    transition: .5s;
     transition-property: fill, width, height;
 }
 
 .animate-menu-svg{
     cursor:pointer;
-    transition: 1.2s;
+    transition: .7s;
     transition-property: background-color, fill;
 }
 

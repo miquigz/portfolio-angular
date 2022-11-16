@@ -60,7 +60,7 @@ describe('NavbarComponent', () => {
         fixture.detectChanges();
         const navbar = fixture.componentInstance;
 
-        expect(navbar.menu.nativeElement.classList.contains('animate__jello')).toBeTruthy
+        expect(navbar.menu.nativeElement.classList.contains('animate__jello')).toBeTrue
     })
 
     it(`should switch class of variable called "menu", animateClickMenu(openClose:boolean)`, ()=>{
