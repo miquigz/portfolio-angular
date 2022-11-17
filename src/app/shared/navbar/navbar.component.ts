@@ -38,6 +38,8 @@ import {
 
 export class NavbarComponent{
 
+  //-TailWind Class-
+
   constructor() { }
 
   @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;

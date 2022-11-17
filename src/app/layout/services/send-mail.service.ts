@@ -8,7 +8,6 @@ import { tap } from 'rxjs';
   providedIn: 'root'
 })
 export class SendMailService {
-  //https://rapidprod-sendgrid-v1.p.rapidapi.com
   private endPoint:string = "https://api.emailjs.com/api/v1.0/email/send";
   private serviceID:string = 'service_k1g0e4c';
   private templateID: string = 'template_7u1yr9k';
@@ -66,12 +65,12 @@ export class SendMailService {
         confirmButtonText:'Enviar',
         html:
         `<div class="flex justify-center items-center flex-col">
-          <input id="swal-input1" maxlength="24" type="text" placeholder="Nombre" class="h-10 mb-1 sm:h-14 sm:w-8/12 w-full bg-common p-2 text-indigo-400 mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:transition focus:border-indigo-300 focus:ring-1 focus:ring-indigo-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
-          <input id="swal-input2" maxlength="24" type="text" placeholder="Apellido" class="h-10 mb-1 sm:h-14 sm:w-8/12 w-full bg-common p-2 text-indigo-400 mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:transition focus:border-indigo-300 focus:ring-1 focus:ring-indigo-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
-          <input id="swal-input3" type="email" placeholder="Email" class="h-10 mb-1 sm:h-14 sm:w-8/12 w-full bg-common p-2 text-indigo-400 mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:transition focus:border-indigo-300 focus:ring-1 focus:ring-indigo-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
-          <input id="swal-input4" placeholder="Asunto del Email" class="h-10 mb-1 sm:h-14 sm:w-8/12 w-full bg-common p-2 text-indigo-400 mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:transition focus:border-indigo-300 focus:ring-1 focus:ring-indigo-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
-          <textarea id="swal-input5" placeholder="Cuerpo del correo" class="h-18 mb-1 sm:h-24 sm:w-8/12 w-full bg-common p-2 text-indigo-400 mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:transition focus:border-indigo-300 focus:ring-1 focus:ring-indigo-300 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"></textarea>
-        </div>`,
+          <input id="swal-input1" maxlength="24" type="text" placeholder="Nombre" class="minimalist-input">
+          <input id="swal-input2" maxlength="24" type="text" placeholder="Apellido" class="minimalist-input">
+          <input id="swal-input3" type="email" placeholder="Email" class="minimalist-input">
+          <input id="swal-input4" placeholder="Asunto del Email" class="minimalist-input">
+          <textarea id="swal-input5" placeholder="Cuerpo del correo" class="minimalist-textarea"></textarea>
+        </div>`,//TODO: Generar msj de warnings en inputs con ngForm
         focusConfirm: false,
         showCancelButton: true,
         preConfirm: () => {

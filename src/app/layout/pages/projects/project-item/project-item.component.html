@@ -2,7 +2,7 @@
 class="group project-animate project-item-style bg-mobile
  relative mt-16 sm:mt-5 lg:mt-8 border-2 border-white rounded-xl sm:bg-gray-100"
 [class.blured-project]="hoverActual !== '' && hoverActual !== project.title">
-    <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white opacity-75 group-hover:opacity-100 animate-img-hover sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+    <div class="responsive-img animate-img-hover">
         <img [src]="project.imgSrc" [alt]="project.altImg" class="h-full w-full object-cover object-center">
     </div>
     <h3 class="mt-1 text-center text-sm text-gray-500">
