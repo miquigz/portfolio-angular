@@ -27,14 +27,14 @@
     transition: .4s;
     transition-property: background-color, fill;
 }
-/* 
+ 
 .bg-nav{
     background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
 }
 
-.bg-nav-text{
+/* .bg-nav-text{
     background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
-} */
+}  */
 
 #nav-gradient {
     --color-stop: #ACB6E5;

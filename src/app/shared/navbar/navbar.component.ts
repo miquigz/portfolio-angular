@@ -7,6 +7,8 @@ import {
   transition,
   keyframes
 } from '@angular/animations';
+import { SendMailService } from 'src/app/layout/services/send-mail.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-navbar',
@@ -37,17 +39,27 @@ import {
 })
 
 export class NavbarComponent{
+  isOpen = true;
+  mostrar:string = '';
+  succesMessage:any = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    background: 'linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%)',
+    iconColor:' #ACB6E5',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
 
-  //-TailWind Class-
-
-  constructor() { }
+  constructor(private mailService:SendMailService) { }
 
   @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;
   
   @Output() selectedSection:EventEmitter<string> = new EventEmitter();
-
-  isOpen = true;
-  mostrar:string = '';
 
   toggle():void{
     this.isOpen = !this.isOpen;
@@ -61,7 +73,13 @@ export class NavbarComponent{
   mouseLeave():void{
     this.mostrar = '';
   }
-
+  
+  successDownload(){
+    this.succesMessage.fire({
+      icon: 'success',
+      title: 'Descargando CV!'
+    })
+  }
 
   animateClickMenu(openClose:boolean):void{
     if(openClose){
@@ -82,6 +100,10 @@ export class NavbarComponent{
     if(!this.isOpen && window.innerWidth < 1025){
       this.isOpen = true;
     }
+  }
+
+  openFormMail():void{
+    this.mailService.openForm();
   }
 
 }

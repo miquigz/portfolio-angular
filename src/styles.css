@@ -26,7 +26,8 @@
     }
     
     .div-projects-grid{
-        @apply rounded-lg text-black text-lg sm:text-2xl h-full text-white w-full sm:w-8/12 md:w-6/12 lg:w-4/12 transparent-background flex justify-center items-center rounded-lg flex-wrap min-h-screen;
+        @apply rounded-lg text-black text-lg
+        sm:text-2xl h-full text-white w-full sm:w-8/12 md:w-10/12 lg:w-8/12 transparent-background flex justify-center items-center rounded-lg flex-wrap min-h-screen;
     }
     /*TODO: vercambios md:w-6/12 lg:w-4/12 */
 
