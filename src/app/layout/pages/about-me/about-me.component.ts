@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 // import { Swal } from 'sweetalert2/dist/sweetalert2.js';
 import Swal from 'sweetalert2';
 import { SendMailService } from '../../services/send-mail.service';
@@ -17,7 +17,7 @@ import { SendMailService } from '../../services/send-mail.service';
       letter-spacing: .2rem;
     }`]
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent {
   succesMessage:any = Swal.mixin({
     toast: true,
     position: 'top-end',

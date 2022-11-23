@@ -21,7 +21,7 @@
     }
 
     .div-ul-nav{
-        @apply w-full lg:w-6/12 rounded-lg h-11 py-1 z-30 lg:mt-4 border border-white flex justify-center fixed bottom-0 sm:top-0 ;
+        @apply w-full lg:w-6/12 rounded-lg h-11 py-1 z-30 lg:mt-4 border border-white flex justify-center fixed bottom-0 sm:top-0;
         background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
     }
     
