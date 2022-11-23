@@ -20,19 +20,13 @@ describe('FormMailComponent', () => {
         expect(home).toBeTruthy();
     });
 
-    it(`should have a variable called "niebla" with value 'false' as default`, ()=>{
-        fixture = TestBed.createComponent(HomeComponent);
-        const home = fixture.componentInstance;
-        expect(home.niebla).toEqual(false);
-    })
-
-    it(`should switch value of the variable "niebla", enComponente(valor:boolean)`, ()=>{
-        fixture = TestBed.createComponent(HomeComponent);
-        const home = fixture.componentInstance;;
-        const mockedData= {value1:false, value2:true};
-        home.enComponente(mockedData.value1);
-        expect(home.niebla).toEqual(mockedData.value1); //Expected Result False
-        home.enComponente(mockedData.value2);
-        expect(home.niebla).toEqual(mockedData.value2); //Expected Result True
-    })
+    // it(`should switch value of the variable "niebla", enComponente(valor:boolean)`, ()=>{
+    //     fixture = TestBed.createComponent(HomeComponent);
+    //     const home = fixture.componentInstance;;
+    //     const mockedData= {value1:false, value2:true};
+    //     home.enComponente(mockedData.value1);
+    //     expect(home.niebla).toEqual(mockedData.value1); //Expected Result False
+    //     home.enComponente(mockedData.value2);
+    //     expect(home.niebla).toEqual(mockedData.value2); //Expected Result True
+    // })
 });

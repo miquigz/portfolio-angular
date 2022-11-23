@@ -1,33 +1,41 @@
-.animate-hover-svg:hover{
-    animation: pulse;
-    animation-duration: .3s;
-    /* fill: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%); */
-    fill: url(#nav-gradient);
-    width: 45px;
-    height: 45px;
-    transition: .5s;
-    transition-property: fill, width, height;
+@media (min-width: 640px) {
+    .animate-hover-svg:hover{
+        animation: pulse;
+        animation-duration: .3s;
+        /* fill: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%); */
+        fill: url(#nav-gradient);
+        width: 45px;
+        height: 45px;
+        transition: .5s;
+        transition-property: fill, width, height;
+    }
+    
+    .animate-hover-svg{
+        cursor: pointer;
+        transition: .5s;
+        transition-property: fill, width, height;
+    }
+    
+    .animate-menu-svg{
+        cursor:pointer;
+        transition: .7s;
+        transition-property: background-color, fill;
+    }
+    
+    .animate-menu-svg:hover{
+        fill: #E1E1E1;
+        background: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%);
+        transition: .4s;
+        transition-property: background-color, fill;
+    }
 }
 
-.animate-hover-svg{
-    cursor: pointer;
-    transition: .5s;
-    transition-property: fill, width, height;
+@media (min-width: 768px) {
+    body{
+    }
 }
 
-.animate-menu-svg{
-    cursor:pointer;
-    transition: .7s;
-    transition-property: background-color, fill;
-}
 
-.animate-menu-svg:hover{
-    fill: #E1E1E1;
-    background: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%);
-    transition: .4s;
-    transition-property: background-color, fill;
-}
- 
 .bg-nav{
     background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
 }

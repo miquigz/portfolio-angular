@@ -59,6 +59,12 @@ export class SendMailService {
       const { value: formValues } = await Swal.fire({
         title: 'Enviarme un Correo',
         background: '#EFEDEF',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown animate__fast'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutDown animate__faster'
+        },
         cancelButtonText:'Cancelar',
         cancelButtonColor:'#b6aab1',
         confirmButtonColor: '#ACB6E5',

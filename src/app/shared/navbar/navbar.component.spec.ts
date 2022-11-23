@@ -1,3 +1,4 @@
+import { SendMailService } from 'src/app/layout/services/send-mail.service';
 import { TestBed } from '@angular/core/testing';
 import { NavbarComponent } from '../navbar/navbar.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,7 +11,8 @@ describe('NavbarComponent', () => {
             ],
             imports:[
                 BrowserAnimationsModule
-            ]
+            ],
+            providers:[SendMailService]
         }).compileComponents();
     });
 

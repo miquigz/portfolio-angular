@@ -10,14 +10,6 @@ export class HomeComponent{
 
   // @ViewChild('projects') projectsSection!:any;
 
-  niebla:boolean = false;
-
-  // sectionAct:string = '';
-
-  enComponente(valor:boolean){
-    this.niebla = valor;
-  }
-
   smoothScroll(section:string){
     document.getElementById(`${section}`)?.scrollIntoView({behavior:'smooth'});
   }

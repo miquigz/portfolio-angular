@@ -88,7 +88,6 @@ export class NavbarComponent{
       this.menu.nativeElement.classList.remove("animate__jello")
       this.menu.nativeElement.classList.add("animate__rubberBand")
     }
-    console.log(this.menu);
   }
 
   emitSection(section:string):void{

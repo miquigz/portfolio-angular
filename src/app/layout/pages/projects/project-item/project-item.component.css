@@ -9,9 +9,9 @@
     }
 
     .blured-project{
-        filter: blur(4px);
-        -webkit-filter: blur(4px);
-        transition: .5s;
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+        transition: .9s;
         opacity: .8;
         transition-property: filter, blur, opacity;
     }

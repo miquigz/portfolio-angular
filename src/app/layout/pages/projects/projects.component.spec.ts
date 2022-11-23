@@ -32,4 +32,10 @@ describe('ProjectsComponent', () => {
         projects.changeActComponent(mockedData.value);
         expect(projects.hoverActual).toEqual('exampleText'); //Expected Result "exampleText"
     })
+
+    it(`should have a array variable called "projects" with length === 4`, ()=>{
+        fixture = TestBed.createComponent(ProjectsComponent);
+        const projects = fixture.componentInstance;
+        expect(projects.projects.length).toEqual(4);
+    });
 });

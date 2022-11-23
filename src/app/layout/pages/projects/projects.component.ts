@@ -15,7 +15,7 @@ export class ProjectsComponent implements OnInit{
   projects:ProjectItem[] = [
     {
       title:'Search Country App',
-      imgSrc:'../../../../assets//paises.png',
+      imgSrc:'../../../../assets/paises.webp',
       desc:'SPA Angular',
       smallDesc:'Consuming API with Angular',
       altImg:'SPA Project',
@@ -23,7 +23,7 @@ export class ProjectsComponent implements OnInit{
     },
     {
       title:'PostCard App',
-      imgSrc:'../../../../assets/postcardApp.png',
+      imgSrc:'../../../../assets/postcardApp.webp',
       desc:'FullStack Back-End Project',
       smallDesc:'MVC CRUD, nodejs, hbs, mongodb, expressjs',
       altImg:'PostCard App Image',
@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit{
     },
       {
       title:'Alice',
-      imgSrc:'../../../../assets/alice.jpg',
+      imgSrc:'../../../../assets/alice.webp',
       desc:'Adventure Graphic',
       smallDesc:'JS Vanilla',
       altImg:'Alice Project',
@@ -39,7 +39,7 @@ export class ProjectsComponent implements OnInit{
     },
     {
       title:'Search Gifs App',
-      imgSrc:'../../../../assets//gifsapp.png',
+      imgSrc:'../../../../assets/gifsapp.webp',
       desc:'Angular WebApp',
       smallDesc:'Consuming API with Angular',
       altImg:'Image of Search Gifs App',
