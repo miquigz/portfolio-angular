@@ -1,14 +1,8 @@
-import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  keyframes
-} from '@angular/animations';
+import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 import { SendMailService } from 'src/app/layout/services/send-mail.service';
 import Swal from 'sweetalert2';
+import { fromEvent, Subscription, tap, throttleTime } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -38,7 +32,8 @@ import Swal from 'sweetalert2';
   ]
 })
 
-export class NavbarComponent{
+export class NavbarComponent implements OnInit, OnDestroy{
+  //data
   isOpen = true;
   mostrar:string = '';
   succesMessage:any = Swal.mixin({
@@ -54,12 +49,35 @@ export class NavbarComponent{
       toast.addEventListener('mouseleave', Swal.resumeTimer)
     }
   })
+  @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;
+  @Output() selectedSection:EventEmitter<string> = new EventEmitter();
 
+  @Input() loadedAbout:boolean = false; 
+  @Input() loadedProjects:boolean = false; 
+  private subResize!:Subscription;
+
+  //hooks
   constructor(private mailService:SendMailService) { }
 
-  @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;
-  
-  @Output() selectedSection:EventEmitter<string> = new EventEmitter();
+  ngOnInit(): void {
+    this.subResize = fromEvent(window, 'resize').pipe(
+      throttleTime(500),
+      tap( ( _ ) => this.onWindowResize())
+    ).subscribe();
+  }
+
+  ngOnDestroy(): void {
+    this.subResize.unsubscribe();
+  }
+
+  //methods
+  onWindowResize() {
+    if(!this.isOpen && window.innerWidth < 1025){
+      this.isOpen = true;
+      console.log('fixed :/ .')
+    }
+  }
+
 
   toggle():void{
     this.isOpen = !this.isOpen;
@@ -92,13 +110,6 @@ export class NavbarComponent{
 
   emitSection(section:string):void{
     this.selectedSection.emit(section);
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onWindowResize() {
-    if(!this.isOpen && window.innerWidth < 1025){
-      this.isOpen = true;
-    }
   }
 
   openFormMail():void{

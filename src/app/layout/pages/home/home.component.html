@@ -1,15 +1,21 @@
 
-<app-navbar (selectedSection)="smoothScroll($event)"></app-navbar>
+<app-navbar [loadedAbout]="this.loadedAbout"
+[loadedProjects]="this.loadedProjects"
+(selectedSection)="smoothScroll($event)"></app-navbar>
 <!-- <app-projects (scroll)="scrollProjects($event)"></app-projects> -->
+
 <app-perfil id="perfil"></app-perfil>
 
-<app-projects id="projects"></app-projects>
+<virtual-load>
+    <ng-template loadContent>   
+        <app-projects id="projects"></app-projects>
+    </ng-template>
+</virtual-load>
 
-<app-about-me id="aboutme"></app-about-me>
+<virtual-load>
+    <ng-template loadContent>   
+        <app-about-me id="aboutme"></app-about-me>
+    </ng-template>
+</virtual-load>
 
 <app-footer></app-footer>
-
-
-
-
-

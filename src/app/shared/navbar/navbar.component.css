@@ -30,12 +30,6 @@
     }
 }
 
-@media (min-width: 768px) {
-    body{
-    }
-}
-
-
 .bg-nav{
     background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
 }
