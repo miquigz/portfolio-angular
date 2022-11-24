@@ -1,21 +1,4 @@
 @media (min-width: 640px) {
-    .animate-hover-svg:hover{
-        animation: pulse;
-        animation-duration: .3s;
-        /* fill: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%); */
-        fill: url(#nav-gradient);
-        width: 45px;
-        height: 45px;
-        transition: .5s;
-        transition-property: fill, width, height;
-    }
-    
-    .animate-hover-svg{
-        cursor: pointer;
-        transition: .5s;
-        transition-property: fill, width, height;
-    }
-    
     .animate-menu-svg{
         cursor:pointer;
         transition: .7s;
@@ -38,9 +21,5 @@
     background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
 }  */
 
-#nav-gradient {
-    --color-stop: #ACB6E5;
-    --color-bot: #C9D6FF;
-}
 
 /* background: linear-gradient(93.37deg, #9c9090a6 -6.79%, #c0bbbb 107.27%); */

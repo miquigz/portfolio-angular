@@ -1,0 +1,4 @@
+const svgContact = `<svg width="35" height="35" class="svg-tam animate-hover-svg" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"> <path d="M 10 8 C 6.86 8 4.2795313 10.42 4.0195312 13.5 L 24 24.289062 L 43.980469 13.5 C 43.720469 10.42 41.14 8 38 8 L 10 8 z M 4 16.890625 L 4 34 C 4 37.31 6.69 40 10 40 L 38 40 C 41.31 40 44 37.31 44 34 L 44 16.890625 L 24.710938 27.320312 C 24.490938 27.440312 24.25 27.5 24 27.5 C 23.75 27.5 23.509062 27.440313 23.289062 27.320312 L 4 16.890625 z"></path></svg>`;
+//(click)="openFormMail()">
+//(mouseenter)="mouseEnter('mail')" (mouseleave)="mouseLeave()"    SPAN METHODS
+export const SVG_CONTACT = svgContact;

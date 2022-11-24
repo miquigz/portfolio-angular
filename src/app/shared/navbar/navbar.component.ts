@@ -1,8 +1,10 @@
 import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
-import { SendMailService } from 'src/app/layout/services/send-mail.service';
-import Swal from 'sweetalert2';
+
 import { fromEvent, Subscription, tap, throttleTime } from 'rxjs';
+
+import { SvgsService } from '../services/svgs.service';
+import { NavItem } from '../interfaces/nav-item';
 
 @Component({
   selector: 'app-navbar',
@@ -34,32 +36,27 @@ import { fromEvent, Subscription, tap, throttleTime } from 'rxjs';
 
 export class NavbarComponent implements OnInit, OnDestroy{
   //data
+
   isOpen = true;
   mostrar:string = '';
-  succesMessage:any = Swal.mixin({
-    toast: true,
-    position: 'top-end',
-    background: 'linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%)',
-    iconColor:' #ACB6E5',
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer)
-      toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
-  })
+
   @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;
   @Output() selectedSection:EventEmitter<string> = new EventEmitter();
 
   @Input() loadedAbout:boolean = false; 
-  @Input() loadedProjects:boolean = false; 
+  @Input() loadedProjects:boolean = false;
+
+  navItems:NavItem[] = [];
+
   private subResize!:Subscription;
 
   //hooks
-  constructor(private mailService:SendMailService) { }
+  constructor(private svgs:SvgsService) { }
 
   ngOnInit(): void {
+    this.navItems = this.svgs.getAllItems();
+    console.log(this.navItems);
+
     this.subResize = fromEvent(window, 'resize').pipe(
       throttleTime(500),
       tap( ( _ ) => this.onWindowResize())
@@ -70,35 +67,25 @@ export class NavbarComponent implements OnInit, OnDestroy{
     this.subResize.unsubscribe();
   }
 
-  //methods
+
+
+
+
+//methods
+  loadedComponents(item:NavItem):boolean{
+    return item.name === 'about' && this.loadedAbout
+    || item.name === 'projects' && this.loadedProjects
+    || item.name !== 'projects' && item.name !== 'about';
+  }
+
   onWindowResize() {
     if(!this.isOpen && window.innerWidth < 1025){
       this.isOpen = true;
       console.log('fixed :/ .')
     }
   }
-
-
-  toggle():void{
-    this.isOpen = !this.isOpen;
-    this.animateClickMenu(this.isOpen);
-  }
-
-  mouseEnter(sectionAct:string):void{
-    this.mostrar = sectionAct;
-  }
-
-  mouseLeave():void{
-    this.mostrar = '';
-  }
   
-  successDownload(){
-    this.succesMessage.fire({
-      icon: 'success',
-      title: 'Descargando CV!'
-    })
-  }
-
+//Menu button
   animateClickMenu(openClose:boolean):void{
     if(openClose){
       this.menu.nativeElement.classList.add("animate__jello")
@@ -108,12 +95,14 @@ export class NavbarComponent implements OnInit, OnDestroy{
     }
   }
 
-  emitSection(section:string):void{
-    this.selectedSection.emit(section);
+  toggle():void{
+    this.isOpen = !this.isOpen;
+    this.animateClickMenu(this.isOpen);
   }
 
-  openFormMail():void{
-    this.mailService.openForm();
+//Click navitem
+  emitSection(section:string):void{
+    this.selectedSection.emit(section);
   }
 
 }
