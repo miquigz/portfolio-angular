@@ -35,10 +35,10 @@ import { NavItem } from '../interfaces/nav-item';
 })
 
 export class NavbarComponent implements OnInit, OnDestroy{
-  //data
-
+  //variables
   isOpen = true;
   mostrar:string = '';
+  mobileResize:boolean = false;
 
   @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;
   @Output() selectedSection:EventEmitter<string> = new EventEmitter();
@@ -56,19 +56,17 @@ export class NavbarComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
     this.navItems = this.svgs.getAllItems();
     console.log(this.navItems);
+    this.mobileResize = window.innerWidth < 425;
 
     this.subResize = fromEvent(window, 'resize').pipe(
-      throttleTime(500),
-      tap( ( _ ) => this.onWindowResize())
+      throttleTime(500),//debounce resize
+      tap( ( _ )=> this.onWindowResize())
     ).subscribe();
   }
 
   ngOnDestroy(): void {
     this.subResize.unsubscribe();
   }
-
-
-
 
 
 //methods
@@ -78,11 +76,16 @@ export class NavbarComponent implements OnInit, OnDestroy{
     || item.name !== 'projects' && item.name !== 'about';
   }
 
+  redesNavItem(name:string):boolean{
+    return name === 'linkedin' || name === 'github' || name === 'twitter';
+  }//TODO: Agregar twitter a la lista (navbar) de redes.
+
   onWindowResize() {
     if(!this.isOpen && window.innerWidth < 1025){
       this.isOpen = true;
       console.log('fixed :/ .')
     }
+    this.mobileResize = window.innerWidth < 425;
   }
   
 //Menu button
@@ -101,8 +104,13 @@ export class NavbarComponent implements OnInit, OnDestroy{
   }
 
 //Click navitem
-  emitSection(section:string):void{
-    this.selectedSection.emit(section);
+  recibeSection(event:string){
+    console.log('emitido::', event);
+    this.selectedSection.emit(event);
+  }
+
+  navItemLink(item:NavItem):boolean{
+    return item.name === 'about' || item.name === 'projects' || item.name === 'perfil';
   }
 
 }

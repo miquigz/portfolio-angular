@@ -2,6 +2,7 @@
 <span *ngIf="!item.href" 
 (mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()"
 (click)="linkToComponent && emitSection(item.name)"
+(click)="!linkToComponent && item.name === 'contact' && openFormMail()"
 [innerHTML]="item.svgHTML | safe:'html'" 
 class="animate-hover-svg"
 >
@@ -14,7 +15,8 @@ class="animate-hover-svg"
 [href]="item.href" target="_blank"></a>
 
 <!-- CV Download -->
-<a *ngIf="item.name === 'cv'" [href]="item.href" download="Miqueas Gimenez CV"
+<a
+*ngIf="item.name === 'cv'" [href]="item.href" download="Miqueas Gimenez CV"
 (mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()"
 (click)="successDownload()"
 [innerHTML]="item.svgHTML | safe: 'html'"></a>
