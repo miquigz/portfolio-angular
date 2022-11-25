@@ -1,0 +1,15 @@
+.animate-background{
+    transition: 1.6s;
+    height: 50%;
+    transition-property: background, heigth, width;
+}
+
+.animate-exit{
+    display: none;
+    transition: 1.6s;
+    transition-property: display;
+}
+
+.bg-nav{
+    background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
+}

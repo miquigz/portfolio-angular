@@ -18,6 +18,17 @@
     
 }
 
+@media (max-width: 639px) {
+    .animate-hover-svg:active{
+        animation: pulse;
+        animation-duration: .2s;
+        transition: .2s;
+        transition-property: fill;
+        fill: #5d6483;
+        box-shadow: 2px 2px 5px #C9D6FF;
+    }
+}
+
 #nav-gradient {
     --color-stop: #ACB6E5;
     --color-bot: #C9D6FF;

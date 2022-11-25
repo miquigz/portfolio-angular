@@ -7,13 +7,15 @@ import { FooterComponent } from './footer/footer.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavItemComponent } from './navbar/nav-item/nav-item.component';
+import { SettingsComponent } from './navbar/settings/settings.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
     NavItemComponent,
-    SafePipe
+    SafePipe,
+    SettingsComponent
   ],
   exports:[
     FooterComponent,
