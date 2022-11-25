@@ -1,5 +1,6 @@
 import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
-import { fromEvent, Subscription, tap, throttleTime } from 'rxjs';
+import { fromEvent, Observable, Subscription, tap, throttleTime } from 'rxjs';
+import { SettingsService } from 'src/app/core/services/settings.service';
 // import * as AOS from 'aos';
 
 @Component({
@@ -20,8 +21,10 @@ export class HomeComponent implements OnInit,  OnDestroy{
 
   private sub!:Subscription;
 
+  darkMode$!:Observable<boolean>;
 //Hooks
-	constructor() {
+	constructor(settingsService:SettingsService) {
+    this.darkMode$ = settingsService.darkModeObservable;
   }
 
   ngOnInit(): void {
@@ -44,8 +47,6 @@ export class HomeComponent implements OnInit,  OnDestroy{
       this.loadedAbout = this.about !== undefined;
     }
     this.currentPosition = window.pageYOffset;
-    console.log('Projects:',this.loadedProjects);
-    console.log('about :',this.loadedAbout);
   }
   
   smoothScroll(section:string){

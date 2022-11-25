@@ -1,18 +1,18 @@
 @media (min-width: 640px) {
     .animate-hover-svg:hover{
         animation: pulse;
-        animation-duration: .3s;
+        animation-duration: .9s;
         /* fill: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%); */
         fill: url(#nav-gradient);
         width: 45px;
         height: 45px;
-        transition: .5s;
+        transition: .3s;
         transition-property: fill, width, height;
     }
     
     .animate-hover-svg{
         cursor: pointer;
-        transition: .5s;
+        transition: .4s;
         transition-property: fill, width, height;
     }
     

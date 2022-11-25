@@ -8,7 +8,9 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { ProjectItemComponent } from './pages/projects/project-item/project-item.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+
 import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ArrangementModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ]
 })
 export class LayoutModule { }

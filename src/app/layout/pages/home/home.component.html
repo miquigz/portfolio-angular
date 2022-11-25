@@ -3,7 +3,7 @@
 [loadedProjects]="this.loadedProjects"
 (selectedSection)="smoothScroll($event)"></app-navbar>
 <!-- <app-projects (scroll)="scrollProjects($event)"></app-projects> -->
-
+{{darkMode$ | async}}
 <app-perfil id="perfil"></app-perfil>
 
 <virtual-load>

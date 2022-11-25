@@ -1,3 +1,4 @@
+import { CoreModule } from './../core/core.module';
 import { SafePipe } from './pipes/safe.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -23,7 +24,8 @@ import { SettingsComponent } from './navbar/settings/settings.component';
   ],
   imports: [
     CommonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CoreModule
   ]
 })
 export class SharedModule { }
