@@ -55,7 +55,6 @@ export class NavbarComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.navItems = this.svgs.getAllItems();
-    console.log(this.navItems);
     this.mobileResize = window.innerWidth < 425;
 
     this.subResize = fromEvent(window, 'resize').pipe(
@@ -105,7 +104,6 @@ export class NavbarComponent implements OnInit, OnDestroy{
 
 //Click navitem
   recibeSection(event:string){
-    console.log('emitido::', event);
     this.selectedSection.emit(event);
   }
 

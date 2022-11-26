@@ -1,21 +1,24 @@
 
-<app-navbar [loadedAbout]="this.loadedAbout"
+<app-navbar [class.dark]="darkMode$ | async"
+[loadedAbout]="this.loadedAbout"
 [loadedProjects]="this.loadedProjects"
 (selectedSection)="smoothScroll($event)"></app-navbar>
 <!-- <app-projects (scroll)="scrollProjects($event)"></app-projects> -->
-{{darkMode$ | async}}
-<app-perfil id="perfil"></app-perfil>
+<app-perfil id="perfil" [class.dark]="darkMode$ | async"></app-perfil>
 
 <virtual-load>
     <ng-template loadContent>   
-        <app-projects #projects id="projects"></app-projects>
+        <app-projects [class.dark]="darkMode$ | async"
+        #projects id="projects"></app-projects>
     </ng-template>
 </virtual-load>
 
 <virtual-load>
     <ng-template loadContent>   
-        <app-about-me #about id="about"></app-about-me>
+        <app-about-me [class.dark]="darkMode$ | async"
+        #about id="about"></app-about-me>
     </ng-template>
 </virtual-load>
 
-<app-footer></app-footer>
+<app-footer [class.dark]="darkMode$ | async"
+></app-footer>

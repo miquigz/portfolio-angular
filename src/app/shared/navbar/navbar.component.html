@@ -2,7 +2,11 @@
 <div class="lg:flex justify-start mx-2 align-center w-100 hidden">
     <!-- <svg class="fixed z-50" (click)="toggle()" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="25" fill="white" viewBox="0 0 50 50"> <path d="M 25.058594 2.171875 C 12.375 2.171875 2.058594 12.488281 2.058594 25.171875 C 2.058594 37.855469 12.375 48.171875 25.058594 48.171875 C 37.738281 48.171875 48.058594 37.855469 48.058594 25.171875 C 48.058594 12.488281 37.738281 2.171875 25.058594 2.171875 Z M 33.707031 29.707031 L 25.707031 37.707031 C 25.617188 37.800781 25.503906 37.871094 25.382813 37.921875 C 25.261719 37.972656 25.128906 38 25 38 C 24.871094 38 24.738281 37.972656 24.617188 37.921875 C 24.496094 37.871094 24.386719 37.800781 24.292969 37.707031 L 16.292969 29.707031 C 15.902344 29.316406 15.902344 28.683594 16.292969 28.292969 C 16.683594 27.902344 17.316406 27.902344 17.707031 28.292969 L 24 34.585938 L 24 13 C 24 12.449219 24.449219 12 25 12 C 25.550781 12 26 12.449219 26 13 L 26 34.585938 L 32.292969 28.292969 C 32.683594 27.902344 33.316406 27.902344 33.707031 28.292969 C 34.097656 28.683594 34.097656 29.316406 33.707031 29.707031 Z"></path> </svg> -->
     <div #menuNav (click)="toggle()"
-    class="fixed animate__animated animate-menu-svg py-1.5 px-1 z-50 bg-nav rounded-xl m-4 border border-white">
+    class="fixed animate__animated animate-menu-svg
+    bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC]
+    dark:bg-gradient-to-r dark:from-[#413737d5] dark:to-[#443434e1] dark:text-white
+    dark:border-indigo-300 dark:fill-white
+    py-1.5 px-1 z-50 rounded-xl m-4 border border-white">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 30 30"><path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path></svg>
     </div>
 </div>

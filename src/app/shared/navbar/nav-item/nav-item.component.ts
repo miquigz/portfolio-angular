@@ -36,10 +36,8 @@ export class NavItemComponent implements OnInit {
 
 //Smooth Click, scroll to section
   emitSection(section:string):void{
-    console.log('Emit section?');
     if (this.linkToComponent){
       this.selectedSection.emit(section);
-      console.log("EMITIDO");  
     }
   }
 

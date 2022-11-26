@@ -9,14 +9,14 @@
     }
 
     .blured-project{
-        filter: blur(3px);
-        -webkit-filter: blur(3px);
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
         transition: .9s;
         opacity: .8;
         transition-property: filter, blur, opacity;
     }
     .project-animate:hover{
-        filter: blur(0px);
+        filter: blur(0px), grayscale(0%);
         animation: pulse;
         animation-duration: .6s;
         background-color: #acb6e593;

@@ -63,7 +63,6 @@ export class SvgsService {
   constructor() { }
 
   getAllItems():NavItem[]{
-    console.log(this.navItems);
     return [... this.navItems];
   }
 

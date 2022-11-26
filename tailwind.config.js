@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{html,ts}",
   ],
+  darkMode: 'class',
   theme: {
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

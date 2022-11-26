@@ -25,7 +25,7 @@ import { SettingsComponent } from './navbar/settings/settings.component';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    CoreModule
+    CoreModule //TODO: Remove this, migrar nav,footer al core.
   ]
 })
 export class SharedModule { }

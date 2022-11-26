@@ -21,7 +21,7 @@ import { CoreModule } from '../core/core.module';
     ProjectItemComponent,
     PerfilComponent
   ],exports:[
-    HomeComponent
+    HomeComponent //TODO: Quitar esto, RouterOutlet, desImportar en appmodule
   ],
   imports: [
     CommonModule,

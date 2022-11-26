@@ -1,16 +1,19 @@
-<div #projectsdiv class="flex justify-center align-center project-body h-max">
+<div #projectsdiv class="project-body flex justify-center align-center h-max">
     <div
     data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200" 
-    class="div-projects-grid">
+    class="div-projects-grid ">
         <div class="my-4 lg:px-32">
             <div class="mx-auto max-w-[7xl] px-4 sm:px-6 lg:px-8">
                 <div class="mx-auto max-w-[2xl] py-16 sm:py-24 lg:max-w-none lg:py-16">
-                    <h2 class="text-2xl text-center font-bold text-gray-900">PROJECTS</h2>
+                    <h2 class="text-2xl text-center font-bold">PROJECTS</h2>
                     <div class=" mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
-                        <app-project-item (posOnComponent)="changeActComponent($event)" [hoverActual]="hoverActual"
-                        *ngFor="let project of projects" [project]="project" ></app-project-item>
+                        <app-project-item 
+                            (posOnComponent)="changeActComponent($event)" [hoverActual]="hoverActual"
+                            *ngFor="let project of projects"
+                            [project]="project" >
+                        </app-project-item>
                     </div>
-                    <div class="mt-4 py-4 text-black">
+                    <div class="mt-4 py-4 text-black dark:text-white">
                         <small class="mt-4 py-4">Actualmente me encuentro trabajando en muchos mas proyectos, si quiere ver mi: <a class="underline text-indigo-300" href="https://github.com/miquigz" target="_blank">actividad diaria</a>. </small>
                     </div>
                 </div>

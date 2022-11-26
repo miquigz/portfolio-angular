@@ -32,8 +32,8 @@ export class ProjectsComponent implements OnInit{
       {
       title:'Alice',
       imgSrc:'../../../../assets/alice.webp',
-      desc:'Adventure Graphic',
-      smallDesc:'JS Vanilla',
+      desc:'Adventure Graphic - 2020',
+      smallDesc:'JS & CSS Vanilla, webpack',
       altImg:'Alice Project',
       hrefLink: 'https://github.com/miquigz/AliceProject'
     },
