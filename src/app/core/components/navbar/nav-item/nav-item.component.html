@@ -1,5 +1,5 @@
 
-<span *ngIf="!item.href" 
+<span *ngIf="!item.href"
 (mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()"
 (click)="linkToComponent && emitSection(item.name)"
 (click)="!linkToComponent && item.name === 'contact' && openFormMail()"

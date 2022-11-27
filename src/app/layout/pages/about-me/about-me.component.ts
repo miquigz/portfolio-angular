@@ -1,7 +1,9 @@
+
 import { Component } from '@angular/core';
 // import { Swal } from 'sweetalert2/dist/sweetalert2.js';
 import Swal from 'sweetalert2';
-import { SendMailService } from '../../services/send-mail.service';
+import { SendMailService } from './../../../shared/services/send-mail.service';
+
 
 @Component({
   selector: 'app-about-me',

@@ -3,8 +3,9 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
 
 import { fromEvent, Subscription, tap, throttleTime } from 'rxjs';
 
-import { SvgsService } from '../services/svgs.service';
-import { NavItem } from '../interfaces/nav-item';
+import { SvgsService } from './../../services/svgs.service';
+import { NavItem } from '../../interfaces/nav-item';
+
 
 @Component({
   selector: 'app-navbar',

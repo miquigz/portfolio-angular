@@ -35,16 +35,14 @@
         @apply rounded-lg text-black text-lg sm:text-2xl
         flex justify-center items-center rounded-lg flex-wrap w-full sm:w-8/12 h-full
         bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC]
-        dark:text-white  dark:bg-gradient-to-r dark:from-[#413737d5] dark:to-[#443434e1] dark:text-white
-        dark:border-indigo-300/50 dark:border neumorphism;
+        darkMode neumorphism;
     }
     
     .div-projects-grid{
         @apply rounded-lg neumorphism
         text-black text-lg sm:text-2xl h-full w-full sm:w-8/12 md:w-10/12 lg:w-8/12
         bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1]
-        dark:text-white  dark:bg-gradient-to-r dark:from-[#413737d5] dark:to-[#443434e1] dark:text-white
-        dark:border-indigo-300/50 dark:border
+        darkMode
         flex justify-center items-center rounded-lg flex-wrap min-h-screen;
     }
 
@@ -75,8 +73,7 @@
 
     .footerClass{
         @apply w-full h-20 pt-2 sm:h-16 flex justify-center bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1] pb-12 text-xs sm:text-lg sm:pb-8 sm:pt-4 sm:items-center z-50
-        dark:text-white dark:bg-gradient-to-r dark:from-[#413737d5] dark:to-[#443434e1] dark:text-white
-        dark:border-indigo-300/50 dark:border;
+        darkMode;
     }
 
     .darkMode{

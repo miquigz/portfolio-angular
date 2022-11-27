@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import Swal from 'sweetalert2';
-import { tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

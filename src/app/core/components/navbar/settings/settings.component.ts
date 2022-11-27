@@ -1,7 +1,7 @@
-import { LocalService } from './../../../core/services/local.service';
-import { SettingsService } from './../../../core/services/settings.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+
+import { LocalService } from 'src/app/shared/services/local.service';
+import { SettingsService } from 'src/app/core/services/settings.service';
 
 @Component({
   selector: 'app-settings',
@@ -15,10 +15,10 @@ export class SettingsComponent implements OnInit {
   
   @ViewChild('svgSettings') svgSettings!:ElementRef<SVGElement>;
 
-  data$:Observable<boolean>;//TODO: quitar luego de tests, usar darkMode en settingsCompo
+  // data$:Observable<boolean>;
 
   constructor(private settingsService:SettingsService, private localS:LocalService) { 
-    this.data$ = settingsService.darkModeObservable;
+    // this.data$ = settingsService.darkModeObservable;
     if (localS.getData('darkMode') === 'true') {
       this.darkMode = true;
       this.settingsService.darkModeObservable = this.darkMode;
