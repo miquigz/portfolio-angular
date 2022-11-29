@@ -1,3 +1,4 @@
+import { LoadedComponentsService } from './../../../../layout/services/loaded-components.service';
 import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 
 import Swal from 'sweetalert2';
@@ -19,9 +20,15 @@ export class NavItemComponent implements OnInit {
   linkToComponent: boolean = false;
   cvItem:boolean = false;
 
-  constructor(private mailService:SendMailService) { 
-  }
+  routeActual:string = '';
+
+  constructor(
+    private mailService:SendMailService,
+    private loadCompo:LoadedComponentsService
+    ){}
+
   ngOnInit(): void {
+
     this.linkToComponent = this.item.name === 'perfil' 
       || this.item.name === 'projects' 
       || this.item.name === 'about';
@@ -36,8 +43,8 @@ export class NavItemComponent implements OnInit {
 
 //Smooth Click, scroll to section
   emitSection(section:string):void{
-    if (this.linkToComponent){
-      this.selectedSection.emit(section);
+    if (this.linkToComponent){//Si es un navitem con link a componente
+      this.loadCompo.clickedElementObservable = section;
     }
   }
 

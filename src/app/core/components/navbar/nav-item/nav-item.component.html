@@ -1,11 +1,23 @@
+<span *ngIf="item.name === 'perfil'"
+    (mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()"
+    routerLink="" routerLinkOptions="{exact: true}"
+    [innerHTML]="item.svgHTML | safe:'html'" class="animate-hover-svg"
+></span>
 
-<span *ngIf="!item.href"
+<span *ngIf="item.name === 'about' || item.name === 'projects'"
+(click)="emitSection(item.name)"
+
 (mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()"
-(click)="linkToComponent && emitSection(item.name)"
-(click)="!linkToComponent && item.name === 'contact' && openFormMail()"
-[innerHTML]="item.svgHTML | safe:'html'" 
 class="animate-hover-svg"
+[innerHTML]="item.svgHTML | safe:'html'"
 >
+</span>
+
+<span *ngIf="item.name === 'contact'"
+(click)="openFormMail()"
+(mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()"
+class="animate-hover-svg"
+[innerHTML]="item.svgHTML | safe:'html'">
 </span>
 
 <!-- Redes Links -->

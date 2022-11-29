@@ -1,7 +1,10 @@
+import { Router } from '@angular/router';
+import { LoadedComponentsService } from './../../../layout/services/loaded-components.service';
+import { SettingsService } from 'src/app/core/services/settings.service';
 import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
-import { fromEvent, Subscription, tap, throttleTime } from 'rxjs';
+import { fromEvent, Subscription, tap, throttleTime, Observable } from 'rxjs';
 
 import { SvgsService } from './../../services/svgs.service';
 import { NavItem } from '../../interfaces/nav-item';
@@ -44,17 +47,34 @@ export class NavbarComponent implements OnInit, OnDestroy{
   @ViewChild('menuNav') menu!:ElementRef<HTMLDivElement>;
   @Output() selectedSection:EventEmitter<string> = new EventEmitter();
 
-  @Input() loadedAbout:boolean = false; 
-  @Input() loadedProjects:boolean = false;
+  // @Input() loadedAbout:boolean = false; 
+  // @Input() loadedProjects:boolean = false;
+
+  loadedProjects$!:Observable<boolean>;
+  loadedAbout$!:Observable<boolean>;
 
   navItems:NavItem[] = [];
 
   private subResize!:Subscription;
 
+  routeActual:string = 'none';
+  
+  darkMode$!:Observable<boolean>;
+
   //hooks
-  constructor(private svgs:SvgsService) { }
+  constructor(private svgs:SvgsService,
+    settingsService:SettingsService,
+    loadedComp:LoadedComponentsService,
+    private route:Router
+    ) { 
+      this.darkMode$ = settingsService.darkModeObservable;
+      this.loadedProjects$ = loadedComp.loadedProjectsObservable
+      this.loadedAbout$ = loadedComp.loadedAboutObservable;
+    }
 
   ngOnInit(): void {
+    this.routeActual = this.route.url;
+
     this.navItems = this.svgs.getAllItems();
     this.mobileResize = window.innerWidth < 425;
 
@@ -70,15 +90,13 @@ export class NavbarComponent implements OnInit, OnDestroy{
 
 
 //methods
-  loadedComponents(item:NavItem):boolean{
-    return item.name === 'about' && this.loadedAbout
-    || item.name === 'projects' && this.loadedProjects
-    || item.name !== 'projects' && item.name !== 'about';
-  }
-
   redesNavItem(name:string):boolean{
     return name === 'linkedin' || name === 'github' || name === 'twitter';
   }//TODO: Agregar twitter a la lista (navbar) de redes.
+
+  componentsNav(item:string):boolean{
+    return item === 'about' || item === 'projects';
+  }
 
   onWindowResize() {
     if(!this.isOpen && window.innerWidth < 1025){

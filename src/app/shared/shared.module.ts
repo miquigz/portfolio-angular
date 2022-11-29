@@ -14,7 +14,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     CommonModule,
     BrowserAnimationsModule
-    // CoreModule //TODO: Remove this, migrar nav,footer al core.I
   ]
 })
 export class SharedModule { }
