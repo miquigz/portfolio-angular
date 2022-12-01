@@ -1,0 +1,28 @@
+
+<div>
+    <div class="min-h-screen flex flex-col flex-wrap justify-center items-center bg-white dark:bg-black">
+        <div *ngIf="!showMessage">
+            <!-- <p class="text-white">Loading...</p> -->
+            <div class="w-full">
+                <div class="w-screen p-4 rounded-md">
+                    <div class="flex justify-center mt-4">
+                        <div class="w-full lg:w-8/12">
+                            <p class="text-gray-600 text-center mb-2">Loading...</p>
+                            <div #progressBar class="w-2/12 bg-indigo-500 py-1 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="showMessage">
+            <div class="w-full">
+                <h2 #name style="font-family: 'Oswald', sans-serif; letter-spacing: 0.4rem;" class="mb-14 text-2xl text-center text-indigo-500/75">Miqueas Gimenez</h2>
+            </div>
+            <div class="text-white rounded-lg p-3">
+                <app-name [continuar]="continuar"></app-name>
+            </div>
+            <div #btnContinuar class="animate__animated flex justify-center"><p (click)="clicked()" class='cursor-pointer animate__animated text-2xl text-indigo-400 p-1 rounded-lg mt-16' #btnText>Continuar</p></div>
+            <p #textWelcome class="mt-4 text-center text-gray-400">Welcome to my portfolio!</p>
+        </div>
+    </div>
+</div>

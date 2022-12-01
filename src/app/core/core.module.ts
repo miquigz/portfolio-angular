@@ -9,7 +9,7 @@ import { SettingsService } from './services/settings.service';
 import { LocalService } from '../shared/services/local.service';
 
 import { NavItemComponent } from './components/navbar/nav-item/nav-item.component';
-import { SettingsComponent } from './components/navbar/settings/settings.component';
+import { SettingsComponent } from './components/settings/settings.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 

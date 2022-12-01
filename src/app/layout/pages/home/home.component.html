@@ -6,18 +6,18 @@
 
 
 <!-- <app-projects (scroll)="scrollProjects($event)"></app-projects> -->
-<app-perfil id="perfil" [class.dark]="darkMode$ | async"></app-perfil>
+<app-perfil id="perfil"></app-perfil>
 
 <virtual-load>
     <ng-template loadContent>   
-        <app-projects [class.dark]="darkMode$ | async"
+        <app-projects
         #projects id="projects"></app-projects>
     </ng-template>
 </virtual-load>
 
 <virtual-load>
     <ng-template loadContent>   
-        <app-about-me [class.dark]="darkMode$ | async"
+        <app-about-me
         #about id="about"></app-about-me>
     </ng-template>
 </virtual-load>

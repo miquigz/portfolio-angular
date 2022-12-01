@@ -38,13 +38,13 @@ export class ProjectsComponent implements OnInit{
       hrefLink: 'https://github.com/miquigz/AliceProject'
     },
     {
-      title:'Search Gifs App',
-      imgSrc:'../../../../assets/gifsapp.webp',
-      desc:'Angular WebApp',
-      smallDesc:'Consuming API with Angular',
-      altImg:'Image of Search Gifs App',
-      hrefLink:'https://github.com/miquigz/buscarGifs'
-    },
+      title:'Practicas de Programacion',
+      imgSrc:'../../../../assets/winmipsAssembly.webp',
+      desc:'Practicas de Programacion hechas en la facultad',
+      smallDesc:'Hechas en 2021-2022',
+      altImg:'Assembly Pascal Java',
+      hrefLink:'https://github.com/stars/miquigz/lists/practicas-facultad'
+    }
   ]
   hoverActual:string = '';
 

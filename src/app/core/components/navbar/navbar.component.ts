@@ -1,11 +1,10 @@
 import { Router } from '@angular/router';
-import { LoadedComponentsService } from './../../../layout/services/loaded-components.service';
-import { SettingsService } from 'src/app/core/services/settings.service';
-import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
 import { fromEvent, Subscription, tap, throttleTime, Observable } from 'rxjs';
 
+import { LoadedComponentsService } from './../../../layout/services/loaded-components.service';
 import { SvgsService } from './../../services/svgs.service';
 import { NavItem } from '../../interfaces/nav-item';
 
@@ -58,22 +57,21 @@ export class NavbarComponent implements OnInit, OnDestroy{
   private subResize!:Subscription;
 
   routeActual:string = 'none';
-  
-  darkMode$!:Observable<boolean>;
-
   //hooks
   constructor(private svgs:SvgsService,
-    settingsService:SettingsService,
     loadedComp:LoadedComponentsService,
     private route:Router
     ) { 
-      this.darkMode$ = settingsService.darkModeObservable;
       this.loadedProjects$ = loadedComp.loadedProjectsObservable
       this.loadedAbout$ = loadedComp.loadedAboutObservable;
+      this.routeActual = route.url;
     }
 
   ngOnInit(): void {
     this.routeActual = this.route.url;
+    this.route.events.subscribe((_)=>{
+        this.routeActual = this.route.url;
+    });
 
     this.navItems = this.svgs.getAllItems();
     this.mobileResize = window.innerWidth < 425;

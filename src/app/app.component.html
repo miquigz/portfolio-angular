@@ -1,7 +1,12 @@
-<app-settings></app-settings>
+<div [class.dark]="darkMode$ | async">
+    
+    <app-settings *ngIf="routeAct !== '/'"></app-settings>
 
-<app-navbar></app-navbar>
+    <app-navbar *ngIf="routeAct !== '/'"></app-navbar>
 
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 
-<app-footer></app-footer>
+    <app-footer *ngIf="routeAct !== '/'"></app-footer>
+
+
+</div>

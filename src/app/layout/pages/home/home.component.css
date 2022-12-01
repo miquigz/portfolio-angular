@@ -1,0 +1,30 @@
+
+
+@media (max-width: 640px) {
+    body{
+        background: #C9D6FF;
+        background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+        background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+        
+    }
+}
+
+/* @media (min-width: 640px) and (max-width: 900px){
+
+} */
+
+@media (min-width:640px) and (max-width: 1925px) and (max-height: 1280px) {
+    body{
+        background-image: url('../../../../assets/fondo2-.webp');
+        background-repeat: repeat;
+    }
+}
+
+@media (min-width: 1925px) or (min-height: 1280px) {
+    body{
+        background: #000000;
+        background: -webkit-linear-gradient(to right, #434343, #000000); 
+        background: linear-gradient(to right, #434343, #000000);
+        
+    }
+}

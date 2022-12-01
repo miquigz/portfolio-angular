@@ -1,5 +1,5 @@
 import { LoadedComponentsService } from './../../services/loaded-components.service';
-import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { fromEvent, Observable, Subscription, throttleTime, tap } from 'rxjs';
 import { SettingsService } from 'src/app/core/services/settings.service';
 // import * as AOS from 'aos';
@@ -7,7 +7,8 @@ import { SettingsService } from 'src/app/core/services/settings.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit,  OnDestroy{
   //Data
