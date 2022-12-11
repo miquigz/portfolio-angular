@@ -106,10 +106,33 @@
 
 /*
 body{
-    
-
     /* background-attachment: fixed; 
 }*/
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+::selection {
+    color: white;
+    background: rgba(138, 196, 229, 0.692);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(93.37deg, #f1f1f1d8 -6.79%, #ecececc2 107.27%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(135, 144, 228, 0.699);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(115, 123, 197);
+}

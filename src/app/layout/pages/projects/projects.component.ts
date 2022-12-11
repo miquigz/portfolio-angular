@@ -14,12 +14,12 @@ export class ProjectsComponent implements OnInit{
 
   projects:ProjectItem[] = [
     {
-      title:'Search Country App',
-      imgSrc:'../../../../assets/paises.webp',
-      desc:'SPA Angular',
-      smallDesc:'Consuming API with Angular',
-      altImg:'SPA Project',
-      hrefLink:'https://github.com/miquigz/searchCountryApp'
+      title:'Inventory Management App',
+      imgSrc:'../../../../assets/inventory.webp',
+      desc:'FullStack Project (MEAN)',
+      smallDesc:'Angular(material, ng2-charts, tailwindcss), NodeJS, Expressjs, MongoDB',
+      altImg:'SPA with Back-end Project',
+      hrefLink:'https://github.com/miquigz/front-management_Inventory'
     },
     {
       title:'PostCard App',

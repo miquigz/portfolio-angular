@@ -39,10 +39,10 @@ export class WelcomeComponent implements OnInit, OnDestroy{
               this.progressBar.nativeElement.classList.remove('w-11/12');
               this.progressBar.nativeElement.classList.add('w-full');
             }, 100)
-          }, 200)
-        }, 300)
+          }, 100)
+        }, 200)
       }, 100)
-    }, 300)//TODO: REFACTOR ...
+    }, 200)//TODO: REFACTOR ...
 
     setTimeout(()=>{
       this.showMessage = true;
@@ -56,9 +56,8 @@ export class WelcomeComponent implements OnInit, OnDestroy{
           if(!this.continuar)
             this.btnText.nativeElement.classList.remove('animate__pulse')
         }
-        console.log('ds');
       }, 2000);
-    }, 1200);
+    }, 900);
 
     // this.btn.nativeElement.classList.add('animate__animated', 'animate__rotateOutUpRight');
   }
