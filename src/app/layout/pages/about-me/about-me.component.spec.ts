@@ -30,4 +30,27 @@ function tests(){
         expect(aboutMe).toBeTruthy();
     });
 
+    it(`should a variable called "succesMessage" defined`, ()=>{
+        const fixture = TestBed.createComponent(AboutMeComponent);
+        fixture.detectChanges();
+        const aboutMe = fixture.componentInstance;
+        expect(aboutMe.succesMessage).toBeDefined();
+    })
+
+    it(`should a function called "successDownload" defined`, ()=>{
+        const fixture = TestBed.createComponent(AboutMeComponent);
+        fixture.detectChanges();
+        const aboutMe = fixture.componentInstance;
+        expect(aboutMe.successDownload).toBeDefined();
+    });
+
+    it(`should a function called "openFormMail" defined`, ()=>{
+        const fixture = TestBed.createComponent(AboutMeComponent);
+        fixture.detectChanges();
+        const aboutMe = fixture.componentInstance;
+        expect(aboutMe.openFormMail).toBeDefined();
+    });
+
+    
+
 }

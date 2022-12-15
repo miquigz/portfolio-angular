@@ -30,4 +30,18 @@ function tests(){
         expect(layout).toBeTruthy();
     });
 
+    it(`should a function called "onScroll" defined`, ()=>{
+        const fixture = TestBed.createComponent(LayoutComponent);
+        fixture.detectChanges();
+        const layout = fixture.componentInstance;
+        expect(layout.onScroll).toBeDefined();
+    });
+
+    it(`should a variable called "scrollUp" with a value "false" as default`, ()=>{
+        const fixture = TestBed.createComponent(LayoutComponent);
+        fixture.detectChanges();
+        const layout = fixture.componentInstance;
+        expect(layout.scrollUp).toEqual(false);
+    })
+
 }

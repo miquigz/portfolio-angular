@@ -15,8 +15,8 @@ export class LayoutComponent implements OnInit,  OnDestroy{
   @ViewChild('about') about:any;
   @ViewChild  ('projects') projects:any;
 
-  scrollUp = false;
-  currentPosition = window.pageYOffset;
+  scrollUp:boolean = false;
+  currentPosition:number = window.pageYOffset;
 
   private sub!:Subscription;
   private subSection!:Subscription;

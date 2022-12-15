@@ -25,6 +25,12 @@ describe('ProjectsComponent', () => {
         expect(projects.hoverActual).toEqual('');
     })
 
+    it(`should have a function called "changeActComponent" defined`, ()=>{
+        fixture = TestBed.createComponent(ProjectsComponent);
+        const projects = fixture.componentInstance;
+        expect(projects.changeActComponent).toBeDefined();
+    })
+
     it(`should change the value of the variable called "hoverActual", changeActComponent(actComponent:string)`, ()=>{
         fixture = TestBed.createComponent(ProjectsComponent);
         const projects = fixture.componentInstance;;
