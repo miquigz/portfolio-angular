@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   constructor(private route:Router, settingsService:SettingsService){
     this.routeAct = route.url;
-    this.darkMode$ = settingsService.darkModeObservable;
+    this.darkMode$ = settingsService.darkModeObservable || false;
   }
 
   ngOnInit(){

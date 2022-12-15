@@ -14,7 +14,7 @@ import { NavItem } from 'src/app/core/interfaces/nav-item';
 })
 export class NavItemComponent implements OnInit {
 
-  @Input() item!:NavItem;
+  @Input() item:NavItem = {    svgHTML: '', name: '', spanDesc:'', href:''};
 
   @Output() selectedSection:EventEmitter<string> = new EventEmitter();
   linkToComponent: boolean = false;

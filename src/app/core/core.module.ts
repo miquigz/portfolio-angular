@@ -13,6 +13,8 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { SafePipe } from './pipes/safe.pipe';
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     FooterComponent,
     SettingsComponent,
-    NavItemComponent
+    NavItemComponent,
+    SafePipe
   ],
   imports: [
     CommonModule,
@@ -31,7 +34,8 @@ import { FooterComponent } from './components/footer/footer.component';
   exports:[
     NavbarComponent,
     SettingsComponent,
-    FooterComponent
+    FooterComponent,
+    SafePipe
   ],
   providers:[SettingsService, LocalService]
 })

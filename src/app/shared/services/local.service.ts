@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class LocalService {
 
+  
+  constructor() { }
+  
   setData(key:any, data:string) {
     // const jsonData = JSON.stringify(data)
     localStorage.setItem(key, data)
@@ -16,5 +19,4 @@ export class LocalService {
     localStorage.removeItem(key)
   }
 
-  constructor() { }
 }

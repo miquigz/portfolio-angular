@@ -8,7 +8,7 @@ import { ProjectItem } from 'src/app/layout/interfaces/project-item';
 })
 export class ProjectItemComponent implements OnInit {
 
-  @Input() project!:ProjectItem;
+  @Input() project:ProjectItem = { title: '', desc: '', imgSrc: '', smallDesc: '', hrefLink: '', altImg: ''}
   @Input() hoverActual:string = '';
   
   @Output() posOnComponent:EventEmitter<string> = new EventEmitter();

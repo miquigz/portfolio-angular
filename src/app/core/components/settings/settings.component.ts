@@ -33,8 +33,6 @@ export class SettingsComponent implements OnInit {
     this.settingsService.darkModeObservable = this.darkMode;
     this.localS.setData('darkMode', `${this.darkMode}`);
   }
-
-
   
   leaveSettings(){
     this.openSettings = false;

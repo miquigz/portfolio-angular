@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class SettingsService {
 
-  private darkModeObservablePrivate: BehaviorSubject<boolean> = 
-      new BehaviorSubject<boolean>(false);//Object default
-
+  private darkModeObservablePrivate: Subject<boolean> = 
+      new Subject<boolean>;// default value of darkMode
 
   get darkModeObservable():any{
     return this.darkModeObservablePrivate.asObservable();
@@ -15,7 +14,6 @@ export class SettingsService {
   set darkModeObservable(value:boolean) {
     this.darkModeObservablePrivate.next(value);
   }
-
 
   constructor() { }
 }

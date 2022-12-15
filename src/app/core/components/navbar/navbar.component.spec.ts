@@ -1,4 +1,4 @@
-import { SendMailService } from 'src/app/layout/services/send-mail.service';
+import { SettingsService } from './../../services/settings.service';
 import { TestBed } from '@angular/core/testing';
 import { NavbarComponent } from '../navbar/navbar.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,18 +12,33 @@ describe('NavbarComponent', () => {
             imports:[
                 BrowserAnimationsModule
             ],
-            providers:[SendMailService]
+            providers:[
+                SettingsService
+            ]
         }).compileComponents();
     });
 
+    tests();
+});
+
+function tests(){
+    it(`should be initialized`, () => {
+        const fixture = TestBed.createComponent(NavbarComponent);
+        fixture.detectChanges();
+        const navbar = fixture.componentInstance;
+        expect(navbar).toBeDefined();
+    });
+        
     it('should create the navbarComponent', () => {
         const fixture = TestBed.createComponent(NavbarComponent);
+        fixture.detectChanges();
         const navbar = fixture.componentInstance;
         expect(navbar).toBeTruthy();
     });
 
     it('should have a variable called "isOpen" with value "true" as default',()=>{
         const fixture = TestBed.createComponent(NavbarComponent);
+        fixture.detectChanges();
         const navbar = fixture.componentInstance;
         expect(navbar.isOpen).toBeTruthy; //Validation that it exists
         expect(navbar.isOpen).toEqual(true);
@@ -31,20 +46,12 @@ describe('NavbarComponent', () => {
 
     it(`should have a variable called "mostrar" with value '' as default`, ()=>{
         const fixture = TestBed.createComponent(NavbarComponent);
+        fixture.detectChanges();
         const navbar = fixture.componentInstance;
         expect(navbar.mostrar).toBeTruthy;
         expect(navbar.mostrar).toEqual('');
     })
     
-    it(`should set the value of variable called "mostrar" in '', mouseLeave()`, ()=>{
-        const fixture = TestBed.createComponent(NavbarComponent);
-        const navbar = fixture.componentInstance;
-        //unitary testing black box
-        const expectedResult = '';
-        navbar.mouseLeave();
-        expect(navbar.mostrar).toEqual(expectedResult);
-    })
-
     it(`should switch value of variable called "isOpen" in true/false, toggle()`, ()=>{
         const fixture = TestBed.createComponent(NavbarComponent);
         fixture.detectChanges();
@@ -57,7 +64,7 @@ describe('NavbarComponent', () => {
         expect(navbar.isOpen).toEqual(true) //ExpectedResult 2 - True
     })
 
-    it(`should have a className called "animate__jello" of variable "menu" as default`, ()=>{
+    it(`should have a class called "animate__jello" in the variable "menu" as default`, ()=>{
         const fixture = TestBed.createComponent(NavbarComponent);
         fixture.detectChanges();
         const navbar = fixture.componentInstance;
@@ -80,4 +87,5 @@ describe('NavbarComponent', () => {
         expect(navbar.menu.nativeElement.classList.contains('animate__rubberBand')).toBeFalse;
         expect(navbar.menu.nativeElement.classList.contains('animate__jello')).toBeTrue;
     })
-});
+
+}
