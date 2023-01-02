@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
+import { TranslateService } from '@ngx-translate/core';
+
 import { LocalService } from 'src/app/shared/services/local.service';
 import { SettingsService } from 'src/app/core/services/settings.service';
 
@@ -17,7 +19,7 @@ export class SettingsComponent implements OnInit {
 
   // data$:Observable<boolean>;
 
-  constructor(private settingsService:SettingsService, private localS:LocalService) { 
+  constructor(private settingsService:SettingsService, private localS:LocalService, private translate: TranslateService) { 
     // this.data$ = settingsService.darkModeObservable;
     if (localS.getData('darkMode') === 'true') {
       this.darkMode = true;
@@ -32,6 +34,14 @@ export class SettingsComponent implements OnInit {
     this.darkMode = !this.darkMode;//Variable aux, para evitar hacer un subscribe por un boolean q emitimos nosotros(component)
     this.settingsService.darkModeObservable = this.darkMode;
     this.localS.setData('darkMode', `${this.darkMode}`);
+  }
+
+  toggleLanguage(){
+    if(this.translate.currentLang === 'en'){
+      this.translate.use('es');
+    }else{
+      this.translate.use('en');
+    }
   }
   
   leaveSettings(){

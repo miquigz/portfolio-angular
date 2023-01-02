@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { LayoutComponent } from './pages/layout/layout.component';
 
 import { NgModule } from '@angular/core';
@@ -23,7 +24,10 @@ import { LayoutRoutingModule } from './layout-routing.module';
   imports: [
     CommonModule,
     ArrangementModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    TranslateModule.forChild({
+      extend: true
+  })
   ]
 })
 export class LayoutModule { }

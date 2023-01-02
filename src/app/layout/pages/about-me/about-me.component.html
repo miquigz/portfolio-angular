@@ -2,29 +2,30 @@
     <div
     data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200" 
     class="aboutme">
-        <h2 class="my-2 py-4 font-semibold">Acerca de mí</h2>
+        <h2 class="my-2 py-4 font-semibold">{{'MAIN.ABOUT.TITLE' | translate}}</h2>
             <div class="lg:mx-8 w-full">
                 <p class="text-justify text-sm mx-2 p-1 sm:pt-4 sm:px-2">
-                    Hola! Soy Miqueas y soy programador desde 2020, en plena pandemia me incursione en este hermoso mundo de la programación, comencé programando en Processing, luego en la facultad programando en papel (Pascal), a partir de ahí me comenzó a apasionar la programación y la tecnología.
+                    {{'MAIN.ABOUT.DESC1' | translate}}
                 </p>
-                <p class="text-justify text-sm mx-2 p-1 sm:pt-1 sm:px-2">Actualmente me encuentro estudiando Analista en Tecnologías de la Información y la Comunicación en la facultad de informática (UNLP).</p>
-                <p class="text-justify text-sm mx-2 p-1 sm:pt-1 sm:px-2">Además de esto soy consciente de que el mundo de la programación es inmenso y no basta con quedarse con los estudios formales, y es por esto que combino mi formación académica con mi curiosidad y personalidad autodidacta.</p>
-                <p class="text-justify text-sm mx-2 p-1 sm:py-1 sm:px-2">Por el momento estoy enfocándome en el stack MEAN, aprendiendo cada vez más de Angular, TypeScript, RxJS, nodeJS, tengo muchas ganas de seguir progresando y tener nuevos retos con la programación cada dia.</p>
-                <p class="text-sm mx-2 p-1 sm:pt-4 sm:px-2 text-center sm:text-base text-justify">Si quieres que programemos algo, o charlemos, no dudes en contactarme.</p>
+                <p class="text-justify text-sm mx-2 p-1 sm:pt-1 sm:px-2">{{'MAIN.ABOUT.DESC2' | translate}}</p>
+                <p class="text-justify text-sm mx-2 p-1 sm:pt-1 sm:px-2">{{'MAIN.ABOUT.DESC3' | translate}}</p>
+                <p class="text-justify text-sm mx-2 p-1 sm:py-1 sm:px-2">{{'MAIN.ABOUT.DESC4' | translate}}</p>
+                <p class="text-justify text-sm mx-2 p-1 sm:py-1 sm:px-2">{{'MAIN.ABOUT.DESC5' | translate}}</p>
+                <p class="text-justify text-sm mx-2 p-1 sm:py-1 sm:px-2">{{'MAIN.ABOUT.DESC6' | translate}}</p>
+                <p class="text-sm mx-2 p-1 sm:pt-4 sm:px-2 text-center sm:text-base text-justify">{{'MAIN.ABOUT.CONTACT' | translate}}</p>
             </div>
             
-            
-            <p class="w-full text-center mt-2 sm:mb-0 mb-4">Gracias por ver mi portfolio!</p>
-            <p class="text-center sm:text-base items-center">Les invito a descargar mi CV para mayor información:</p>
+            <p class="w-full text-center mt-2 sm:mb-0 mb-4">{{'MAIN.ABOUT.THANKS' | translate}}</p>
+            <p class="text-center sm:text-base items-center">{{'MAIN.ABOUT.CVDOWNLOAD' | translate}}</p>
         <div class="w-full flex justify-center">
             <a href="./../../../assets/CV.pdf" download="CV Miqueas Gimenez" (click)="successDownload()"
-            class="button-about animate-button-download">Descargar CV
+            class="button-about animate-button-download">{{'MAIN.ABOUT.DOWNLOAD' | translate}} CV
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="rounded-sm ml-2" width="20" height="20" viewBox="0 0 24 24"><path d="M 10 0 L 10 10 L 6.5 10 L 12 17.5 L 17.5 10 L 14 10 L 14 0 Z M 0 22 L 0 24 L 24 24 L 24 22 Z"></path>
             </svg></a>
         </div>
         <div class="w-full flex justify-center mb-4">
             <a (click)="openFormMail()"
-            class="button-about animate-button-download">Enviarme un Mail
+            class="button-about animate-button-download">{{'MAIN.ABOUT.SENDMAIL' | translate}}
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="rounded-lg ml-2"
                 width="24" height="24" viewBox="0 0 50 50"><path d="M 0 8 L 0 10.542969 C 6.473 16.089969 19.711219 27.428359 20.824219 28.318359 C 22.213219 29.507359 23.606 29.599609 24 29.599609 C 24.304493 29.599609 25.206585 29.538696 26.228516 28.974609 C 26.279271 29.025187 27.41935 30.158671 27.693359 30.431641 C 26.130899 31.470117 24.630072 31.599609 24 31.599609 C 23.272 31.599609 21.381828 31.429375 19.548828 29.859375 C 19.222828 29.599375 4.175 16.755734 0 13.177734 L 0 42 L 39.337891 42 C 41.312858 43.953631 42.823001 45.439453 42.851562 45.439453 C 42.853494 45.441366 42.85737 45.443401 42.859375 45.445312 L 43.150391 45.734375 C 44.744391 47.321375 47.333734 47.519375 48.927734 45.734375 C 50.421734 44.147375 50.322125 41.767078 48.828125 40.080078 L 48.130859 39.386719 L 48 39.257812 L 48 13.111328 C 45.258846 15.469773 34.841415 24.393529 33.896484 25.203125 L 32.486328 23.796875 C 37.036019 19.899722 43.463801 14.375807 48 10.472656 L 48 8 L 0 8 z M 26.490234 23.46875 L 30.414062 24.509766 L 46.785156 40.726562 L 43.847656 43.650391 L 43.798828 43.699219 L 27.625 27.484375 L 26.490234 23.46875 z"></path></svg>
             </a>

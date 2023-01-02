@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './../shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,7 +30,10 @@ import { SafePipe } from './pipes/safe.pipe';
     CommonModule,
     BrowserAnimationsModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    TranslateModule.forChild({
+      extend: true
+    })
   ],
   exports:[
     NavbarComponent,

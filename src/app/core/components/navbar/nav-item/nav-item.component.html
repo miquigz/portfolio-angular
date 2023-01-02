@@ -35,7 +35,7 @@ class="animate-hover-svg"
 
 <!--  messages span  -->
 <div *ngIf="mostrar === this.item.name" class="absolute justify-center animate__fadeIn animate__fast animate__animated">
-    <span class="span-nav">{{item.spanDesc}}</span>
+    <span class="span-nav">{{('NAVBAR.' + item.name) | translate}}</span>
 </div>
 
 <!-- //TODO: Pasar a ngSwitch -->

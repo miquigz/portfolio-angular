@@ -5,7 +5,7 @@
         <div class="my-4 lg:px-32">
             <div class="mx-auto max-w-[7xl] px-4 sm:px-6 lg:px-8">
                 <div class="mx-auto max-w-[2xl] py-16 sm:py-24 lg:max-w-none lg:py-16">
-                    <h2 class="text-2xl text-center font-bold">PROJECTS</h2>
+                    <h2 class="text-2xl text-center font-bold">{{'MAIN.PROJECTS.TITLE' | translate}}</h2>
                     <div class=" mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
                         <app-project-item 
                             (posOnComponent)="changeActComponent($event)" [hoverActual]="hoverActual"
@@ -13,11 +13,11 @@
                             [project]="project" >
                         </app-project-item>
                     </div>
-                    <div class="mt-4 py-4 text-black dark:text-white">
-                        <small class="mt-4 py-4">Actualmente me encuentro trabajando en muchos mas proyectos, si quiere ver mi: <a class="underline text-indigo-300" href="https://github.com/miquigz" target="_blank">actividad diaria</a>. </small>
-                    </div>
                 </div>
             </div>
+        </div>
+        <div class="mb-4 pb-4 text-black dark:text-white w-5/6 lg:text-center">
+            <small class="mt-4 py-4">{{'MAIN.PROJECTS.DESC' | translate}} <a class="underline text-indigo-300" href="https://github.com/miquigz" target="_blank">{{'MAIN.PROJECTS.DESC_LINK' | translate}}</a>. </small>
         </div>
     </div>
 </div>

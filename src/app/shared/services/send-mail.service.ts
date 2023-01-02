@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
+import { TranslateService } from '@ngx-translate/core';
 import Swal from 'sweetalert2';
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,7 @@ export class SendMailService {
   private userID:string = 'qBNUm7nhPvMF8_4z-';
   
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private translate:TranslateService) { }
 
   sendMail(formValues:string[]){
 
@@ -54,9 +56,34 @@ export class SendMailService {
   }
 
   openForm(){
+    
+    //IFEE to fire the Swal form
     (async () =>{
+      //Translation form 
+      const actions = {
+        confirm: 'Send',
+        cancel: 'Cancel'
+      }
+
+      let titleForm = 'Send Mail';
+      const place = {
+        name: 'Name',
+        lastname: 'Last Name',
+        email: 'Email',
+        subject: 'Subject',
+        body: 'Body of the email'
+      }
+
+      if (this.translate.currentLang === 'es'){
+        titleForm = 'Enviarme un Correo'; place.name = 'Nombre';
+        place.lastname = 'Apellido'; place.email = 'Correo';
+        place.subject = 'Asunto del correo'; place.body = 'Cuerpo del correo';
+        actions.confirm = 'Enviar'; actions.cancel = 'Cancelar';
+      }
+
+
       const { value: formValues } = await Swal.fire({
-        title: 'Enviarme un Correo',
+        title: `${titleForm}`,
         background: '#EFEDEF',
         showClass: {
           popup: 'animate__animated animate__fadeInDown animate__fast'
@@ -64,17 +91,17 @@ export class SendMailService {
         hideClass: {
           popup: 'animate__animated animate__fadeOutDown animate__faster'
         },
-        cancelButtonText:'Cancelar',
+        cancelButtonText:`${actions.cancel}`,
         cancelButtonColor:'#b6aab1',
         confirmButtonColor: '#ACB6E5',
-        confirmButtonText:'Enviar',
+        confirmButtonText:`${actions.confirm}`,
         html:
         `<div class="flex justify-center items-center flex-col">
-          <input id="swal-input1" maxlength="24" type="text" placeholder="Nombre" class="minimalist-input">
-          <input id="swal-input2" maxlength="24" type="text" placeholder="Apellido" class="minimalist-input">
-          <input id="swal-input3" type="email" placeholder="Email" class="minimalist-input">
-          <input id="swal-input4" placeholder="Asunto del Email" class="minimalist-input">
-          <textarea id="swal-input5" placeholder="Cuerpo del correo" class="minimalist-textarea"></textarea>
+          <input id="swal-input1" maxlength="24" type="text" placeholder="${place.name}" class="minimalist-input">
+          <input id="swal-input2" maxlength="24" type="text" placeholder="${place.lastname}" class="minimalist-input">
+          <input id="swal-input3" type="email" placeholder="${place.email}" class="minimalist-input">
+          <input id="swal-input4" placeholder="${place.subject}" class="minimalist-input">
+          <textarea id="swal-input5" placeholder="${place.body}" class="minimalist-textarea"></textarea>
         </div>`,//TODO: Generar msj de warnings en inputs con ngForm
         focusConfirm: false,
         showCancelButton: true,

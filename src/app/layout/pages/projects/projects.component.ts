@@ -38,7 +38,7 @@ export class ProjectsComponent implements OnInit{
       hrefLink: 'https://github.com/miquigz/AliceProject'
     },
     {
-      title:'Practicas de Programacion',
+      title:'Programming Practices',
       imgSrc:'../../../../assets/winmipsAssembly.webp',
       desc:'Practicas de Programacion hechas en la facultad',
       smallDesc:'Hechas en 2021-2022',

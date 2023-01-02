@@ -1,0 +1,46 @@
+{
+    "NAVBAR": {
+        "perfil":"Inicio",
+        "about":"Sobre mí",
+        "projects":"Proyectos",
+        "contact":"Contáctame",
+        "cv":"Descargar CV",
+        "linkedin":"Linkedin",
+        "github":"Github"
+    },
+    "SETTINGS":{
+        "TITLE":"Opciones",
+        "INFO":"Información acerca de la aplicación",
+        "DARKMODE":"Modo oscuro",
+        "LANGUAGE":"Cambiar a inglés"
+    },
+    "MAIN": {
+        "PERFIL": {
+            "DESC":"Desarrollador Full Stack"
+        },
+        "PROJECTS": {
+            "TITLE":"Proyectos",
+            "DESC":"Actualmente me encuentro trabajando en muchos mas proyectos, si quiere ver mi:",
+            "DESC_LINK":"actividad diaria"
+        },
+        "ABOUT": {
+            "TITLE":"Sobre mí",
+            "DESC1":"Hola! Soy Miqueas y soy programador desde 2020, en plena pandemia me incursione en este hermoso mundo de la programación, comencé programando en Processing, luego en la facultad programando en papel (Pascal), a partir de ahí me comenzó a apasionar la programación y la tecnología.",
+            "DESC2": "Me gusta el orden y la estética, trato de replicar mis gustos en la creacion de interfaces de usuario atractivas, amigables y accessibles (a11y), también me gusta todo lo relacionado al manejo de datos, considero que hoy en dia es el nuevo petróleo(oro negro), por lo que me gusta mucho crear aplicaciones que puedan ser usadas para gestiones de datos.",
+            "DESC3": "Actualmente me encuentro estudiando Tecnologías de la Información y la Comunicación (Analista en TIC) en la Facultad de Informática (UNLP).",
+            "DESC4": "Además de esto soy consciente de que el mundo de la programación es inmenso y no basta con quedarse con los estudios formales, y es por esto que combino mi formación académica con mi curiosidad y personalidad autodidacta.",
+            "DESC5": "Por el momento estoy enfocándome en las siguientes tecnologias: Front:Angular(Material, primeNG, ng2-charts), TailwindCSS(flowbite), RxJS, TypeScript, BackEnd: NodejS(NestJS + expressJS) DB: MongoDB, MySql, MariaDB",
+            "DESC6": "Ademas me encuentro interesado, aprendiendo e investigando en nuevas tecnologias y conceptos, tales como: .NET(C#), Testing: Jasmine y Karma, Cloud: Azure",
+            "CONTACT":"Si quieres que programemos algo, o charlemos, no dudes en contactarme.",
+            "THANKS": "Gracias por ver mi portfolio!",
+            "CVDOWNLOAD":"Les invito a descargar mi CV para mayor información:",
+            "DOWNLOAD": "Descargar",
+            "SENDMAIL":"Enviarme un mail"
+        }
+    },
+    "INFOAPP":{
+        "TITLE":"Portfolio Minimalista Responsive",
+        "DESC":"SPA hecho con Angular14, TailwindCSS y TypeScript, RxJS, Material, SweetAlert, aos, ng-arrangement, etc.",
+        "LINKREPO":"Link al repositorio GitHub"
+    }
+}
