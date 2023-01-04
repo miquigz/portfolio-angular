@@ -42,5 +42,9 @@
         "TITLE":"Portfolio Minimalista Responsive",
         "DESC":"SPA hecho con Angular14, TailwindCSS y TypeScript, RxJS, Material, SweetAlert, aos, ng-arrangement, etc.",
         "LINKREPO":"Link al repositorio GitHub"
+    },
+    "FOOTER":{
+        "DESC": "©2022 - Creado por Miqueas Gimenez",
+        "CONTACT": "contáctame"
     }
 }

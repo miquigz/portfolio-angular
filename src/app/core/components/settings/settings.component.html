@@ -30,7 +30,7 @@ class="fixed">
             <p routerLink="info" routerLinkActive="text-indigo-400 font-semibold" class="cursor-pointer hover:text-indigo-400 p-2 rounded-sm text-sm mx-2 sm:text-md sm:mx-6 my-2 text-center bg-nav">
                 {{'SETTINGS.INFO' | translate}}
             </p>
-            <p (click)="toggleDarkMode()" 
+            <p (click)="toggleDarkMode()"  [class]="darkMode ? 'text-indigo-400 font-semibold' : '' "
             class="cursor-pointer hover:text-indigo-400 p-2 rounded-sm text-sm mx-2 sm:text-md sm:mx-6 my-2 text-center bg-nav">
                 {{'SETTINGS.DARKMODE' | translate}}
             </p>
