@@ -28,7 +28,7 @@ export class LayoutComponent implements OnInit,  OnDestroy{
     settingsService:SettingsService,
     private loadComp:LoadedComponentsService
     ) {
-    this.darkMode$ = settingsService.darkModeObservable;
+    this.darkMode$ = settingsService.getDarkModeObservable();
   }
 
   ngOnInit(): void {

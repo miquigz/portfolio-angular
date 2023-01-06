@@ -1,19 +1,33 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',//Singleton service
+})
 export class SettingsService {
 
-  private darkModeObservablePrivate: Subject<boolean> = 
-      new Subject<boolean>;// default value of darkMode
+  private _darkModeObservablePrivate: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  get darkModeObservable():any{
-    return this.darkModeObservablePrivate.asObservable();
+  getDarkModeObservable():Observable<boolean>{
+    return this._darkModeObservablePrivate.asObservable();
   }
 
   set darkModeObservable(value:boolean) {
-    this.darkModeObservablePrivate.next(value);
+    this._darkModeObservablePrivate.next(value);
   }
 
-  constructor() { }
+  constructor() {
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      this._darkModeObservablePrivate.subscribe((value)=>{
+        console.log('dark mode browser', value)
+      })
+      this.darkModeObservable = true;//Ref to darkModeObservable setter
+      // this.localS.setData('darkMode', `true`);
+      console.log('dark mode browser')
+    }else{
+      this.darkModeObservable = false;
+      // this.localS.setData('darkMode', `false`);
+      console.log('light mode browser')
+    }
+  }
 }

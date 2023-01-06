@@ -19,7 +19,8 @@ export class WelcomeComponent implements OnInit, OnDestroy{
 
   private interval:any;
 
-  constructor(private route:Router) { }
+  constructor(private route:Router) {
+  }
 
   ngOnInit(): void {
     setTimeout(()=>{

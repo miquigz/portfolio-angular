@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
 
 import { SettingsService } from './core/services/settings.service';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
@@ -17,26 +16,29 @@ export class AppComponent implements OnInit {
   routeAct:string = '';
   darkMode$!:Observable<Boolean>;
 
-  constructor(private route:Router, settingsService:SettingsService, private translate:TranslateService){
-    this.routeAct = route.url;
-    this.darkMode$ = settingsService.darkModeObservable || false;
-
-    //Detect dark mode browser
-    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')){
-      settingsService.darkModeObservable = true;
-    }
-
+  constructor(
+      private route:Router,
+      private settingsService:SettingsService, 
+      translate:TranslateService
+    ){
+    this.routeAct = route.url;  
     translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');
     if(window.navigator.language === 'es-419')//Detect browser language
-      translate.use('es');
+      translate.use('es');  
   }
 
   ngOnInit(){
+
+    //Detect dark mode browser
+
+    this.darkMode$ = this.settingsService.getDarkModeObservable();
+
     this.routeAct = this.route.url;
     this.route.events.subscribe((event:Event) => {
       if(event instanceof NavigationStart)
         this.routeAct = event.url;
     });
   }
+
 }
