@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { LocalService } from 'src/app/shared/services/local.service';
 import { SettingsService } from 'src/app/core/services/settings.service';
+import { first } from 'rxjs';
 
 @Component({
   selector: 'app-settings',
@@ -31,7 +32,11 @@ export class SettingsComponent implements OnInit {
   }
 
   toggleDarkMode(){
-    this.darkMode = !this.darkMode;//Variable aux, para evitar hacer un subscribe por un boolean q emitimos nosotros(component)
+    this.settingsService.getDarkModeObservable()
+    .pipe(first())
+    .subscribe((data:boolean) => {
+      this.darkMode = !data;
+    });
     this.settingsService.darkModeObservable = this.darkMode;
     this.localS.setData('darkMode', `${this.darkMode}`);
   }

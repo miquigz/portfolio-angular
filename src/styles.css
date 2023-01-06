@@ -7,7 +7,7 @@
 
 @layer components {
     .li-item{
-        @apply mx-1 sm:mx-2 md:mx-3 py-1 px-1 sm:px-2 rounded-xl;
+        @apply mx-1 sm:mx-2 md:mx-3 py-0.5 sm:py-0 px-1 sm:px-2 rounded-xl;
         background-color: #b8bac28f;
     }
 
@@ -61,7 +61,7 @@
     .aboutme{
         @apply sm:p-2 lg:p-8 rounded-lg text-black text-lg sm:text-2xl
         bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC] neumorphism
-        w-full sm:w-6/12 h-full flex justify-center items-center rounded-lg flex-wrap
+        w-full sm:w-8/12 md:w-10/12 lg:w-8/12 h-full flex justify-center items-center rounded-lg flex-wrap
         darkMode;
     }
 
