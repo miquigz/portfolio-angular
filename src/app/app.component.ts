@@ -21,9 +21,12 @@ export class AppComponent implements OnInit {
     this.routeAct = route.url;
     this.darkMode$ = settingsService.darkModeObservable || false;
 
+    console.log('---', window.matchMedia('(prefers-color-scheme: dark)').matches);
+
     translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');
-    translate.use('en');
+    if(window.navigator.language === 'es-419')//Detect browser language
+      translate.use('es');
   }
 
   ngOnInit(){

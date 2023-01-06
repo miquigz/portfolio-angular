@@ -1,7 +1,8 @@
-import { LoadedComponentsService } from '../../services/loaded-components.service';
 import { Component, ViewChild, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { fromEvent, Observable, Subscription, throttleTime, tap } from 'rxjs';
+
 import { SettingsService } from 'src/app/core/services/settings.service';
+import { LoadedComponentsService } from '../../services/loaded-components.service';
 // import * as AOS from 'aos';
 
 @Component({
@@ -53,7 +54,7 @@ export class LayoutComponent implements OnInit,  OnDestroy{
   }
   
 //Methods:
-  onScroll() {
+  onScroll() { //Show components links nav when scroll down
     // console.log(window.pageYOffset < this.currentPosition);
     this.scrollUp = window.pageYOffset < this.currentPosition;
     if(!this.scrollUp){
