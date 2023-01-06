@@ -21,7 +21,10 @@ export class AppComponent implements OnInit {
     this.routeAct = route.url;
     this.darkMode$ = settingsService.darkModeObservable || false;
 
-    console.log('---', window.matchMedia('(prefers-color-scheme: dark)').matches);
+    //Detect dark mode browser
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')){
+      settingsService.darkModeObservable = true;
+    }
 
     translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');
