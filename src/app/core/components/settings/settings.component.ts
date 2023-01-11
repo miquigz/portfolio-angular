@@ -22,6 +22,7 @@ export class SettingsComponent implements OnInit {
 
   constructor(private settingsService:SettingsService, private localS:LocalService, private translate: TranslateService) { 
     // this.data$ = settingsService.darkModeObservable;
+    //TODO: Llevarlo al service
     if (localS.getData('darkMode') === 'true') {
       this.darkMode = true;
       this.settingsService.darkModeObservable = this.darkMode;

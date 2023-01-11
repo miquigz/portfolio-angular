@@ -19,6 +19,9 @@ export class LayoutComponent implements OnInit,  OnDestroy{
   scrollUp:boolean = false;
   currentPosition:number = window.pageYOffset;
 
+  scrollPercentage:number = 0;
+  // getScreenWidth:number;
+
   private sub!:Subscription;
   private subSection!:Subscription;
 
@@ -29,16 +32,31 @@ export class LayoutComponent implements OnInit,  OnDestroy{
     private loadComp:LoadedComponentsService
     ) {
     this.darkMode$ = settingsService.getDarkModeObservable();
+    // this.getScreenWidth = window.innerWidth;
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
     //Defect value
     this.loadComp.loadedAboutObservable = false;
     this.loadComp.loadedProjectsObservable = false;
+    this.sub = fromEvent(window, 'scroll')
+    .pipe(
+      throttleTime(1),//debounce
+      tap( ( _ ) =>{
+        this.onScroll();
 
-    this.sub = fromEvent(window, 'scroll').pipe(
-      throttleTime(300),//debounce
-      tap( ( _ ) => this.onScroll())
+        let scrollTop = window.scrollY;
+        let windowHeight = window.innerHeight;
+        let documentHeight = Math.max(
+          document.body.scrollHeight, document.documentElement.scrollHeight,
+          document.body.offsetHeight, document.documentElement.offsetHeight,
+          document.body.clientHeight, document.documentElement.clientHeight
+        );
+        this.scrollPercentage = Math.round( (scrollTop / (documentHeight - windowHeight)) * 100);
+        // console.log('asd'+ scrollPercentage);
+
+
+      })
     ).subscribe();
 
     this.subSection = this.loadComp.clickedElementObservable.subscribe((value:string)=>{
