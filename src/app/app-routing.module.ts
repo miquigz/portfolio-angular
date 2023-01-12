@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NoPreloading, PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -9,7 +9,7 @@ const routes: Routes = [
   ,
   {
     path: 'miqueas-gimenez',
-    loadChildren: ()=> import('./layout/layout.module').then(m => m.LayoutModule)
+    loadChildren: ()=> import('./home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'info',

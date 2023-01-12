@@ -1,8 +1,8 @@
-import { LoadedComponentsService } from './../../../../layout/services/loaded-components.service';
 import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 
 import Swal from 'sweetalert2';
 
+import { LoadedComponentsService } from './../../../../shared/services/loaded-components.service';
 import { SendMailService } from './../../../../shared/services/send-mail.service';
 import { NavItem } from 'src/app/core/interfaces/nav-item';
 

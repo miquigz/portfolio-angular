@@ -4,8 +4,8 @@ import { trigger, state, style, animate, transition, keyframes } from '@angular/
 
 import { fromEvent, Subscription, tap, throttleTime, Observable } from 'rxjs';
 
-import { LoadedComponentsService } from './../../../layout/services/loaded-components.service';
-import { SvgsService } from './../../services/svgs.service';
+import { LoadedComponentsService } from './../../../shared/services/loaded-components.service';
+import { SvgsNavbarService } from '../../services/svgs-navbar.service';
 import { NavItem } from '../../interfaces/nav-item';
 
 
@@ -58,7 +58,7 @@ export class NavbarComponent implements OnInit, OnDestroy{
 
   routeActual:string = 'none';
   //hooks
-  constructor(private svgs:SvgsService,
+  constructor(private svgs:SvgsNavbarService,
     loadedComp:LoadedComponentsService,
     private route:Router
     ) { 

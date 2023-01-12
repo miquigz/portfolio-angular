@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SvgsService } from './svgs.service';
+import { SvgsProfileService } from './svgs-profile.service';
 
-describe('SvgsService', () => {
-  let service: SvgsService;
+describe('SvgsProfileService', () => {
+  let service: SvgsProfileService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SvgsService);
+    service = TestBed.inject(SvgsProfileService);
   });
 
   it('should be created', () => {

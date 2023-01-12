@@ -1,10 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
+import { first } from 'rxjs';
 
 import { LocalService } from 'src/app/shared/services/local.service';
 import { SettingsService } from 'src/app/core/services/settings.service';
-import { first } from 'rxjs';
 
 @Component({
   selector: 'app-settings',

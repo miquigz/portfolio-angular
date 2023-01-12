@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ProjectItem } from 'src/app/layout/interfaces/project-item';
+
+import { ProjectItem } from 'src/app/home/interfaces/project-item';
 
 @Component({
   selector: 'app-project-item',

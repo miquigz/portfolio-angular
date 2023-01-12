@@ -1,8 +1,7 @@
 import { Component, ViewChild, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { fromEvent, Observable, Subscription, throttleTime, tap } from 'rxjs';
+import { fromEvent, Subscription, tap } from 'rxjs';
 
-import { SettingsService } from 'src/app/core/services/settings.service';
-import { LoadedComponentsService } from '../../services/loaded-components.service';
+import { LoadedComponentsService } from 'src/app/shared/services/loaded-components.service';
 // import * as AOS from 'aos';
 
 @Component({
@@ -26,13 +25,10 @@ export class LayoutComponent implements OnInit,  OnDestroy{
   private sub!:Subscription;
   private subSection!:Subscription;
 
-  darkMode$!:Observable<boolean>;
 //Hooks
 	constructor(
-    settingsService:SettingsService,
     private loadComp:LoadedComponentsService
     ) {
-    this.darkMode$ = settingsService.getDarkModeObservable();
     // this.getScreenWidth = window.innerWidth;
   }
 

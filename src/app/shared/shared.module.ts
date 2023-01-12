@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SafeHTMLPipe } from './pipes/safe-html.pipe';
 
 @NgModule({
   declarations: [
+    SafeHTMLPipe
   ],
   exports:[
-  ],
-  imports: [
-    CommonModule,
-    BrowserAnimationsModule
+    SafeHTMLPipe
   ]
 })
 export class SharedModule { }

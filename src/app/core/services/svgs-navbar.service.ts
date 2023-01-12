@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 
 import { NavItem } from '../interfaces/nav-item';
 //constants svgs
-import { SVG_HOME } from '../../core/constants/svg-home.constant';
-import { SVG_GITHUB } from '../../core/constants/svg-github.constant';
-import { SVG_LINKEDIN } from '../../core/constants/svg-linkedin.constant';
-import { SVG_CV } from '../../core/constants/svg-cv.constant';
-import { SVG_CONTACT } from '../../core/constants/svg-contact.constant';
-import { SVG_ABOUT } from '../../core/constants/svg-about.constant';
-import { SVG_PROJECTS } from '../../core/constants/svg-projects.constant';
+import { SVG_HOME } from '../constants/svg-home.constant';
+// import { SVG_GITHUB } from '../../core/constants/svg-github.constant';
+// import { SVG_LINKEDIN } from '../../core/constants/svg-linkedin.constant';
+import { SVG_CV } from '../constants/svg-cv.constant';
+import { SVG_CONTACT } from '../constants/svg-contact.constant';
+import { SVG_ABOUT } from '../constants/svg-about.constant';
+import { SVG_PROJECTS } from '../constants/svg-projects.constant';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SvgsService {
+export class SvgsNavbarService {
 //Data
   navItems:NavItem[] = [
     {
@@ -45,19 +45,19 @@ export class SvgsService {
       name: 'cv',
       spanDesc:'Descargar CV',
       href: './../../../assets/CV.pdf'
-    },
-    {
-      svgHTML: SVG_LINKEDIN,
-      name: 'linkedin',
-      spanDesc:'Linkedin',
-      href: 'https://www.linkedin.com/in/miqueasgimenez/'
-    },
-    {
-      svgHTML: SVG_GITHUB,
-      name: 'github',
-      spanDesc:'Github',
-      href: 'https://github.com/miquigz'
-    }
+    },//TODO: Refactor tests, disminuir cant total de items
+    // {
+    //   svgHTML: SVG_LINKEDIN,
+    //   name: 'linkedin',
+    //   spanDesc:'Linkedin',
+    //   href: 'https://www.linkedin.com/in/miqueasgimenez/'
+    // },
+    // {
+    //   svgHTML: SVG_GITHUB,
+    //   name: 'github',
+    //   spanDesc:'Github',
+    //   href: 'https://github.com/miquigz'
+    // }
   ]
   
   constructor() { }
@@ -73,9 +73,6 @@ export class SvgsService {
       console.log("Index out of range");
       return { ... this.navItems[0] };
     }
-    
   }
-
   
-
 }

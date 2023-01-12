@@ -1,0 +1,42 @@
+<div class="bg-transparent flex justify-center min-h-screen items-center">
+    <div class="div-perfil profile-div">
+        <div class="col-span-6 row-start-1 sm:row-end-1 col-end-1 sm:col-span-4">
+            <h1
+                class="text-4xl sm:text-6xl lg:text-8xl text-center py-8 animate__fadeIn animate__slower animate__animated">
+                {{'Miqueas Gimenez' | uppercase}}</h1>
+
+            <div class="text-md text-center w-full mb-4 pb-4 pt-2">
+                <p class="w-100">{{'MAIN.PERFIL.DESC' | translate}}</p>
+            </div>
+            <div class="w-full flex justify-center pb-8">
+                <div class="md:w-2/6 flex justify-center">
+
+<!--TODO: Llevar clases a .Css -->
+                    <a *ngFor="let itemSvg of socialItems; index as i"  class="transition-all duration-500 delay-75 animate-profile-svg mr-5 bg-gray-300 rounded-md py-2 pl-2 cursor-pointer flex text-lg items-center w-fit"
+                    (mouseenter)="showLink(i)" (mouseleave)="hideLink(i)">
+                        <span [innerHTML]="itemSvg.svg | safeHTML"></span>
+                        <span [ngClass]="{
+                            'w-24 scale-100': link[i] && itemSvg.userId === 'miquigz',
+                            'w-28 scale-100': link[i] && itemSvg.userId === 'Miqui#1181',
+                            'w-40 scale-100': link[i] && itemSvg.userId === 'miqueasgimenez',
+                            'scale-[0] w-0': !link[i]}"
+                            class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@{{itemSvg.userId}}
+                        </span>
+                    </a>
+                    
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-span-6 row-end-1 sm:row-start-1 sm:col-span-2 flex justify-center py-6 px-4 select-none">
+            <div class="flex justify-center items-center w-full">
+                <!-- <img class="h-64 w-64 sm:w-full sm:h-full rounded-lg border border-white shadow-xl" src="../../../../assets/me.webp" alt=""> -->
+            </div>
+            
+        </div>
+
+
+
+    </div>
+</div>

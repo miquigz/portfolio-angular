@@ -1,6 +1,9 @@
+import { SvgsProfileService } from './../../services/svgs-profile.service';
+import { SocialSVG } from './../../interfaces/social-svg';
 import { Component } from '@angular/core';
 
 import Swal from 'sweetalert2';
+import { SVG_DISCORD } from '../../constants/svg-discord.constant';
 
 @Component({
   selector: 'app-perfil',
@@ -9,10 +12,15 @@ import Swal from 'sweetalert2';
 })
 export class PerfilComponent {
 
+  //TODO: Hacer array
+  svgDC = SVG_DISCORD;
 
-  link:boolean[] = [false, false];
+  link:boolean[] = [false, false, false, false];
+  socialItems:SocialSVG[] = [];
 
-  constructor() { }
+  constructor(svgsProfileService:SvgsProfileService) {
+    this.socialItems = svgsProfileService.getAllSvgs();
+  }
 
   showLink(num:number){
     this.link[num] = true;
@@ -34,7 +42,6 @@ export class PerfilComponent {
     })
   
   }
-
 
   succesMessage:any = Swal.mixin({
     toast: true,
