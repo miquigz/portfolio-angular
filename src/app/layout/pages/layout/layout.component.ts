@@ -20,6 +20,7 @@ export class LayoutComponent implements OnInit,  OnDestroy{
   currentPosition:number = window.pageYOffset;
 
   scrollPercentage:number = 0;
+  private _documentHeight:number = 1;
   // getScreenWidth:number;
 
   private sub!:Subscription;
@@ -41,21 +42,18 @@ export class LayoutComponent implements OnInit,  OnDestroy{
     this.loadComp.loadedProjectsObservable = false;
     this.sub = fromEvent(window, 'scroll')
     .pipe(
-      throttleTime(1),//debounce
+      // throttleTime(1),//debounce
       tap( ( _ ) =>{
         this.onScroll();
-
-        let scrollTop = window.scrollY;
-        let windowHeight = window.innerHeight;
-        let documentHeight = Math.max(
+        // let scrollTop = window.scrollY;
+        // let windowHeight = window.innerHeight;
+        this._documentHeight = Math.max(
           document.body.scrollHeight, document.documentElement.scrollHeight,
           document.body.offsetHeight, document.documentElement.offsetHeight,
           document.body.clientHeight, document.documentElement.clientHeight
         );
-        this.scrollPercentage = Math.round( (scrollTop / (documentHeight - windowHeight)) * 100);
+        this.scrollPercentage = Math.round( (window.scrollY / (this._documentHeight - window.innerHeight)) * 100);
         // console.log('asd'+ scrollPercentage);
-
-
       })
     ).subscribe();
 

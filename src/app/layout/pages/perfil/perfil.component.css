@@ -1,0 +1,27 @@
+h1 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1rem;
+    background: #ACB6E5;
+    background: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .5rem;
+}
+
+.animate-profile-svg{
+    cursor:pointer;
+    transition: .7s;
+    transition-property: background-color, fill, color;
+}
+
+.animate-profile-svg:hover{
+    fill: #200f0f;
+    color: #200f0f!important;
+    background: linear-gradient(to bottom left, #ACB6E5 19%, #C9D6FF 100%);
+    transition: .6s;
+    transition-property: background-color, fill, color;
+}

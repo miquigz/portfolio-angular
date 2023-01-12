@@ -12,6 +12,7 @@ import { ProjectItemComponent } from './pages/projects/project-item/project-item
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { PercentageComponent } from './pages/layout/percentage/percentage.component';
+import { SkillsComponent } from './pages/skills/skills.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PercentageComponent } from './pages/layout/percentage/percentage.compon
     AboutMeComponent,
     ProjectItemComponent,
     PerfilComponent,
-    PercentageComponent
+    PercentageComponent,
+    SkillsComponent
   ],
   imports: [
     CommonModule,

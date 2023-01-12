@@ -1,0 +1,21 @@
+
+.main_div_skills{
+    @apply mb-12 mt-16 sm:mb-0 flex justify-center sm:mt-4 min-h-screen items-center;
+}
+
+.div_skills{
+    @apply sm:p-2 lg:p-8 rounded-lg text-black text-lg sm:text-2xl
+    bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC] neumorphism
+    w-full sm:w-8/12 md:w-10/12 lg:w-8/12 h-full flex justify-center items-center rounded-lg flex-wrap
+    darkMode;
+}
+
+.neumorphism{
+    /* box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff; */
+    box-shadow:  -5px -5px 50px #b6b2b2a8, 5px 5px 50px #dcd3d38a;
+}
+
+.darkMode{
+    @apply sm:dark:text-white sm:dark:bg-gradient-to-r sm:dark:from-[#413737d5] sm:dark:to-[#443434e1] dark:text-white
+    dark:bg-gradient-to-r dark:from-[#413737] dark:to-[#443434] dark:border-indigo-300/50 dark:border;
+}

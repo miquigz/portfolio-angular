@@ -1,12 +1,90 @@
 <div class="bg-transparent flex justify-center min-h-screen items-center">
-    <div class="div-perfil">
-        <div class="w-full flex justify-center py-6 px-4 select-none">
-            <img class="w-6/12 h-6/12 lg:w-3/12 lg:h-3/12 md:w-4/12 md:h-4/12 rounded-lg border border-white shadow-xl" src="../../../../assets/me.webp" alt="">
+    <div class="div-perfil rounded-lg text-black text-lg sm:text-2xl
+    grid grid-cols-6 grid-rows-2 sm:grid-rows-none
+    rounded-md flex-wrap w-full sm:w-8/12 h-full
+    bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC]">
+        <div class="col-span-6 row-start-1 sm:row-end-1 col-end-1 sm:col-span-4">
+            <h1
+                class="text-4xl sm:text-6xl lg:text-8xl text-center py-8 animate__fadeIn animate__slower animate__animated">
+                {{'Miqueas Gimenez' | uppercase}}</h1>
+
+            <div class="text-md text-center w-full mb-4 pb-4 pt-2">
+                <p class="w-100">{{'MAIN.PERFIL.DESC' | translate}}</p>
+            </div>
+            <div class="w-full flex justify-center">
+                <div class="md:w-2/6 flex justify-center">
+
+                    <a href="https://github.com/miquigz" target="_blank" (mouseenter)="showLink(1)"
+                        (mouseleave)="hideLink(1)"
+                        class="transition-all duration-500 delay-75 animate-profile-svg mr-5 bg-gray-300 rounded-md py-2 pl-2 cursor-pointer flex text-lg items-center w-fit">
+                        <svg width="35" height="35" class="svg-tam" x="0px" y="0px" width="35" height="35"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.673,21.633c-0.152,0.057 -0.322,0.035 -0.456,-0.057c-0.133,-0.093 -0.212,-0.245 -0.212,-0.407c-0.005,-0.842 -0.005,-2.139 -0.005,-2.139c0,-0.689 -0.241,-1.351 -0.728,-1.838c-0.21,-0.21 -0.451,-0.38 -0.713,-0.505c2.352,-0.547 4.074,-2.299 4.074,-4.373c0,-0.902 -0.325,-1.743 -0.887,-2.451c0.364,-1.281 0.021,-2.533 0.021,-2.533c-1.333,-0.013 -2.137,0.421 -2.579,0.79c-0.672,-0.229 -1.412,-0.356 -2.188,-0.356c-0.776,-0 -1.516,0.127 -2.188,0.356c-0.442,-0.369 -1.246,-0.803 -2.579,-0.79c0,0 -0.343,1.252 0.021,2.533c-0.562,0.708 -0.887,1.549 -0.887,2.451c-0,2.074 1.722,3.826 4.074,4.373c-0.262,0.125 -0.503,0.295 -0.713,0.505c-0.487,0.487 -0.728,1.149 -0.728,1.838l0,2.139c0,0.164 -0.08,0.318 -0.214,0.411c-0.135,0.094 -0.307,0.116 -0.461,0.058c-3.702,-1.47 -6.325,-5.085 -6.325,-9.308c0,-5.519 4.481,-10 10,-10c5.519,0 10,4.481 10,10c0,4.223 -2.623,7.838 -6.327,9.303Z">
+                            </path>
+                        </svg>
+
+                        <span [ngClass]="{
+                            'w-24 scale-100': link[1],
+                            'scale-[0] w-0': !link[1]}"
+                            class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@miquigz
+                        </span>
+                    </a>
+                    
+                    <a (click)="copyId('miquigz', 'Instagram')" target="_blank" (mouseenter)="showLink(3)"
+                        (mouseleave)="hideLink(3)"
+                        class="transition bg-gray-300 animate-profile-svg rounded-md mr-5 py-2 pl-2 cursor-pointer flex text-lg items-center w-fit">
+                        <svg width="35" height="35" class="svg-tam" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50"><path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"> </path></svg>
+                        <span [ngClass]="{
+                'w-24 scale-100': link[3],
+                'scale-[0] w-0': !link[3]}"
+                            class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@miquigz
+                        </span>
+                    </a>
+
+                    <a (click)="copyId('Miqui#1181', 'Discord')" (mouseenter)="showLink(2)" (mouseleave)="hideLink(2)"
+                        class="animate-profile-svg transition bg-gray-300 rounded-md mr-5 py-2 pl-2 cursor-pointer flex text-lg items-center w-fit">
+                        <svg  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="svg-tam" width="35" height="35"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M42.298,11.65c-0.676-1.021-1.633-1.802-2.768-2.256c-2.464-0.988-4.583-1.648-6.479-2.02	C31.721,7.114,30.404,7.768,29.771,9l-0.158,0.308c-1.404-0.155-2.895-0.207-4.593-0.164c-1.741-0.042-3.237,0.009-4.643,0.164	L20.22,9c-0.633-1.232-1.952-1.885-3.279-1.625c-1.896,0.371-4.016,1.031-6.479,2.02c-1.134,0.454-2.091,1.234-2.768,2.256	c-4.721,7.131-6.571,14.823-5.655,23.517c0.032,0.305,0.202,0.578,0.461,0.741c3.632,2.29,6.775,3.858,9.891,4.936	c1.303,0.455,2.748-0.054,3.517-1.229l1.371-2.101c-1.092-0.412-2.158-0.9-3.18-1.483c-0.479-0.273-0.646-0.884-0.373-1.363	c0.273-0.481,0.884-0.65,1.364-0.373c3.041,1.734,6.479,2.651,9.942,2.651s6.901-0.917,9.942-2.651	c0.479-0.277,1.09-0.108,1.364,0.373c0.273,0.479,0.106,1.09-0.373,1.363c-1.056,0.603-2.16,1.105-3.291,1.524l1.411,2.102	c0.581,0.865,1.54,1.357,2.528,1.357c0.322,0,0.647-0.053,0.963-0.161c3.125-1.079,6.274-2.649,9.914-4.944	c0.259-0.163,0.429-0.437,0.461-0.741C48.869,26.474,47.019,18.781,42.298,11.65z M18.608,28.983c-1.926,0-3.511-2.029-3.511-4.495	c0-2.466,1.585-4.495,3.511-4.495s3.511,2.029,3.511,4.495C22.119,26.954,20.534,28.983,18.608,28.983z M31.601,28.957	c-1.908,0-3.478-2.041-3.478-4.522s1.57-4.522,3.478-4.522c1.908,0,3.478,2.041,3.478,4.522S33.509,28.957,31.601,28.957z">
+                            </path>
+                        </svg>
+                        <span [ngClass]="{
+                    'w-28 scale-100': link[2],
+                    'scale-[0] w-0': !link[2]}"
+                            class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@Miqui#1181
+                        </span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/miqueasgimenez/" target="_blank" (mouseenter)="showLink(0)"
+                        (mouseleave)="hideLink(0)"
+                        class="transition bg-gray-300 rounded-md mr-5 animate-profile-svg py-2 pl-2 cursor-pointer flex text-lg items-center w-fit">
+                        <svg width="35" height="35" class="svg-tam" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 50 50">
+                            <path
+                                d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+                            </path>
+                        </svg>
+                        <span [ngClass]="{
+                    'w-40 scale-100': link[0],
+                    'scale-[0] w-0': !link[0]}"
+                            class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@miqueasgimenez
+                        </span>
+                    </a>
+                </div>
+
+
+            </div>
         </div>
-        <h1 class="text-4xl sm:text-6xl lg:text-8xl py-8 text-center animate__fadeInUp animate__slow animate__animated">{{'Miqueas Gimenez' | uppercase}}</h1>
-        <div class="text-md text-center w-full mb-4 pb-4 pt-2">
-            <p class="w-100">{{'MAIN.PERFIL.DESC' | translate}}</p>
+        <div class="col-span-6 row-end-1 sm:row-start-1 sm:col-span-2 flex justify-center py-6 px-4 select-none">
+            <div class="flex justify-center items-center w-full">
+                <img class="h-64 w-64 sm:w-full sm:h-full rounded-lg border border-white shadow-xl" src="../../../../assets/me.webp" alt="">
+            </div>
+            
         </div>
-        
+
+
+
     </div>
 </div>

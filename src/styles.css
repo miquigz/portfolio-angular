@@ -33,9 +33,7 @@
     }
 
     .div-perfil{
-        @apply rounded-lg text-black text-lg sm:text-2xl
-        flex justify-center items-center rounded-lg flex-wrap w-full sm:w-8/12 h-full
-        bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC]
+        @apply 
         darkMode neumorphism;
     }
     
