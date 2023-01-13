@@ -14,6 +14,7 @@
 <!--TODO: Llevar clases a .Css -->
                     <a *ngFor="let itemSvg of socialItems; index as i"  class="transition-all duration-500 delay-75 animate-profile-svg mr-5 bg-gray-300 rounded-md py-2 pl-2 cursor-pointer flex text-lg items-center w-fit"
                     (mouseenter)="showLink(i)" (mouseleave)="hideLink(i)">
+<!--TODO: poner a todos en true en mobile, + flexwrap/flex-col -->
                         <span [innerHTML]="itemSvg.svg | safeHTML"></span>
                         <span [ngClass]="{
                             'w-24 scale-100': link[i] && itemSvg.userId === 'miquigz',
@@ -23,7 +24,7 @@
                             class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@{{itemSvg.userId}}
                         </span>
                     </a>
-                    
+
                 </div>
 
 

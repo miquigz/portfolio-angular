@@ -1,5 +1,5 @@
 import { PerfilComponent } from './perfil.component';
-import { TESTING_PROVIDERS } from './../../../spec/constants';
+import { TESTING_PROVIDERS } from '../../../spec/constants.providers';
 import { TestBed } from '@angular/core/testing';
 
 describe('PerfilComponent', () => {

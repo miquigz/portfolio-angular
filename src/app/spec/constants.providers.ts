@@ -4,7 +4,7 @@ import { HttpHandler } from '@angular/common/http';
 import { LocalService } from 'src/app/shared/services/local.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { SettingsService } from './../core/services/settings.service';
+import { SettingsService } from '../core/services/settings.service';
 
 const testingProviders = [
     { provide: SettingsService, useValue: {} },

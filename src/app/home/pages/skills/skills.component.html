@@ -1,15 +1,76 @@
 <div class="main_div_skills">
-    <div data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200" class="div_skills">
+    <!--  -->
+    <div class="div_skills">
+        <!-- data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200" -->
         <h2 class="my-2 py-4 font-semibold">Skills / Habilidades</h2>
             <div class="lg:mx-8 w-full">
                 <!-- !Skills -->
-                <div class="bg-[#b8bac28f] h-6 w-6">
+                <div class="grid w-full grid-cols-9  gap-4">
+                    <div class="col-span-3 bg-[#b8bac28f] min-h-max h-full w-full rounded-md text-lg
+                    grid grid-cols-8 grid-rows-6 grid-gap-2 sm:hover:scale-[1.05] transition duration-300 delay-75">
+                        <div class="text-xl col-span-8 flex justify-center items-center">
+                            <h3>BackEnd</h3>
+                        </div>
+                        <span *ngFor="let itemSvg of backItems;index as i" (mouseenter)="onHoverSvg(i, 0)" (mouseleave)="offHoverSvg(i, 0)"
+                        class="flex justify-center flex-col items-center col-span-4 row-auto">
+                            <div class=" w-full flex justify-center flex-col items-center">
+                                <span>{{itemSvg.name}}</span>
+                                <span [ngClass]="{
+                                    'animate__rubberBand' : hoverItems[0][i] === true
+                                }"
+                                class="animate__animated animate__delay-1s" [innerHTML]="itemSvg.svg | safeHTML"></span>
+                            </div>
+                        </span>
+                    </div>
+                
+                    <div class="col-span-3 bg-[#b8bac28f] min-h-max h-full w-full rounded-md text-lg
+                    grid grid-cols-8 grid-rows-6 grid-gap-2 sm:hover:scale-[1.05] transition duration-300 delay-75"
+                    >
+                            <div class="text-xl col-span-8 flex justify-center items-center">
+                                <h3>FrontEnd</h3>
+                            </div>
+                            <span *ngFor="let itemSvg of frontItems;index as i" (mouseenter)="onHoverSvg(i, 1)" (mouseleave)="offHoverSvg(i, 1)"
+                            class="flex justify-center flex-col items-center col-span-4">
+                                <div class=" w-full flex justify-center flex-col items-center">
+                                    <span>{{itemSvg.name}}</span>
+                                    <span [ngClass]="{
+                                        ' animate__tada' : hoverItems[1][i] === true
+                                    }"
+                                    class="animate__animated animate__delay-1s" [innerHTML]="itemSvg.svg | safeHTML"></span>
+                                </div>
+                            </span>
+                        
+                    </div>
+
+                                    
+                    <div class="col-span-3 bg-[#b8bac28f] min-h-max h-full w-full rounded-md text-lg
+                    grid grid-cols-8 grid-rows-6 grid-gap-2 sm:hover:scale-[1.05] transition duration-300 delay-75"
+                    >
+                            <div class="text-xl col-span-8 flex justify-center items-center">
+                                <h3>Tools / Testing</h3>
+                            </div>
+                            <span *ngFor="let itemSvg of toolsItems;index as i" (mouseenter)="onHoverSvg(i, 2)" (mouseleave)="offHoverSvg(i, 2)"
+                            class="flex justify-center flex-col items-center col-span-4">
+                                <div class="w-full flex justify-center flex-col items-center">
+                                    <span>{{itemSvg.name}}</span>
+                                    <span [ngClass]="{
+                                        'animate__rubberBand' : hoverItems[2][i] === true
+                                    }"
+                                    class="animate__animated animate__delay-1s" [innerHTML]="itemSvg.svg | safeHTML"></span>
+                                
+                                </div>
+                            </span>
+                                
+                        
+                    </div>
+
+
+
 <!--TODO: hacer skills con iconos negros/blancos, segun el DarkMode, luego con un hover tenerlos con el gradient.
 Luego ver si esta bueno el ToolTip de material, sino hacerlo yo -->
 
 <!-- Despues de esto hacer la parte de educacion + experiencia -->
                 </div>
-                {{'' | safeHTML}}
             </div>
     </div>
 </div>

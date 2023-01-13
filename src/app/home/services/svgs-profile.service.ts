@@ -1,9 +1,11 @@
-import { SocialSVG } from './../interfaces/social-svg';
-import { SVG_LINKEDIN } from './../constants/svg-linkedin.constant';
-import { SVG_DISCORD } from './../constants/svg-discord.constant';
 import { Injectable } from '@angular/core';
-import { SVG_GITHUB } from '../constants/svg-github.constant';
-import { SVG_INSTAGRAM } from '../constants/svg-instagram.constant';
+
+import { SocialSVG } from './../interfaces/social-svg';
+//constants svgs
+import { SVG_DISCORD } from '../constants/profile-svgs/svg-discord.constant';
+import { SVG_LINKEDIN } from './../constants/profile-svgs/svg-linkedin.constant';
+import { SVG_GITHUB } from '../constants/profile-svgs/svg-github.constant';
+import { SVG_INSTAGRAM } from '../constants/profile-svgs/svg-instagram.constant';
 
 @Injectable({
   providedIn: 'root'

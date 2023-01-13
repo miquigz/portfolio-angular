@@ -3,7 +3,7 @@ import { SocialSVG } from './../../interfaces/social-svg';
 import { Component } from '@angular/core';
 
 import Swal from 'sweetalert2';
-import { SVG_DISCORD } from '../../constants/svg-discord.constant';
+import { SVG_DISCORD } from '../../constants/profile-svgs/svg-discord.constant';
 
 @Component({
   selector: 'app-perfil',

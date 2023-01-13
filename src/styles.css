@@ -85,7 +85,11 @@
 *{
     font-family: 'Didact Gothic', sans-serif;
 }
-
+/* animate css config*/
+:root {
+    --animate-delay: 0.5s;
+}
+/* ---------------*/
 .bg-common{
     background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%);
 }

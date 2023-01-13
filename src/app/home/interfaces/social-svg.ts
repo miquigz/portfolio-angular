@@ -1,5 +1,6 @@
-export interface SocialSVG {
-    svg:string;
+import { SVGItem } from './svg-item';
+
+export interface SocialSVG extends SVGItem {
     userId:string;
     href?:string;
 }

@@ -1,4 +1,4 @@
-import { TESTING_PROVIDERS } from './../../spec/constants';
+import { TESTING_PROVIDERS } from '../../spec/constants.providers';
 import { TestBed } from '@angular/core/testing';
 
 import { SettingsService } from './settings.service';

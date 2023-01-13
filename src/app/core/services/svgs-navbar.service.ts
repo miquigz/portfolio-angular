@@ -1,13 +1,13 @@
+
+
 import { Injectable } from '@angular/core';
 
 import { NavItem } from '../interfaces/nav-item';
 //constants svgs
 import { SVG_HOME } from '../constants/svg-home.constant';
-// import { SVG_GITHUB } from '../../core/constants/svg-github.constant';
-// import { SVG_LINKEDIN } from '../../core/constants/svg-linkedin.constant';
+import { SVG_ABOUT } from '../constants/svg-about.constant';
 import { SVG_CV } from '../constants/svg-cv.constant';
 import { SVG_CONTACT } from '../constants/svg-contact.constant';
-import { SVG_ABOUT } from '../constants/svg-about.constant';
 import { SVG_PROJECTS } from '../constants/svg-projects.constant';
 
 @Injectable({
