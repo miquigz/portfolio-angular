@@ -2,7 +2,7 @@
     <div class="div-perfil profile-div">
         <div class="col-span-6 row-start-1 sm:row-end-1 col-end-1 sm:col-span-4">
             <h1
-                class="text-4xl sm:text-6xl lg:text-8xl text-center py-8 animate__fadeIn animate__slower animate__animated">
+                class="text-4xl sm:text-6xl lg:text-8xl w-full sm:w-fit text-center py-8 animate__fadeIn animate__slower animate__animated">
                 {{'Miqueas Gimenez' | uppercase}}</h1>
 
             <div class="text-md text-center w-full mb-4 pb-4 pt-2">
@@ -12,18 +12,36 @@
                 <div class="md:w-2/6 flex justify-center">
 
 <!--TODO: Llevar clases a .Css -->
-                    <a *ngFor="let itemSvg of socialItems; index as i"  class="transition-all duration-500 delay-75 animate-profile-svg mr-5 bg-gray-300 rounded-md py-2 pl-2 cursor-pointer flex text-lg items-center w-fit"
-                    (mouseenter)="showLink(i)" (mouseleave)="hideLink(i)">
+                    <ng-container *ngFor="let itemSvg of socialItems; index as i">
 <!--TODO: poner a todos en true en mobile, + flexwrap/flex-col -->
-                        <span [innerHTML]="itemSvg.svg | safeHTML"></span>
-                        <span [ngClass]="{
-                            'w-24 scale-100': link[i] && itemSvg.userId === 'miquigz',
-                            'w-28 scale-100': link[i] && itemSvg.userId === 'Miqui#1181',
-                            'w-40 scale-100': link[i] && itemSvg.userId === 'miqueasgimenez',
-                            'scale-[0] w-0': !link[i]}"
-                            class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@{{itemSvg.userId}}
-                        </span>
-                    </a>
+                        <ng-container *ngIf="itemSvg.href !== ''; else withoutHref">
+                            <a (mouseenter)="showLink(i)" (mouseleave)="hideLink(i)"
+                            [href]="itemSvg.href" target="_blank"
+                            class="sm:transition-all sm:duration-500 sm:delay-75 animate-profile-svg mr-5 bg-gray-300 rounded-md py-0.5 sm:py-2 pl-2 cursor-pointer flex sm:text-lg items-center w-fit">
+                                <span [innerHTML]="itemSvg.svg | safeHTML"></span>
+                                <span [ngClass]="{
+                                    'w-24 scale-100': link[i] && itemSvg.userId === 'miquigz',
+                                    'w-40 scale-100': link[i] && itemSvg.userId === 'miqueasgimenez',
+                                    'scale-[0] w-0': !link[i]}"
+                                    class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@{{itemSvg.userId}}
+                                </span>
+                            </a>
+                        </ng-container>
+                        <ng-template #withoutHref>
+                            <div (mouseenter)="showLink(i)" (mouseleave)="hideLink(i)"
+                            (click)="copyId(itemSvg.userId, i)"
+                            class="transition-all duration-500 delay-75 animate-profile-svg mr-5 bg-gray-300 rounded-md py-2 pl-2 cursor-pointer flex text-lg items-center w-fit">
+                                <span  
+                                [innerHTML]="itemSvg.svg | safeHTML"></span>
+                                <span [ngClass]="{
+                                    'w-24 scale-100': link[i] && itemSvg.userId === 'miquigz',
+                                    'w-28 scale-100': link[i] && itemSvg.userId === 'Miqui#1181',
+                                    'scale-[0] w-0': !link[i]}"
+                                    class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@{{itemSvg.userId}}
+                                </span>
+                            </div>
+                        </ng-template>
+                    </ng-container>
 
                 </div>
 
@@ -32,7 +50,7 @@
         </div>
         <div class="col-span-6 row-end-1 sm:row-start-1 sm:col-span-2 flex justify-center py-6 px-4 select-none">
             <div class="flex justify-center items-center w-full">
-                <!-- <img class="h-64 w-64 sm:w-full sm:h-full rounded-lg border border-white shadow-xl" src="../../../../assets/me.webp" alt=""> -->
+                <img class="h-64 w-64 sm:w-full sm:h-full rounded-lg border border-white shadow-xl" src="../../../../assets/me.webp" alt="">
             </div>
             
         </div>

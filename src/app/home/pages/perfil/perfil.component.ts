@@ -15,22 +15,29 @@ export class PerfilComponent {
   //TODO: Hacer array
   svgDC = SVG_DISCORD;
 
+  screenWidth:number;
+
   link:boolean[] = [false, false, false, false];
   socialItems:SocialSVG[] = [];
 
   constructor(svgsProfileService:SvgsProfileService) {
     this.socialItems = svgsProfileService.getAllSvgs();
+    this.screenWidth = window.innerWidth;
   }
 
   showLink(num:number){
-    this.link[num] = true;
+    if (this.screenWidth > 680){//TODO: Evento de resize? si hace falta
+      this.link[num] = true;
+    }
   }
 
   hideLink(num:number){
     this.link[num] = false;
   }
 
-  copyId(id:string, copyText:string){
+  copyId(id:string, index:number){
+    const text:string[] = ['Instagram', 'Discord'];
+
     let textId:string = id;
     console.log(textId);
     
@@ -38,7 +45,7 @@ export class PerfilComponent {
   
     this.succesMessage.fire({
       icon: 'success',
-      title: `${copyText} username copied!`
+      title: `${text[index - 1]} username copied!`
     })
   
   }

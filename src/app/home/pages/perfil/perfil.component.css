@@ -28,11 +28,11 @@ p {
 
 .profile-div{
     @apply rounded-lg text-black text-lg sm:text-2xl
-    grid grid-cols-6 grid-rows-2 sm:grid-rows-none
-    rounded-md flex-wrap w-full sm:w-8/12 h-full
+    grid grid-cols-6 sm:grid-rows-none
+    rounded-md w-full md:w-8/12 h-full
     bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC];
 }
 
 .svg-tam-profile{
-    @apply w-6 h-6 sm:w-9 sm:h-9 dark:fill-white;
+    @apply w-4 h-4 sm:w-9 sm:h-9 dark:fill-white;
 }

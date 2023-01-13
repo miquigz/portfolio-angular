@@ -16,7 +16,7 @@ export class SvgsProfileService {
     {
       svg: SVG_GITHUB,
       userId: "miquigz",
-      href: ""
+      href: "https://github.com/miquigz"
     },
     {
       svg: SVG_INSTAGRAM,
@@ -31,7 +31,7 @@ export class SvgsProfileService {
     {
       svg: SVG_LINKEDIN,
       userId: "miqueasgimenez",
-      href: ""
+      href: "https://www.linkedin.com/in/miqueasgimenez/"
     }
   ]
 
