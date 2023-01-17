@@ -1,14 +1,11 @@
 
 .main_div_skills{
-    @apply mb-12 mt-16 sm:mb-0 flex justify-center sm:mt-4 min-h-screen items-center;
+    @apply mb-12 mt-16 sm:mb-0 flex justify-center sm:mt-4 items-center;
 }
-
+/* 
 .div_skills{
-    @apply sm:p-2 lg:p-8 rounded-lg text-black text-lg sm:text-2xl
-    bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC] neumorphism
-    w-full sm:w-8/12 md:w-10/12 lg:w-8/12 h-full flex justify-center items-center rounded-lg flex-wrap
-    darkMode;
-}
+    @apply ;
+} */
 
 .neumorphism{
     /* box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff; */
@@ -24,9 +21,18 @@
     @apply w-6 h-6 sm:w-9 sm:h-9 dark:fill-white fill-black;
 }
 
+.cls-1{fill:#9c85b8;}.cls-2{fill:#8057ac;}.cls-3{fill:#caa3e7}.cls-4{fill:#b2a9be;}.cls-5{fill:#fff;}
+
 /* url(#a58bcd, #652c93) */
 .asd{
     color:#82719e;
     background: #8057ac;
     background: #9c85b8;
+}
+
+.cols-skills{
+    @apply col-span-7 md:col-start-auto md:col-span-3 bg-[#b8bac28f] min-h-max h-full w-full rounded-md text-lg
+    sm:hover:shadow-2xl dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border
+    select-none
+    grid col-start-2 grid-cols-8 grid-rows-6 gap-2 sm:hover:scale-[1.05] transition duration-300 delay-75;
 }

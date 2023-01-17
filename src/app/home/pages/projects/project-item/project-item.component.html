@@ -1,6 +1,8 @@
 <div (mouseenter)="onComponent()" (mouseleave)="leaveComponent()"
 class="group project-animate project-item-style bg-mobile
-relative mt-16 md:mx-4 sm:mt-5 lg:mt-8 border-2 border-indigo-200/50 rounded-xl sm:bg-gray-100"
+relative mt-16 md:mx-4 sm:mt-5 lg:mt-8 border-2 border-indigo-200/50 rounded-xl 
+dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border
+ sm:bg-gray-100"
 [class.blured-project]="hoverActual !== '' && hoverActual !== project.title">
     <div class="responsive-img animate-img-hover">
         <img [src]="project.imgSrc" [alt]="project.altImg" class="h-full w-full object-cover object-center grayscale-[70%] sm:hover:grayscale-0 ">
@@ -8,7 +10,7 @@ relative mt-16 md:mx-4 sm:mt-5 lg:mt-8 border-2 border-indigo-200/50 rounded-xl 
     <h3 class="mt-1 text-center text-sm text-gray-500">
         <a [href]="project.hrefLink" target="_blank">
             <span class="absolute inset-0"></span>
-            <p class="title-project text-center text-base text-gray-900">{{project.title}}</p>
+            <p class="title-project text-center dark:text-white text-base text-gray-900">{{project.title}}</p>
         </a>
     </h3>
     <div [class.sm:text-transparent]="!hoverComponent" class="text-xs text-center text-black dark:text-gray-100 font-semi-bold mb-2">

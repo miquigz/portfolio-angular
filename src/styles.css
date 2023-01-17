@@ -31,15 +31,14 @@
         
         /* background: linear-gradient(93.37deg, #F1F1F1 -6.79%, #ECECEC 107.27%); */
     }
-
-    .div-perfil{
-        @apply 
-        darkMode neumorphism;
+/* 
+    .perfil-darkmode{
+        @apply darkMode neumorphism;
     }
-    
+     */
     .div-projects-grid{
         @apply rounded-lg neumorphism
-        text-black text-lg sm:text-2xl h-full w-full sm:w-8/12 md:w-10/12 lg:w-8/12
+        text-black text-lg sm:text-2xl w-full md:w-10/12 lg:w-8/12 h-full
         bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1]
         darkMode
         flex justify-center items-center rounded-lg flex-wrap min-h-screen;
@@ -60,13 +59,15 @@
     .aboutme{
         @apply sm:p-2 lg:p-8 rounded-lg text-black text-lg sm:text-2xl
         bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC] neumorphism
-        w-full sm:w-8/12 md:w-10/12 lg:w-8/12 h-full flex justify-center items-center rounded-lg flex-wrap
+        w-full md:w-10/12 lg:w-8/12 h-full flex justify-center items-center rounded-lg flex-wrap
         darkMode;
     }
 
     .button-about{
         @apply cursor-pointer mt-4 bg-gray-100 
-        dark:bg-stone-900/25 dark:border-white dark:text-gray-200/75
+        dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border
+        dark:fill-indigo-500/75
+        /* dark:bg-stone-900/25 dark:border-white dark:text-gray-200/75 */
         flex items-center p-2 rounded-lg border-2 border-white;
     }
 
@@ -87,7 +88,7 @@
 }
 /* animate css config*/
 :root {
-    --animate-delay: 0.5s;
+    --animate-delay: 0.2s;
 }
 /* ---------------*/
 .bg-common{

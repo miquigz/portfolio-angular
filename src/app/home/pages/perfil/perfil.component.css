@@ -29,10 +29,12 @@ p {
 .profile-div{
     @apply rounded-lg text-black text-lg sm:text-2xl
     grid grid-cols-6 sm:grid-rows-none
-    rounded-md w-full md:w-8/12 h-full
-    bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC];
+    rounded-md w-full md:w-10/12 lg:w-8/12 py-24 h-full
+    bg-gradient-to-r from-[#F1F1F1] to-[#ECECEC]
+    sm:dark:text-white sm:dark:bg-gradient-to-r sm:dark:from-[#413737d5] sm:dark:to-[#443434e1] dark:text-white
+    dark:bg-gradient-to-r dark:from-[#413737] dark:to-[#443434] dark:border-indigo-300/50 dark:border;
 }
-
+/* //TODO: ver q onda el darkmode */
 .svg-tam-profile{
     @apply w-4 h-4 sm:w-9 sm:h-9 dark:fill-white;
 }

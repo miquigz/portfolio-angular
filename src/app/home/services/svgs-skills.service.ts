@@ -48,10 +48,14 @@ export class SvgsSkillsService {
         name: 'Bootstrap',
         svg: FRONT_SVGS.bootstrap
       },
-      {
-        name: 'webpack',
-        svg: FRONT_SVGS.webpack
-      }
+      // {
+      //   name: 'webpack',
+      //   svg: FRONT_SVGS.webpack
+      // },
+      // {
+      //   name:'Material Angular',
+      //   svg: FRONT_SVGS.material
+      // }
     ];
 
     this.tools_svgs = [
@@ -131,7 +135,6 @@ export class SvgsSkillsService {
       }
     ]
   }
-
 
   getBackItems():SkillsSVG[] {
     return [... this.back_svgs];
