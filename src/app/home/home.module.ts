@@ -5,7 +5,9 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+
 import { ArrangementModule } from 'ngx-arrangement';
+import { NgParticlesModule } from "ng-particles";
 
 import { HomeRoutingModule } from './home-routing.module';
 import { ProjectsComponent } from './pages/projects/projects.component';
@@ -14,6 +16,7 @@ import { ProjectItemComponent } from './pages/projects/project-item/project-item
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { PercentageComponent } from './pages/layout/percentage/percentage.component';
 import { SkillsComponent } from './pages/skills/skills.component';
+import { ParticlesComponent } from './pages/perfil/particles/particles.component';
 
 
 @NgModule({
@@ -22,12 +25,14 @@ import { SkillsComponent } from './pages/skills/skills.component';
     ProjectsComponent,
     AboutMeComponent,
     ProjectItemComponent,
-    PerfilComponent,
+    PerfilComponent, 
     PercentageComponent,
-    SkillsComponent
+    SkillsComponent,
+    ParticlesComponent
   ],
   imports: [
     CommonModule,
+    NgParticlesModule,
     SharedModule,
     ArrangementModule,
     HomeRoutingModule,

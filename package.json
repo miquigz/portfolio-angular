@@ -23,10 +23,14 @@
     "@ngx-translate/http-loader": "^7.0.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "ng-particles": "^3.3.3",
     "ngx-arrangement": "^1.0.5",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.4.9",
     "tslib": "^2.3.0",
+    "tsparticles": "^2.8.0",
+    "tsparticles-engine": "^2.2.2",
+    "tsparticles-slim": "^2.2.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
