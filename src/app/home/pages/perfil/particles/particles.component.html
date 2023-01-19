@@ -4,10 +4,15 @@
     [particlesInit]="particlesInit"
 ></ng-particles> -->
 
+
+<!-- <div id="parti123"></div> -->
 <!--The content below is only a placeholder and can be replaced.-->
-<ng-particles class="w-full h-full" id="tsparticles"  [options]="particlesOptions"
-[particlesInit]="particlesInit">
+<!-- <div class="w-full h-full"> -->
+<ng-particles id="tsparticles"  [options]="opt"
+[particlesInit]="particlesInit" (particlesLoaded)="particlesLoaded($event)">
 </ng-particles>
+<!-- </div> -->
+
 
 <!-- <ng-particles class="w-full h-full" id="tsparticles34" [options]="options"
 [options]="options" [particlesInit]="particlesInit"
