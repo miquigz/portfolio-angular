@@ -1,7 +1,7 @@
 import { SettingsService } from './../../../../core/services/settings.service';
 import { Component, OnInit, OnChanges } from '@angular/core';
 
-import { tsParticles, Engine, ClickMode, ParticlesOptions, Container, InteractivityDetect} from 'tsparticles-engine';
+import { tsParticles, Engine, Container, InteractivityDetect} from 'tsparticles-engine';
 import { loadFull } from "tsparticles";
 
 
@@ -22,7 +22,9 @@ export class ParticlesComponent implements OnInit, OnChanges {
   ngOnChanges(): void {
   }
 
-  constructor(private settings:SettingsService) { 
+  constructor(
+    // private settings:SettingsService
+    ) { 
     // this.snow =  {
     //   fullScreen: {
     //     enable: false
@@ -134,37 +136,6 @@ export class ParticlesComponent implements OnInit, OnChanges {
       fullScreen: {
         enable: false
       },
-      themes: [
-        {
-          name: "light",
-          default: {
-            value: true,
-          },
-          options: {
-            particles: {
-              color: {
-                value: ["#000000", "#0000ff"]
-              }
-            }
-          }
-        },
-        {
-          name: "dark",
-          default: {
-            value: false
-          },
-          options: {
-            // background: {
-            //   color: "#000000"
-            // },
-            particles: {
-              color: {
-                value: ["#ffffff", "#ff0000"]
-              }
-            }
-          }
-        }
-      ],
       fpsLimit: 120,
       interactivity: {
         detectsOn: "canvas" as  keyof typeof InteractivityDetect,
@@ -190,6 +161,9 @@ export class ParticlesComponent implements OnInit, OnChanges {
         }
       },
       particles: {
+        color: {
+          value: this.particlesColor
+        },
         collisions: {
           enable: true
         },
@@ -253,30 +227,30 @@ export class ParticlesComponent implements OnInit, OnChanges {
     }
   }
 
+  // themeCont:any;
 
   ngOnInit(): void {
 
-    let themeContainerAux:any;
-    tsParticles.load('parti123', this.opt)
-    .then((container) => {
-      themeContainerAux = container;
-      themeContainerAux?.canvas.initBackground();
-      console.log(themeContainerAux?.actualOptions);
-    });
+  //   let themeContainerAux:any;
+  //   tsParticles.load('parti123', this.opt)
+  //   .then((container) => {
+  //     themeContainerAux = container;
+  //   });
 
 
-    this.settings.getDarkModeObservable().subscribe((darkMode) => {
-      if (darkMode) {
-        themeContainerAux?.loadTheme('dark');
-        console.log('darkmodee');
-      } else {
-        themeContainerAux?.loadTheme('light');
-      }
-      // this.particlesColor = darkMode ? '#ffffff' : '#000000';
-      // // this.opt!.particles.color.value = this.particlesColor;
-      // tsParticles.refresh();
-      // console.log('cambio');
-    });
+  //   this.settings.getDarkModeObservable().subscribe((darkMode) => {
+  //     this.particlesColor = darkMode ? '#ffffff' : '#000000';
+  //     if (darkMode) {
+  //       console.log(themeContainerAux?.canvas)
+  //       themeContainerAux?.canvas.initUpdaters();
+  //     } else {
+  //       themeContainerAux?.canvas.initUpdaters();
+  //     }
+  //     // // this.opt!.particles.color.value = this.particlesColor;
+  //     // tsParticles.refresh();
+  //     // console.log('cambio');
+  //   });
+  // }
   }
 
   particlesLoaded(container:Container){
