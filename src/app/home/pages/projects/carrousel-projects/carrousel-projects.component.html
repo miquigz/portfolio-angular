@@ -1,0 +1,14 @@
+<div class="w-full flex justify-center bg-gray-300/75 items-center h-full min-h-screen">
+    <ng-carousel
+    class="h-3/6 w-3/6"
+    #carouselRef="ngCarousel"
+    [config]="config">
+    <ng-template
+        [ngCarouselSlide]="carouselRef"
+        let-item>
+        <div class="bg-gray-300 flex justify-center py-8">
+            <p class="self-bottom text-3xl">{{item.name}}</p>
+        </div>
+    </ng-template>
+</ng-carousel>
+</div>

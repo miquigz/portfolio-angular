@@ -8,6 +8,9 @@ import { NgModule } from '@angular/core';
 
 import { ArrangementModule } from 'ngx-arrangement';
 import { NgParticlesModule } from "ng-particles";
+import { NgxScrollTopModule } from 'ngx-scrolltop';
+import { CarouselModule } from 'ng-carousel-cdk';
+
 
 import { HomeRoutingModule } from './home-routing.module';
 import { ProjectsComponent } from './pages/projects/projects.component';
@@ -17,6 +20,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { PercentageComponent } from './pages/layout/percentage/percentage.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ParticlesComponent } from './pages/perfil/particles/particles.component';
+import { CarrouselProjectsComponent } from './pages/projects/carrousel-projects/carrousel-projects.component';
+
 
 
 @NgModule({
@@ -28,13 +33,16 @@ import { ParticlesComponent } from './pages/perfil/particles/particles.component
     PerfilComponent, 
     PercentageComponent,
     SkillsComponent,
-    ParticlesComponent
+    ParticlesComponent,
+    CarrouselProjectsComponent
   ],
   imports: [
     CommonModule,
     NgParticlesModule,
     SharedModule,
+    CarouselModule,
     ArrangementModule,
+    NgxScrollTopModule,
     HomeRoutingModule,
     TranslateModule.forChild({
       extend: true

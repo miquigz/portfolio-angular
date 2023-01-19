@@ -10,6 +10,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -31,7 +32,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     }),
     HttpClientModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    NgxScrollTopModule
   ],
   bootstrap: [AppComponent]
 })
