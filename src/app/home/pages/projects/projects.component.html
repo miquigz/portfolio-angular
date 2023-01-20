@@ -20,10 +20,16 @@
             <small class="mt-4 py-4">{{'MAIN.PROJECTS.DESC' | translate}} <a class="underline text-indigo-300" href="https://github.com/miquigz" target="_blank">{{'MAIN.PROJECTS.DESC_LINK' | translate}}</a>. </small>
         </div>
     </div> -->
+
+    <div class="w-full bg-gray-800 fill-indigo-300 flex justify-center text-indigo-300 items-center">
+    </div>
+
+
 <div #projectsdiv class="mb-12 mt-16 sm:mb-0 flex justify-center sm:mt-4 items-center">
 
 <!-- todo: Ver collapse si agregar o no  -->
 <!-- ng add @angular/material -->
+
 
 
     <div class="sm:dark:bg-gradient-to-r sm:dark:from-[#413737d5] sm:dark:to-[#443434e1] dark:text-white
@@ -36,26 +42,126 @@ w-full lg:w-8/12">
                     <svg width="34" height="34" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24"><path d="M20.705,8.313L18.242,5.85l1.241-3.803c0.207-0.634-0.409-1.227-1.034-0.996L6.902,5.305 c-0.277,0.102-0.495,0.32-0.597,0.597L2.051,17.448c-0.035,0.095-0.046,0.188-0.045,0.28L2,17.729V22h2v-3.829l2.85-0.93 l2.463,2.464c0.393,0.393,1.031,0.393,1.424,0l9.968-9.968C21.098,9.344,21.098,8.707,20.705,8.313z"></path></svg>
                     <h2 class="text-2xl text-center font-bold">Educacion</h2>
                 </div>
-                <div>
-                    <h3 class="mx-2 text-2xl font-['Oswald'] tracking-wider	">Academic:</h3>
-                    <ul class="flex flex-col">
-                        <li class="ml-8"><span class="font-semibold">2014-2019 </span>Bachiller en Artes Visuales, EESN2 Veronica(Bs As)</li>
-                        <li class="ml-8"><span class="font-semibold">2017-2019 </span>Itinerario Formativo Disenio Grafico Multimedial, EESN2</li>
-                        <li class="ml-8"><span class="font-semibold">2021-Presente </span>Analista en Tecnologias de la Informacion y Comunicacion, UNLP Facultad de Informatica.</li>
-                    </ul>
+                    <!-- <div class="grid grid-cols-12">
+                        <div class="col-span-12">
+                            <h3 class="ml-4 text-2xl font-['Oswald'] tracking-wider	">Academic:</h3>
+                        </div>
+                        <div class="flex col-span-11">
+                            <ul class="flex flex-col">
+                                <li class="ml-8 my-4"><span class="font-semibold text-lg">2014-2019 </span>Bachiller en Artes Visuales, <span class="font-semibold">EESN2</span> Veronica(Bs As)</li>
+                                <li class="ml-8 my-4"><span class="font-semibold text-lg">2017-2019 </span>Itinerario Formativo Disenio Grafico Multimedial, <span class="font-semibold"> EESN2</span></li>
+                                <li class="ml-8 my-4"><span class="font-semibold text-lg">2021-Presente </span>Analista en Tecnologias de la Informacion y Comunicacion, <span class="font-semibold">UNLP</span> Facultad de Informatica.</li>
+                            </ul>
+                        </div>
+                    </div>
                     <h3 class="mx-2 text-2xl font-['Oswald'] tracking-wider	">Training - Courses</h3>
                     <ul>
-                        <li class="ml-8"><span class="font-semibold">2021 Abril - Junio    </span>Introducion al desarrollo web <span class="font-semibold">FLACSO</span> Argentina.</li>
-                        <li class="ml-8"><span class="font-semibold">2021 - Mayo - Junio   </span>Javascript Intensivo <span class="font-semibold"> CILSA</span>, La Plata</li>
-                        <li class="ml-8"><span class="font-semibold">2022 - Mayo - Noviembre</span>Bootcamp NodeJS Developer(<span class="font-semibold">EducacionIT - Telecom</span>)</li>
-                        <li class="ml-8"><span class="font-semibold">2023 - Enero - Presente  </span>Bootcamp Crisalis (<span class="font-semibold">Finnegans - CESSI</span>)</li>
-                    </ul>
+                        <li class="ml-8 my-4"><span class="font-semibold text-lg">2022: Mayo - Noviembre </span>Bootcamp NodeJS Developer(<span class="font-semibold">EducacionIT - Telecom</span>)</li>
+                        <li class="ml-8 my-4"><span class="font-semibold text-lg">2023: Enero - Presente </span>Bootcamp Crisalis (<span class="font-semibold">Finnegans - CESSI</span>)</li>
+                    </ul> -->
+                <div class="grid grid-cols-12">
+                    <div class="col-span-12 mb-4">
+                        <h3 class="ml-2 text-3xl font-['Oswald'] tracking-wider	underline underline-offset-2">Academic</h3>
+                    </div>
+                    <div class="col-start-2 col-span-11 mb-8">
+                        <ol class="relative border-l-2 border-indigo-200 dark:border-gray-700">
+                            <li class="mb-5 ml-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                    <!-- <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg> -->
+                                    <img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../assets/info.png" alt="">
+                                </span>
+                                <h3 class="flex items-center mb-0.5 text-lg font-semibold text-gray-900 dark:text-white">Analista en TIC UNLP Facultad de Informatica<span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">Latest</span></h3>
+                                <time class="block mb-6 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">28 de Enero de 2021 - <span class="underline  underline-offset-4">Presente</span></time>
+                                <!-- <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p> -->
+                            </li>
+                            <li class="mb-5 ml-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                    <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+                                </span>
+                                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Itinerario Formativo Disenio Grafico Multimedial EESN2</h3>
+                                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Marzo 2017 - Noviembre 2019</time>
+                                <p class="text-base mb-4 font-normal text-gray-500 dark:text-gray-400">Itinerario formativo adicional a la cursada normal, realizado en EESN2 Veronica(Punta Indio), Buenos Aires.</p>
+                            </li>
+                            <li class="ml-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                    <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+                                </span>
+                                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Bachiller en Artes Visuales, EESN2</h3>
+                                <time class="block mb-6 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2014 - 2019</time>
+                                <!-- <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p> -->
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-span-12 mb-4">
+                        <h3 class="ml-4 text-2xl font-['Oswald'] tracking-wider	">Training - Courses:</h3>
+                    </div>
+                    <div class="col-start-2 col-span-11">
+                        <ol class="relative border-l-2 border-indigo-200 dark:border-gray-700">
+                            <li class="mb-5 ml-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                    <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+                                </span>
+                                <h3 class="flex items-center mb-0.5 text-lg font-semibold text-gray-900 dark:text-white">Bootcamp Crisalis, Finnegans - CESSI<span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">Latest</span></h3>
+                                <time class="block mb-6 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 de Enero de 2022 - <span class="underline underline-offset-4">Presente</span></time>
+                                <!-- <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p> -->
+                            </li>
+                            <li class="mb-5 ml-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                    <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+                                </span>
+                                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Bootcamp NodeJS Developer - Telecom EducacionIT</h3>
+                                <time class="block mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">20 de Mayo de 2022 - 4 de Noviembre de 2022</time>
+                                <p class="text-base mb-4 font-normal text-gray-500 dark:text-gray-400">Bootcamp proporcionado por <span class="text-gray-700 dark:text-gray-500">Telecom Argentina</span> en el programa digit@lers, en conjunto con EducacionIT.</p>
+                            </li>
+                            <li class="ml-8">
+                                <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                    <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg>
+                                </span>
+                                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Javascript Intensivo CILSA, La Plata</h3>
+                                <time class="block mb-6 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2021 Mayo - Junio</time>
+                                <!-- <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p> -->
+                            </li>
+                        </ol>
+                    </div>
+                    
                 </div>
+                <!-- <li class="ml-8 my-4"><span class="font-semibold text-lg">2021: Abril - Junio    </span>Introducion al desarrollo web <span class="font-semibold">FLACSO</span> Argentina.</li>
+                <li class="ml-8 my-4"><span class="font-semibold text-lg">2021: Mayo - Junio     </span>Javascript Intensivo <span class="font-semibold"> CILSA</span>, La Plata</li> -->
                 
             </div>
             <div class="col-span-12 md:col-span-6 w-full py-8 flex justify-center">
                 <svg class="mr-0.5" width="30" height="30" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50"><path d="M 25 2 C 20.390625 2 16.703125 4.566406 16.09375 8 L 3 8 C 1.347656 8 0 9.347656 0 11 L 0 28 C 0 28.550781 0.449219 29 1 29 L 20 29 C 20 27.347656 21.347656 26 23 26 L 27 26 C 28.652344 26 30 27.347656 30 29 L 49 29 C 49.550781 29 50 28.550781 50 28 L 50 11 C 50 9.347656 48.652344 8 47 8 L 33.90625 8 C 33.296875 4.566406 29.609375 2 25 2 Z M 25 4 C 28.449219 4 31.25 5.6875 31.875 8 L 18.125 8 C 18.75 5.6875 21.550781 4 25 4 Z M 23 28 C 22.449219 28 22 28.449219 22 29 L 22 31 C 22 31.550781 22.449219 32 23 32 L 27 32 C 27.550781 32 28 31.550781 28 31 L 28 29 C 28 28.449219 27.550781 28 27 28 Z M 0 30.8125 L 0 45 C 0 46.652344 1.347656 48 3 48 L 47 48 C 48.652344 48 50 46.652344 50 45 L 50 30.8125 C 49.6875 30.925781 49.351563 31 49 31 L 30 31 C 30 32.652344 28.652344 34 27 34 L 23 34 C 21.347656 34 20 32.652344 20 31 L 1 31 C 0.648438 31 0.3125 30.925781 0 30.8125 Z"></path></svg>
                 <h2 class="text-2xl text-center font-bold">Experiencia</h2>
+                <div>
+                    <ol class="relative border-l border-gray-200 dark:border-gray-700">                  
+                        <li class="mb-10 ml-6">            
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                <svg aria-hidden="true" class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Flowbite Application UI v2.0.0 <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">Latest</span></h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 13th, 2022</time>
+                            <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
+                            <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg> Download ZIP</a>
+                        </li>
+                        <li class="mb-10 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                <svg aria-hidden="true" class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                            </span>
+                            <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Flowbite Figma v1.3.0</h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 7th, 2021</time>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.</p>
+                        </li>
+                        <li class="ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                                <svg aria-hidden="true" class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                            </span>
+                            <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.2.2</h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2nd, 2021</time>
+                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+                        </li>
+                    </ol>
+                </div>
+
             </div>
         </div>
         <div>
@@ -64,8 +170,28 @@ w-full lg:w-8/12">
         </div>            
     </div>
 
-
-    
 </div>
     
 <!-- </div> -->
+<!-- 
+<div>
+    <div class="grid grid-cols-12">
+        <div class="col-span-12">
+            <h3 class="ml-4 text-2xl font-['Oswald'] tracking-wider	">Academic:</h3>
+        </div>
+        <div class="flex col-span-11">
+            <ul class="flex flex-col">
+                <li class="ml-8 my-4"><span class="font-semibold text-lg">2014-2019 </span>Bachiller en Artes Visuales, <span class="font-semibold">EESN2</span> Veronica(Bs As)</li>
+                <li class="ml-8 my-4"><span class="font-semibold text-lg">2017-2019 </span>Itinerario Formativo Disenio Grafico Multimedial, <span class="font-semibold"> EESN2</span></li>
+                <li class="ml-8 my-4"><span class="font-semibold text-lg">2021-Presente </span>Analista en Tecnologias de la Informacion y Comunicacion, <span class="font-semibold">UNLP</span> Facultad de Informatica.</li>
+            </ul>
+        </div>
+    </div>
+    <h3 class="mx-2 text-2xl font-['Oswald'] tracking-wider	">Training - Courses</h3>
+    <ul>
+        <li class="ml-8 my-4"><span class="font-semibold text-lg">2021: Abril - Junio    </span>Introducion al desarrollo web <span class="font-semibold">FLACSO</span> Argentina.</li>
+        <li class="ml-8 my-4"><span class="font-semibold text-lg">2021: Mayo - Junio     </span>Javascript Intensivo <span class="font-semibold"> CILSA</span>, La Plata</li>
+        <li class="ml-8 my-4"><span class="font-semibold text-lg">2022: Mayo - Noviembre </span>Bootcamp NodeJS Developer(<span class="font-semibold">EducacionIT - Telecom</span>)</li>
+        <li class="ml-8 my-4"><span class="font-semibold text-lg">2023: Enero - Presente </span>Bootcamp Crisalis (<span class="font-semibold">Finnegans - CESSI</span>)</li>
+    </ul>
+</div> -->

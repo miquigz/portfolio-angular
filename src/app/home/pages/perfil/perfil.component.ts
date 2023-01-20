@@ -17,6 +17,8 @@ export class PerfilComponent {
 
   screenWidth:number;
 
+  showOverlay:boolean = false;
+
   link:boolean[] = [false, false, false, false];
   socialItems:SocialSVG[] = [];
 

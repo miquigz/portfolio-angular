@@ -39,7 +39,7 @@
         }
     },
     "INFOAPP":{
-        "TITLE":"Responsive Minimalist Portfolio",
+        "TITLE":"Angular Portfolio",
         "DESC":"SPA made with Angular14, TailwindCSS and TypeScript, RxJS, Material, SweetAlert, aos, ng-arrangement, etc.",
         "LINKREPO":"Link to the repository"
     },

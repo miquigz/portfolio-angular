@@ -62,7 +62,22 @@
         </div>
         <div class="z-20 col-span-6 row-end-1 sm:row-start-1 sm:col-span-2 flex justify-center py-6 px-4 select-none">
             <div class="flex justify-center w-full">
-                <img class="md:h-52 md:w-52 h-64 w-64 lg:h-64 lg:w-64 sm:w-full sm:h-full rounded-lg border border-white shadow-xl" src="../../../../assets/me.webp" alt="">
+                <img (mouseenter)="showOverlay = true" (mouseleave)="showOverlay = false"
+                class="md:h-52 md:w-52 h-64 w-64 lg:h-64 lg:w-64 sm:w-full sm:h-full rounded-lg border border-white shadow-xl" src="../../../../assets/me.webp" alt="">
+                <div (mouseenter)="showOverlay = true" (mouseleave)="showOverlay = false"
+                class="absolute md:h-52 md:w-52 h-64 w-64 lg:h-64 lg:w-64 sm:w-full sm:h-full rounded-lg ">
+                    <div [ngClass]="{'animate__fadeOut': !showOverlay}"
+                    class="transition duration-300 animate__animated animate__fadeIn
+                    flex bg-gray-800/[0.90] justify-center items-center flex-wrap h-full text-indigo-300 fill-indigo-200/75 rounded-lg">
+                        <!-- <p class="mx-0.5 font-['Oswald']">GZ</p> -->
+                        <div class="w-full flex justify-center flex-col items-center">
+                            <svg class="mb-2" version="1.0" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none"><path d="M1760 4886 c-8 -8 -175 -130 -370 -271 -598 -433 -599 -434 -685 -610 -67 -137 -76 -198 -73 -518 l3 -268 370 270 c204 149 422 309 485 355 63 47 116 83 118 81 2 -1 -12 -23 -30 -47 -44 -57 -93 -166 -119 -264 -19 -70 -22 -113 -26 -366 -3 -159 -1 -288 3 -288 18 1 890 641 942 692 113 110 189 261 212 423 5 39 10 180 10 314 0 191 3 242 13 238 6 -2 100 -67 208 -143 107 -77 320 -227 472 -334 152 -107 274 -196 273 -198 -2 -2 -28 4 -58 13 -72 22 -238 30 -324 16 -38 -6 -181 -48 -318 -92 -210 -68 -247 -83 -235 -94 48 -47 897 -651 954 -679 109 -54 182 -70 320 -70 136 0 141 1 450 103 116 38 211 68 212 67 2 -1 -29 -101 -67 -222 -38 -120 -118 -373 -177 -561 l-108 -343 -11 85 c-27 198 -72 291 -271 570 -146 205 -148 207 -159 178 -42 -104 -345 -1041 -355 -1097 -24 -140 4 -313 71 -446 25 -50 217 -328 292 -423 17 -21 28 -41 25 -44 -6 -5 -1169 -22 -1176 -16 -2 1 5 5 15 9 112 38 235 118 326 211 55 57 338 437 338 454 0 13 -1079 11 -1160 -1 -157 -25 -283 -86 -391 -187 -41 -39 -130 -148 -215 -264 -80 -110 -148 -199 -152 -199 -4 0 -89 242 -188 538 -100 295 -185 546 -190 557 -4 11 26 -15 66 -58 133 -142 202 -179 542 -293 200 -66 249 -80 245 -66 -4 16 -93 291 -257 798 -43 133 -87 263 -99 289 -54 121 -186 261 -308 327 -55 30 -538 198 -568 198 -4 0 -4 -8 0 -17 15 -41 295 -914 295 -922 0 -9 -80 15 -532 158 -141 44 -259 81 -261 81 -11 0 356 -1069 389 -1132 27 -51 64 -99 124 -159 111 -112 197 -155 500 -249 l225 -70 295 -1 c162 -1 388 -5 502 -8 l208 -6 -241 -338 c-133 -186 -240 -339 -238 -340 2 -1 263 1 579 4 538 6 580 8 653 28 107 28 194 72 279 140 80 63 98 84 284 347 l129 180 154 467 c85 257 157 467 162 467 4 0 116 -149 250 -331 159 -217 245 -326 250 -317 4 7 81 247 172 534 181 568 195 628 178 763 -12 93 -51 216 -88 281 -28 47 -229 327 -299 414 -29 37 -147 129 -430 334 -214 156 -390 287 -392 291 -1 5 161 63 360 130 200 67 376 127 392 134 l29 13 -134 95 c-839 596 -809 577 -925 615 -82 27 -101 29 -234 29 l-145 0 -250 -84 c-137 -45 -268 -94 -290 -109 -22 -14 -203 -144 -403 -289 -199 -145 -369 -266 -377 -270 -13 -4 -15 49 -15 411 0 229 -4 416 -8 416 -4 0 -14 -6 -22 -14z"/></g></svg>
+                            <p class="italic text-xl w-full md:w-4/6 text-center font-['Oswald']
+                            bg-clip-text bg-gradient-to-r from-[#ACB6E5] to-[#8057ac] dark:from-[#ACB6E5] dark:to-[#C9D6FF] font-semibold text-transparent
+                            tracking-wider p-1">Miqueas Gimenez</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
         </div>
