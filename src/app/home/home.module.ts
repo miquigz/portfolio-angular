@@ -39,10 +39,10 @@ import { CarrouselProjectsComponent } from './pages/projects/carrousel-projects/
   imports: [
     CommonModule,
     NgParticlesModule,
+    NgxScrollTopModule,
     SharedModule,
     CarouselModule,
     ArrangementModule,
-    NgxScrollTopModule,
     HomeRoutingModule,
     TranslateModule.forChild({
       extend: true

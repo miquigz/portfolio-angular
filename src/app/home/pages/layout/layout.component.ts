@@ -18,6 +18,8 @@ export class LayoutComponent implements OnInit,  OnDestroy{
   scrollUp:boolean = false;
   currentPosition:number = window.pageYOffset;
 
+  hoverTOP:boolean = false;
+
   scrollPercentage:number = 0;
   private _documentHeight:number = 1;
   // getScreenWidth:number;

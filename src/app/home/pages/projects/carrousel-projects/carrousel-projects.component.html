@@ -1,24 +1,24 @@
-<div class="w-full flex justify-center  items-center h-full min-h-screen">
+<div class="w-full flex justify-center  items-center">
     <ng-carousel
-    class="w-full
-    sm:dark:text-white sm:dark:bg-gradient-to-r sm:dark:from-[#413737d5] sm:dark:to-[#443434e1] dark:text-white
-        dark:bg-gradient-to-r dark:from-[#413737] dark:to-[#443434] dark:border-indigo-300/50 dark:border
-    py-8 bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1] h-full md:h-3/6 md:w-3/6"
+    class="w-full bg-[#b8bac28f] dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border rounded-md
+    py-8 h-full md:h-3/6 md:w-4/6"
     #carouselRef="ngCarousel"
     [config]="config">
     <ng-template
         [ngCarouselSlide]="carouselRef"
         let-item>
         <div
-        class="bg-gray-300 h-2 flex justify-center w-full" [ngClass]="{'blur-[2.5px]': item.index !==  carouselRef.slideIndex}">
+        class="bg-transparent select-none h-2 flex justify-center w-full" [ngClass]="{'blur-[2.5px]': item.index !==  carouselRef.slideIndex}">
             <h2 [ngClass]="{'hidden': item.index !==  carouselRef.slideIndex}"
-            class="text-3xl w-2/6 text-center backdrop-blur absolute z-30 rounded-md p-1 text-white translate-y-8">{{item.name}}</h2>
+            class="text-3xl w-full md:w-2/6 text-center font-['Oswald']
+            bg-clip-text bg-gradient-to-r from-[#ACB6E5] to-[#8057ac] dark:from-[#ACB6E5] dark:to-[#C9D6FF] font-semibold text-transparent
+            tracking-wider backdrop-blur absolute z-30 rounded-md p-1 text-white translate-y-6">{{item.name}}</h2>
         </div>
-        <div [ngClass]="{'blur-[2.5px]': item.index !==  carouselRef.slideIndex}"
-        class="flex justify-center py-8 
-        relative mt-16 md:mx-4 sm:mt-5 lg:mt-8 border-2 border-indigo-200/50 rounded-xl 
+        <div [ngClass]="{'blur-[2.5px] brightness-75': item.index !==  carouselRef.slideIndex}"
+        class="flex justify-center py-8 select-none brightness-90
+        relative mt-16 md:mx-4 sm:mt-5 lg:mt-8 border-2 border-indigo-200/50 rounded 
 dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-gray-100">
-            <img class="h-72 w-96 rounded-md"
+            <img class="h-72 w-96 rounded-md select-none grayscale-[70%]"
             [src]="item.image" alt="">
             <p [ngClass]="{
                 'hidden': item.index !==  carouselRef.slideIndex,
@@ -29,3 +29,4 @@ dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-
     </ng-template>
 </ng-carousel>
 </div>
+

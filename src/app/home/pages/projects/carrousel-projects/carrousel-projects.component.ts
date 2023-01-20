@@ -31,12 +31,18 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
 
   slideActual:number = 0;
 
+  slideWidthActual:number = 50;
+
   constructor() {
+
+    console.log()
+    window.innerWidth < 768 ? this.slideWidthActual = 100 : this.slideWidthActual = 50; 
+
 
     this.config = {
       alignMode: 'center' as any,
-      slideWidth: 50,
-      shouldRecalculateOnResize: false,
+      slideWidth: this.slideWidthActual,
+      shouldRecalculateOnResize: true,
       items: [
         {
           index: 0,
@@ -65,8 +71,8 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
         {
           index: 3,
           fecha: '2020',
-          name: 'Proyecto 4',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+          name: 'Programming Practices',
+          description: 'Pascal, Java, Assembly WinMips, Assembly MSX88',
           image: '../../../../../assets/winmipsAssembly.webp',
           altimg: 'Imagen de proyecto 2'
         },

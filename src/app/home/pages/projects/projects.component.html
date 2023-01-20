@@ -1,5 +1,5 @@
-<div #projectsdiv class="project-body flex justify-center align-center h-max">
-    <div
+<!-- <div  class="project-body h-max min-h-screen"> -->
+    <!-- <div
     data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="1200" 
     class="div-projects-grid ">
         <div class="my-4 lg:px-32">
@@ -19,8 +19,53 @@
         <div class="mb-4 pb-4 text-black dark:text-white w-5/6 lg:text-center">
             <small class="mt-4 py-4">{{'MAIN.PROJECTS.DESC' | translate}} <a class="underline text-indigo-300" href="https://github.com/miquigz" target="_blank">{{'MAIN.PROJECTS.DESC_LINK' | translate}}</a>. </small>
         </div>
+    </div> -->
+<div #projectsdiv class="mb-12 mt-16 sm:mb-0 flex justify-center sm:mt-4 items-center">
+
+<!-- todo: Ver collapse si agregar o no  -->
+<!-- ng add @angular/material -->
+
+
+    <div class="sm:dark:bg-gradient-to-r sm:dark:from-[#413737d5] sm:dark:to-[#443434e1] dark:text-white
+dark:bg-gradient-to-r dark:from-[#413737] dark:to-[#443434] dark:border-indigo-300/50 dark:border
+p-3 bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1] shadow-lg neumorphism
+w-full lg:w-8/12"> 
+        <div class="grid grid-cols-12">
+            <div class="col-span-12 md:col-span-6 w-full py-8 flex justify-center flex-wrap">
+                <div class="w-full flex justify-center">
+                    <svg width="34" height="34" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24"><path d="M20.705,8.313L18.242,5.85l1.241-3.803c0.207-0.634-0.409-1.227-1.034-0.996L6.902,5.305 c-0.277,0.102-0.495,0.32-0.597,0.597L2.051,17.448c-0.035,0.095-0.046,0.188-0.045,0.28L2,17.729V22h2v-3.829l2.85-0.93 l2.463,2.464c0.393,0.393,1.031,0.393,1.424,0l9.968-9.968C21.098,9.344,21.098,8.707,20.705,8.313z"></path></svg>
+                    <h2 class="text-2xl text-center font-bold">Educacion</h2>
+                </div>
+                <div>
+                    <h3 class="mx-2 text-2xl font-['Oswald'] tracking-wider	">Academic:</h3>
+                    <ul class="flex flex-col">
+                        <li class="ml-8"><span class="font-semibold">2014-2019 </span>Bachiller en Artes Visuales, EESN2 Veronica(Bs As)</li>
+                        <li class="ml-8"><span class="font-semibold">2017-2019 </span>Itinerario Formativo Disenio Grafico Multimedial, EESN2</li>
+                        <li class="ml-8"><span class="font-semibold">2021-Presente </span>Analista en Tecnologias de la Informacion y Comunicacion, UNLP Facultad de Informatica.</li>
+                    </ul>
+                    <h3 class="mx-2 text-2xl font-['Oswald'] tracking-wider	">Training - Courses</h3>
+                    <ul>
+                        <li class="ml-8"><span class="font-semibold">2021 Abril - Junio    </span>Introducion al desarrollo web <span class="font-semibold">FLACSO</span> Argentina.</li>
+                        <li class="ml-8"><span class="font-semibold">2021 - Mayo - Junio   </span>Javascript Intensivo <span class="font-semibold"> CILSA</span>, La Plata</li>
+                        <li class="ml-8"><span class="font-semibold">2022 - Mayo - Noviembre</span>Bootcamp NodeJS Developer(<span class="font-semibold">EducacionIT - Telecom</span>)</li>
+                        <li class="ml-8"><span class="font-semibold">2023 - Enero - Presente  </span>Bootcamp Crisalis (<span class="font-semibold">Finnegans - CESSI</span>)</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="col-span-12 md:col-span-6 w-full py-8 flex justify-center">
+                <svg class="mr-0.5" width="30" height="30" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50"><path d="M 25 2 C 20.390625 2 16.703125 4.566406 16.09375 8 L 3 8 C 1.347656 8 0 9.347656 0 11 L 0 28 C 0 28.550781 0.449219 29 1 29 L 20 29 C 20 27.347656 21.347656 26 23 26 L 27 26 C 28.652344 26 30 27.347656 30 29 L 49 29 C 49.550781 29 50 28.550781 50 28 L 50 11 C 50 9.347656 48.652344 8 47 8 L 33.90625 8 C 33.296875 4.566406 29.609375 2 25 2 Z M 25 4 C 28.449219 4 31.25 5.6875 31.875 8 L 18.125 8 C 18.75 5.6875 21.550781 4 25 4 Z M 23 28 C 22.449219 28 22 28.449219 22 29 L 22 31 C 22 31.550781 22.449219 32 23 32 L 27 32 C 27.550781 32 28 31.550781 28 31 L 28 29 C 28 28.449219 27.550781 28 27 28 Z M 0 30.8125 L 0 45 C 0 46.652344 1.347656 48 3 48 L 47 48 C 48.652344 48 50 46.652344 50 45 L 50 30.8125 C 49.6875 30.925781 49.351563 31 49 31 L 30 31 C 30 32.652344 28.652344 34 27 34 L 23 34 C 21.347656 34 20 32.652344 20 31 L 1 31 C 0.648438 31 0.3125 30.925781 0 30.8125 Z"></path></svg>
+                <h2 class="text-2xl text-center font-bold">Experiencia</h2>
+            </div>
+        </div>
+        <div>
+            <h2 class="md:translate-y-12 text-2xl text-center font-bold">{{'MAIN.PROJECTS.TITLE' | translate}}</h2>
+            <app-carrousel-projects></app-carrousel-projects>
+        </div>            
     </div>
+
+
+    
 </div>
-<div class="min-h-screen">
-    <!-- <app-carrousel-projects></app-carrousel-projects> -->
-</div>
+    
+<!-- </div> -->

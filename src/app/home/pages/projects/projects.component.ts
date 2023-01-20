@@ -7,7 +7,7 @@ import { ProjectItem } from '../../interfaces/project-item';
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styles: [`
-      h2{letter-spacing: 2rem; font-family: 'Oswald', sans-serif; letter-spacing: 1rem;}
+      h2{letter-spacing: 0.3rem; font-family: 'Oswald', sans-serif; letter-spacing: 0.3rem;}
   `]
 })
 export class ProjectsComponent implements OnInit{
