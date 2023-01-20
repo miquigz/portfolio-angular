@@ -1,13 +1,30 @@
-<div class="w-full flex justify-center bg-gray-300/75 items-center h-full min-h-screen">
+<div class="w-full flex justify-center  items-center h-full min-h-screen">
     <ng-carousel
-    class="h-3/6 w-3/6"
+    class="w-full
+    sm:dark:text-white sm:dark:bg-gradient-to-r sm:dark:from-[#413737d5] sm:dark:to-[#443434e1] dark:text-white
+        dark:bg-gradient-to-r dark:from-[#413737] dark:to-[#443434] dark:border-indigo-300/50 dark:border
+    py-8 bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1] h-full md:h-3/6 md:w-3/6"
     #carouselRef="ngCarousel"
     [config]="config">
     <ng-template
         [ngCarouselSlide]="carouselRef"
         let-item>
-        <div class="bg-gray-300 flex justify-center py-8">
-            <p class="self-bottom text-3xl">{{item.name}}</p>
+        <div
+        class="bg-gray-300 h-2 flex justify-center w-full" [ngClass]="{'blur-[2.5px]': item.index !==  carouselRef.slideIndex}">
+            <h2 [ngClass]="{'hidden': item.index !==  carouselRef.slideIndex}"
+            class="text-3xl w-2/6 text-center backdrop-blur absolute z-30 rounded-md p-1 text-white translate-y-8">{{item.name}}</h2>
+        </div>
+        <div [ngClass]="{'blur-[2.5px]': item.index !==  carouselRef.slideIndex}"
+        class="flex justify-center py-8 
+        relative mt-16 md:mx-4 sm:mt-5 lg:mt-8 border-2 border-indigo-200/50 rounded-xl 
+dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-gray-100">
+            <img class="h-72 w-96 rounded-md"
+            [src]="item.image" alt="">
+            <p [ngClass]="{
+                'hidden': item.index !==  carouselRef.slideIndex,
+                'text-black': item.index === 3 || item.index === 2,
+                'text-indigo-200 backdrop-blur-3xl': item.index === 0 || item.index === 1 }"
+            class="absolute text-center w-3/6 text-white h-fit bottom-[15%] text-center backdrop-blur rounded-md self-bottom text-xs sm:text-md">{{item.description}}</p>
         </div>
     </ng-template>
 </ng-carousel>

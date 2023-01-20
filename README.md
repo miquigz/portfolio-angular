@@ -1,5 +1,5 @@
 # Miqueas Gimenez Portfolio
-Portfolio minimalista hecho con Angular, TailwindCSS, aos, Animate.css, sweetalert2, ngx-arrangment ,sendEmail API, etc.
+Portfolio hecho con Angular, TailwindCSS, aos, Animate.css, sweetalert2, ngx-arrangment ,sendEmail API, etc.
 
 ``` visita el sitio: ```
 **https://miquigz.github.io/**
