@@ -1,6 +1,7 @@
-<div class="w-full flex justify-center  items-center">
+<div class="w-full flex justify-center  items-center mb-2">
+    <!-- bg-[#b8bac28f] -->
     <ng-carousel
-    class="w-full bg-[#b8bac28f] dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border rounded-md
+    class="w-full bg-gray-100/50 shadow-xl dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border rounded-md
     py-8 h-full md:h-3/6 md:w-4/6"
     #carouselRef="ngCarousel"
     [config]="config">
@@ -25,6 +26,16 @@ dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-
                 'text-black': item.index === 3 || item.index === 2,
                 'text-indigo-200 backdrop-blur-3xl': item.index === 0 || item.index === 1 }"
             class="absolute text-center w-3/6 text-white h-fit bottom-[15%] text-center backdrop-blur rounded-md self-bottom text-xs sm:text-md">{{item.description}}</p>
+        </div>
+        <div [ngClass]="{'hidden': item.index !==  carouselRef.slideIndex}"
+        class="w-full justify-center flex mt-8">
+            <ul class="flex">
+                <li (click)="toSlideProject(0)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 0}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+                <li (click)="toSlideProject(1)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 1}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+                <li (click)="toSlideProject(2)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 2}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+                <li (click)="toSlideProject(3)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 3}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+                <li (click)="toSlideProject(4)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 4}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+            </ul>
         </div>
     </ng-template>
 </ng-carousel>

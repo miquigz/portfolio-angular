@@ -133,6 +133,11 @@ export class ParticlesComponent implements OnInit, OnChanges {
     //   retina_detect: true
     // }
     this.opt = {
+      // background: {
+      //   color: {
+      //     value: "#a0e0e003"
+      //   }
+      // },
       fullScreen: {
         enable: false
       },

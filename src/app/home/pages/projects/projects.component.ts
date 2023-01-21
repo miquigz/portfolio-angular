@@ -6,11 +6,12 @@ import { ProjectItem } from '../../interfaces/project-item';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styles: [`
-      h2{letter-spacing: 0.3rem; font-family: 'Oswald', sans-serif; letter-spacing: 0.3rem;}
-  `]
+  styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit{
+
+  mesesTotalExp:number = 0; //ExpLaboral, total de meses
+  diasTotalExp:number = 0; //ExpLaboral, total de dias
 
   projects:ProjectItem[] = [
     {
@@ -48,15 +49,22 @@ export class ProjectsComponent implements OnInit{
   ]
   hoverActual:string = '';
 
-  changeActComponent(actComponent:string){
-    this.hoverActual = actComponent;
-  }
-
-  constructor() {
-  }
+  constructor() {    }
 
   ngOnInit(){
+    this.calcularExpLaboral();
     AOS.init();
+  }
+
+  calcularExpLaboral(){
+    const fechaActual = new Date();
+    const fechaObjetivo = new Date(2022,9,14); //los meses empiezan en 0 en javascript
+    const milisegundosDiferencia = fechaActual.getTime() - fechaObjetivo.getTime();
+
+    this.mesesTotalExp = Math.floor(milisegundosDiferencia / (1000 * 60 * 60 * 24 * 30));
+    this.diasTotalExp = Math.floor((milisegundosDiferencia % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+    console.log(this.mesesTotalExp);
+    console.log(this.diasTotalExp);
   }
 
 

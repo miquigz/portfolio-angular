@@ -1,0 +1,57 @@
+h2{letter-spacing: 0.3rem; font-family: 'Oswald', sans-serif; letter-spacing: 0.3rem;}
+
+.span-timeline{
+    @apply absolute flex items-center justify-center
+    w-6 h-6 bg-indigo-200 rounded-full -left-3 ring-8
+    ring-white dark:ring-gray-900 dark:bg-indigo-400;
+}
+
+.subject-timeline{
+    @apply flex items-center mb-0.5 text-lg 
+    font-semibold text-gray-900 dark:text-white;
+}
+
+.latest-timeline{
+    @apply bg-indigo-100 text-blue-800 text-sm 
+    font-medium mr-2 px-2.5 py-0.5 rounded 
+    dark:bg-blue-200 dark:text-blue-800 ml-3;
+}
+
+.time-desc-timeline{
+    @apply block mb-2 text-sm font-normal 
+    leading-none text-gray-400 dark:text-gray-500;
+}
+
+.desc-timeline{
+    @apply text-base mb-4 font-normal 
+    text-gray-500 dark:text-gray-400;
+}
+
+.timeline-education-left{
+    @apply md:hover:shadow-2xl md:transition md:duration-300 md:ease-in-out
+    dark:bg-gray-800/50 dark:border-indigo-300/50 dark:border
+    md:hover:scale-[1.04] md:hover:rotate-[1deg] md:hover:translate-x-[1px]
+    md:hover:translate-y-[1px] md:hover:skew-y-[1deg] 
+    col-span-8 col-start-3 md:col-span-4 md:col-start-2
+    mb-8 bg-gray-100/50 px-8 pt-4 rounded-md shadow-xl;
+}
+
+.timeline-education-right{
+    @apply md:hover:shadow-2xl md:transition md:duration-300 md:ease-in-out
+    dark:bg-gray-800/50 dark:border-indigo-300/50 dark:border
+    md:hover:scale-[1.04] md:hover:rotate-[-1deg] md:hover:skew-x-[-1deg]
+    md:hover:skew-y-[-1deg] md:hover:translate-x-[-1px] md:hover:translate-y-[-1px]
+    col-span-8 col-start-3 md:col-span-4 md:col-start-8 mb-8
+    bg-gray-100/50 px-8 pt-4 rounded-md shadow-xl;
+}
+
+.timeline-exp{
+    @apply md:hover:shadow-2xl md:hover:scale-[1.04] md:transition md:duration-300 md:ease-in-out
+    w-5/6 sm:w-4/6 shadow-xl mb-8 bg-gray-100/50
+    dark:bg-gray-800/50 dark:border-indigo-300/50 dark:border
+    px-8 pt-4 rounded-md;
+}
+
+.ol-timeline{
+    @apply relative border-l-2 border-indigo-200 dark:border-gray-700;
+}

@@ -1,5 +1,5 @@
 <div class="bg-transparent flex justify-center min-h-screen items-center">
-    <app-particles class="absolute w-full md:w-10/12 lg:w-8/12 py-40 h-full z-1"></app-particles>
+    <app-particles class="absolute w-full md:w-10/12 lg:w-8/12 py-20 sm:py-44 h-full z-1"></app-particles>
     <div class="profile-div neumorphism  sm:dark:text-white sm:dark:bg-gradient-to-r sm:dark:from-[#413737d5] sm:dark:to-[#443434e1] dark:text-white
     dark:bg-gradient-to-r dark:from-[#413737] dark:to-[#443434] dark:border-indigo-300/50 dark:border">
 
@@ -60,6 +60,9 @@
 
             </div>
         </div>
+
+<!-- todo: Arreglar overlay al principio, establecer boolean de primera carga -->
+
         <div class="z-20 col-span-6 row-end-1 sm:row-start-1 sm:col-span-2 flex justify-center py-6 px-4 select-none">
             <div class="flex justify-center w-full">
                 <img (mouseenter)="showOverlay = true" (mouseleave)="showOverlay = false"

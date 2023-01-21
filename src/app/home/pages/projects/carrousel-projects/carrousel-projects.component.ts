@@ -31,7 +31,7 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
 
   slideActual:number = 0;
 
-  slideWidthActual:number = 50;
+  slideWidthActual:number = 65;
 
   constructor() {
 
@@ -56,7 +56,7 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
           index: 1,
           fecha: '2022',
           name: 'Inventory Management',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+          description: 'Angular(material, ng2-charts, tailwindcss), NodeJS, Expressjs, MongoDB',
           image: '../../../../../assets/inventory.webp',
           altimg: 'Imagen del proyecto Inventory Management'
         },
@@ -66,7 +66,7 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
           name: 'Postcard App',
           description: 'Monolitic Application - 2022 "Postcard App", Handlebars, NodeJS, ExpressJS, MongoDB, Mongoose, Deployed:RailWay',
           image: '../../../../../assets/postcardApp.webp',
-          altimg: 'Imagen de proyecto 2'
+          altimg: 'Imagen de proyecto 3'
         },
         {
           index: 3,
@@ -74,15 +74,15 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
           name: 'Programming Practices',
           description: 'Pascal, Java, Assembly WinMips, Assembly MSX88',
           image: '../../../../../assets/winmipsAssembly.webp',
-          altimg: 'Imagen de proyecto 2'
+          altimg: 'Imagen de proyecto 4'
         },
         {
           index: 4,
           fecha: '2020',
-          name: 'Proyecto 5',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+          name: 'Gifs App',
+          description: 'Angular 14, Bootstrap (+ Bootswatch), Giphy API',
           image: '../../../../../assets/gifsapp.webp',
-          altimg: 'Imagen de proyecto 2'
+          altimg: 'Imagen de proyecto 5'
         }
         // {name: 2},
         // {name: 3},
@@ -92,6 +92,10 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+  }
+
+  toSlideProject(index:number){
+    this.carouselRef.setIndex(index);
   }
 
   ngAfterViewInit(): void {
