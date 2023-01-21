@@ -42,14 +42,14 @@
                         <ng-template #withoutHref>
                             <div (mouseenter)="showLink(i)" (mouseleave)="hideLink(i)"
                             (click)="copyId(itemSvg.userId, i)"
-                            class="transition-all duration-500 delay-75 animate-profile-svg mr-5 bg-gray-300 rounded-md py-2 pl-2 cursor-pointer flex text-lg items-center w-fit">
+                            class="transition-all duration-500 delay-75 animate-profile-svg mr-5 bg-gray-300 rounded-md py-2 pl-2 cursor-pointer flex text-lg items-center">
                                 <span  
                                 [innerHTML]="itemSvg.svg | safeHTML"></span>
                                 <span [ngClass]="{
                                     'w-24 scale-100': link[i] && itemSvg.userId === 'miquigz',
                                     'w-28 scale-100': link[i] && itemSvg.userId === 'Miqui#1181',
                                     'scale-[0] w-0': !link[i]}"
-                                    class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-2">@{{itemSvg.userId}}
+                                    class="w-0 scale-[0] transition-all delay-75 duration-300 ease-out text-black text-lg font-semibold ml-1.5 sm:ml-2">@{{itemSvg.userId}}
                                 </span>
                             </div>
                         </ng-template>
