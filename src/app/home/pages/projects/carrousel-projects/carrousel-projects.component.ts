@@ -1,9 +1,7 @@
-import { throttleTime } from 'rxjs';
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 import { CarouselConfig, CarouselComponent } from 'ng-carousel-cdk';
 
-import { ProjectItem } from 'src/app/home/interfaces/project-item';
 
 // import { CompleteCarouselConfig } from 'ng-carousel-cdk/lib/private/models/carousel-config';
 interface CarouselItem {
@@ -13,6 +11,7 @@ interface CarouselItem {
   description:string;
   image:string;
   altimg?:string;
+  hrefUrl:string;
 }
 
 @Component({
@@ -20,7 +19,7 @@ interface CarouselItem {
   templateUrl: './carrousel-projects.component.html',
   styleUrls: ['./carrousel-projects.component.css']
 })
-export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
+export class CarrouselProjectsComponent {
   // @Input() projects: ProjectItem[] = [];
   @ViewChild(CarouselComponent) carouselRef!: CarouselComponent;
 
@@ -50,7 +49,8 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
           name: 'Adventure Graphic',
           description: 'Adventure Graphic - 2020 "Alice", JS & CSS Vanilla, webpack',
           image: '../../../../../assets/alice.webp',
-          altimg: 'Alice Project'
+          altimg: 'Alice Project',
+          hrefUrl: 'https://github.com/miquigz/AliceProject'
         },
         {
           index: 1,
@@ -58,7 +58,9 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
           name: 'Inventory Management',
           description: 'Angular(material, ng2-charts, tailwindcss), NodeJS, Expressjs, MongoDB',
           image: '../../../../../assets/inventory.webp',
-          altimg: 'Imagen del proyecto Inventory Management'
+          altimg: 'Imagen del proyecto Inventory Management',
+          hrefUrl: 'https://github.com/miquigz/front-management_Inventory'
+
         },
         {
           index: 2,
@@ -66,7 +68,8 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
           name: 'Postcard App',
           description: 'Monolitic Application - 2022 "Postcard App", Handlebars, NodeJS, ExpressJS, MongoDB, Mongoose, Deployed:RailWay',
           image: '../../../../../assets/postcardApp.webp',
-          altimg: 'Imagen de proyecto 3'
+          altimg: 'Imagen de proyecto 3',
+          hrefUrl: 'https://github.com/miquigz/final-project'
         },
         {
           index: 3,
@@ -74,15 +77,26 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
           name: 'Programming Practices',
           description: 'Pascal, Java, Assembly WinMips, Assembly MSX88',
           image: '../../../../../assets/winmipsAssembly.webp',
-          altimg: 'Imagen de proyecto 4'
+          altimg: 'Imagen de proyecto 4',
+          hrefUrl: 'https://github.com/stars/miquigz/lists/practicas-facultad'
         },
         {
           index: 4,
-          fecha: '2020',
+          fecha: '2022',
           name: 'Gifs App',
           description: 'Angular 14, Bootstrap (+ Bootswatch), Giphy API',
           image: '../../../../../assets/gifsapp.webp',
-          altimg: 'Imagen de proyecto 5'
+          altimg: 'Imagen de proyecto 5',
+          hrefUrl: 'https://github.com/miquigz/buscarGifs'
+        },
+        {
+          index: 5,
+          fecha: '2022',
+          name: 'Search Country App',
+          description: 'Angular 14, Angular Material, Rest Countries API, TailwindCSS',
+          image: '../../../../../assets/searchCountry.webp',
+          altimg: 'Imagen de proyecto 6',
+          hrefUrl: 'https://github.com/miquigz/searchCountry.webp'
         }
         // {name: 2},
         // {name: 3},
@@ -91,22 +105,8 @@ export class CarrouselProjectsComponent implements OnInit, AfterViewInit {
 
   }
 
-  ngOnInit(): void {
-  }
-
   toSlideProject(index:number){
     this.carouselRef.setIndex(index);
-  }
-
-  ngAfterViewInit(): void {
-    // this.carouselRef.itemIndexChange
-    // .pipe(
-    //   throttleTime(600)
-    // )
-    // .subscribe((index) => {
-    //   this.slideActual = index;
-    //   console.log(index);
-    // });
   }
 
 }

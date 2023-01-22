@@ -1,4 +1,4 @@
-<div class="w-full flex justify-center  items-center mb-2">
+<div class="w-full flex justify-center flex-col items-center mb-2">
     <!-- bg-[#b8bac28f] -->
     <ng-carousel
     class="w-full bg-gray-100/50 shadow-xl dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border rounded-md
@@ -21,23 +21,23 @@
 dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-gray-100">
             <img class="h-72 w-96 rounded-md select-none grayscale-[70%]"
             [src]="item.image" alt="">
-            <p [ngClass]="{
+            <a target="_blank" href="" [ngClass]="{
                 'hidden': item.index !==  carouselRef.slideIndex,
                 'text-black': item.index === 3 || item.index === 2,
                 'text-indigo-200 backdrop-blur-3xl': item.index === 0 || item.index === 1 }"
-            class="absolute text-center w-3/6 text-white h-fit bottom-[15%] text-center backdrop-blur rounded-md self-bottom text-xs sm:text-md">{{item.description}}</p>
-        </div>
-        <div [ngClass]="{'hidden': item.index !==  carouselRef.slideIndex}"
-        class="w-full justify-center flex mt-8">
-            <ul class="flex">
-                <li (click)="toSlideProject(0)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 0}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
-                <li (click)="toSlideProject(1)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 1}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
-                <li (click)="toSlideProject(2)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 2}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
-                <li (click)="toSlideProject(3)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 3}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
-                <li (click)="toSlideProject(4)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 4}" class="cursor-pointer bg-gray-400 rounded-full mx-0.5 mt-2  w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
-            </ul>
+            class="absolute text-center w-3/6 text-white h-fit bottom-[15%] text-center backdrop-blur rounded-md self-bottom text-xs sm:text-md">{{item.description}}</a>
         </div>
     </ng-template>
 </ng-carousel>
+    <div class="w-full justify-center flex mt-4 -translate-y-10">
+        <ul class="flex">
+            <li (click)="toSlideProject(0)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 0}" class="cursor-pointer rounded-full mx-0.5 mt-2 bg-gray-300 w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+            <li (click)="toSlideProject(1)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 1}" class="cursor-pointer rounded-full mx-0.5 mt-2 bg-gray-300 w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+            <li (click)="toSlideProject(2)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 2}" class="cursor-pointer rounded-full mx-0.5 mt-2 bg-gray-300 w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+            <li (click)="toSlideProject(3)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 3}" class="cursor-pointer rounded-full mx-0.5 mt-2 bg-gray-300 w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+            <li (click)="toSlideProject(4)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 4}" class="cursor-pointer rounded-full mx-0.5 mt-2 bg-gray-300 w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+            <li (click)="toSlideProject(5)" [ngClass]="{'bg-indigo-300 w-10 lg:w-[30px]': carouselRef.slideIndex === 5}" class="cursor-pointer rounded-full mx-0.5 mt-2 bg-gray-300 w-6 h-3 sm:w-5 sm:h-2 lg:h-2.5"></li>
+        </ul>
+    </div>
 </div>
 
