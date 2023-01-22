@@ -7,8 +7,7 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-p {
-    font-family: 'Oswald', sans-serif;
+.p-perfil {
     letter-spacing: .5rem;
 }
 
@@ -28,5 +27,5 @@ p {
 
 /* //TODO: ver q onda el darkmode */
 .svg-tam-profile{
-    @apply w-3 h-3 sm:w-9 sm:h-9 dark:fill-white;
+    @apply w-6 h-6 sm:w-9 sm:h-9 dark:fill-white;
 }

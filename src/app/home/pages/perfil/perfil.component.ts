@@ -1,6 +1,6 @@
 import { SvgsProfileService } from './../../services/svgs-profile.service';
 import { SocialSVG } from './../../interfaces/social-svg';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 import Swal from 'sweetalert2';
 import { SVG_DISCORD } from '../../constants/profile-svgs/svg-discord.constant';
@@ -8,14 +8,14 @@ import { SVG_DISCORD } from '../../constants/profile-svgs/svg-discord.constant';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css']
+  styleUrls: ['./perfil.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PerfilComponent {
 
   //TODO: Hacer array
   svgDC = SVG_DISCORD;
 
-  screenWidth:number;
 
   showOverlay:boolean = false;
 
@@ -24,11 +24,10 @@ export class PerfilComponent {
 
   constructor(svgsProfileService:SvgsProfileService) {
     this.socialItems = svgsProfileService.getAllSvgs();
-    this.screenWidth = window.innerWidth;
   }
 
   showLink(num:number){
-    if (this.screenWidth > 680){//TODO: Evento de resize? si hace falta
+    if (window.innerWidth > 680){//TODO: Evento de resize? si hace falta
       this.link[num] = true;
     }
   }

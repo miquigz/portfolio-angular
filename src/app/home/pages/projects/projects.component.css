@@ -18,12 +18,13 @@ h2{letter-spacing: 0.3rem; font-family: 'Oswald', sans-serif; letter-spacing: 0.
 }
 
 .time-desc-timeline{
-    @apply block mb-2 text-sm font-normal 
+    @apply block mb-2 text-sm
     leading-none text-gray-400 dark:text-gray-500;
 }
 
 .desc-timeline{
-    @apply text-base mb-4 font-normal 
+    
+    @apply text-base mb-4
     text-gray-500 dark:text-gray-400;
 }
 
@@ -32,7 +33,7 @@ h2{letter-spacing: 0.3rem; font-family: 'Oswald', sans-serif; letter-spacing: 0.
     dark:bg-gray-800/50 dark:border-indigo-300/50 dark:border
     md:hover:scale-[1.04] md:hover:rotate-[1deg] md:hover:translate-x-[1px]
     md:hover:translate-y-[1px] md:hover:skew-y-[1deg] 
-    col-span-8 col-start-3 md:col-span-4 md:col-start-2
+    col-span-10 col-start-2 md:col-span-4 md:col-start-2
     mb-8 bg-gray-100/50 px-8 pt-4 rounded-md shadow-xl;
 }
 
@@ -41,7 +42,7 @@ h2{letter-spacing: 0.3rem; font-family: 'Oswald', sans-serif; letter-spacing: 0.
     dark:bg-gray-800/50 dark:border-indigo-300/50 dark:border
     md:hover:scale-[1.04] md:hover:rotate-[-1deg] md:hover:skew-x-[-1deg]
     md:hover:skew-y-[-1deg] md:hover:translate-x-[-1px] md:hover:translate-y-[-1px]
-    col-span-8 col-start-3 md:col-span-4 md:col-start-8 mb-8
+    col-span-10 col-start-2 md:col-span-4 md:col-start-8 mb-8
     bg-gray-100/50 px-8 pt-4 rounded-md shadow-xl;
 }
 
