@@ -48,14 +48,31 @@
 
 
 
-    .div-projects-grid{
+    /* .div-projects-grid{
         @apply rounded-lg neumorphism
         text-black text-lg sm:text-2xl w-full md:w-10/12 lg:w-8/12 h-full
         bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1]
         darkMode
         flex justify-center items-center rounded-lg flex-wrap min-h-screen;
+    } */
+
+    /* Projects */
+    .project-div{
+        @apply sm:dark:bg-gradient-to-r sm:dark:from-[#413737d5] sm:dark:to-[#443434e1] dark:text-white
+        dark:bg-gradient-to-r dark:from-[#413737] dark:to-[#443434] dark:border-indigo-300/50 dark:border
+        p-3 bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1] shadow-lg dark:text-gray-100
+        w-full lg:w-8/12;
     }
 
+    .time-desc-timeline{
+        @apply dark:text-gray-100 block mb-2 text-sm leading-none text-gray-400;
+    }
+
+    .desc-timeline{
+        @apply text-base mb-4 text-gray-500 dark:text-gray-300;
+    }
+
+    /* -------- */
     .responsive-img{
         @apply relative h-80 w-full overflow-hidden rounded-lg bg-white opacity-75 group-hover:opacity-100 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1;
     }

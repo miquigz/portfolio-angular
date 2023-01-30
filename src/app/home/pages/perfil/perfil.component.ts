@@ -15,10 +15,7 @@ export class PerfilComponent {
 
   //TODO: Hacer array
   svgDC = SVG_DISCORD;
-
-
-  showOverlay:boolean = false;
-
+  
   link:boolean[] = [false, false, false, false];
   socialItems:SocialSVG[] = [];
 

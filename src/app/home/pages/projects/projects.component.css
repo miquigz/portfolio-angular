@@ -17,17 +17,6 @@ h2{letter-spacing: 0.3rem; font-family: 'Oswald', sans-serif; letter-spacing: 0.
     dark:bg-blue-200 dark:text-blue-800 ml-3;
 }
 
-.time-desc-timeline{
-    @apply block mb-2 text-sm
-    leading-none text-gray-400 dark:text-gray-500;
-}
-
-.desc-timeline{
-    
-    @apply text-base mb-4
-    text-gray-500 dark:text-gray-400;
-}
-
 .timeline-education-left{
     @apply md:hover:shadow-2xl md:transition md:duration-300 md:ease-in-out
     dark:bg-gray-800/50 dark:border-indigo-300/50 dark:border

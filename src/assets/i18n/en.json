@@ -29,7 +29,7 @@
             "DESC2": "I like order and aesthetics, I try to replicate my tastes in the creation of attractive user interfaces, friendly and accessible (a11y), I also like everything related to data management, I consider that today is the new oil (black gold), so I really like creating applications that can be used for data management.",
             "DESC3": "I am currently studying Information and Communication Technologies (ICT analyst) at the Faculty of Informatics (UNLP).",
             "DESC4": "Besides this I am aware that the world of programming is immense and it is not enough to stay with formal studies, and that is why I combine my academic training with my curiosity and self-taught personality.",
-            "DESC5": "At the moment I am focusing on the following technologies: Front:Angular(Material, primeNG, ng2-charts), TailwindCSS(flowbite), RxJS, TypeScript, BackEnd: NodejS(NestJS + expressJS) DB: MongoDB, MySql, MariaDB",
+            "DESC5": "At the moment I am focusing on the following technologies: Front:Angular(Material, ng2-charts, ngx-ui), TailwindCSS(DaisyUI), RxJS, NgRx,  TypeScript, BackEnd: NodejS(NestJS + ExpressJS) DB: MongoDB, MySql, MariaDB",
             "DESC6": "I am also interested in learning and researching new technologies and concepts, such as: .NET (C#), Testing: Jasmine and Karma, Cloud: Azure.",
             "CONTACT":"If you want to program something or have a chat, feel free to contact me.",
             "THANKS": "Thanks for view my portfolio!",
