@@ -21,12 +21,9 @@
 dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-gray-100">
             <img class="h-72 w-96 rounded-md select-none grayscale-[70%]"
             [src]="item.image" alt="">
-            <a target="_blank" href="" [ngClass]="{
-                'hidden': item.index !==  carouselRef.slideIndex,
-                'text-black': item.index === 3 || item.index === 2,
-                'text-indigo-200 backdrop-blur-3xl': item.index === 0 || item.index === 1 }"
-            class="sm:hover:border-indigo-300 sm:transition sm:duration-300
-            border border-transparent absolute text-center w-3/6 text-white h-fit bottom-[15%] text-center backdrop-blur rounded-md self-bottom text-xs sm:text-md">{{item.description}}</a>
+            <a target="_blank" [href]="item.hrefUrl" [ngClass]="{
+                'hidden': item.index !==  carouselRef.slideIndex}"
+            class="button-about absolute text-center w-3/6 h-fit bottom-[15%] text-center self-bottom text-xs sm:text-md">{{item.description}}</a>
         </div>
     </ng-template>
 </ng-carousel>
