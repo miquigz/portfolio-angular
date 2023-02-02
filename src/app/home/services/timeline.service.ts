@@ -39,17 +39,18 @@ export class TimelineService {
 
     this.trainingsAndCourses = [
       {
-        title:'Bootcamp Crisalis, Finnegans - CESSI <span class="latest-timeline">Latest</span>',
+        title:'Bootcamp Crisalis, Finnegans<span class="latest-timeline">Latest</span>',
         spanLatest: true,
         date:'23 de Enero de 2023 - <span class="underline underline-offset-4">Presente</span>',
-        desc:'Dentro de los 25 seleccionados entre 300 postulantes al Bootcampo Crisalis(Angular), ofrecido por Finnegans en conjunto de Alkemy y CESSI.',
+        desc:`Dentro de los 25 seleccionados entre 300 postulantes al Bootcamp <a href="https://www.finneg.com/ar/adw/bootcamp-crisalis/" target="_blank"
+        class="underline underline-offset-2">Crisalis</a>(Angular), ofrecido por Finnegans en conjunto de Alkemy y CESSI.`,
         icon: `${timelineSvgs.academic}`
       },
       {
         title:'Bootcamp NodeJS Developer, Telecom - EducacionIT',
         spanLatest:false,
         date:'20 de Mayo de 2022 - 4 de Noviembre de 2022',
-        desc:`Bootcamp ofrecido por <span class="text-gray-700 dark:text-gray-200">Telecom</span> en el programa digit@lers, en conjunto con EducacionIT.`,
+        desc:``,
         icon: `${timelineSvgs.academic}`
       },
       {
