@@ -1,4 +1,5 @@
-import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ShowWelcomeService } from './../../../services/show-welcome.service';
 import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 
 @Component({
@@ -16,33 +17,15 @@ export class WelcomeComponent implements OnInit, OnDestroy{
   @ViewChild('name') name!:ElementRef<HTMLTitleElement>;
 
   showMessage:boolean = false;
+  
 
   private interval:any;
 
-  constructor(private route:Router) {
-  }
+  constructor(
+    private showWelcome:ShowWelcomeService
+    ) { }
 
   ngOnInit(): void {
-    setTimeout(()=>{
-      this.progressBar.nativeElement.classList.add('w-4/12');
-      setTimeout(()=>{
-        this.progressBar.nativeElement.classList.add('w-7/12');
-        setTimeout(()=>{
-          this.progressBar.nativeElement.classList.add('w-8/12');
-          setTimeout(()=>{
-            this.progressBar.nativeElement.classList.add('w-11/12');
-            this.progressBar.nativeElement.classList.remove('w-8/12');
-            this.progressBar.nativeElement.classList.remove('w-7/12');
-            setTimeout(()=>{
-              this.progressBar.nativeElement.classList.remove('w-2/12');
-              this.progressBar.nativeElement.classList.remove('w-4/12');
-              this.progressBar.nativeElement.classList.remove('w-11/12');
-              this.progressBar.nativeElement.classList.add('w-full');
-            }, 100)
-          }, 100)
-        }, 200)
-      }, 100)
-    }, 200)//TODO: REFACTOR ...
 
     setTimeout(()=>{
       this.showMessage = true;
@@ -58,8 +41,6 @@ export class WelcomeComponent implements OnInit, OnDestroy{
         }
       }, 2000);
     }, 900);
-
-    // this.btn.nativeElement.classList.add('animate__animated', 'animate__rotateOutUpRight');
   }
 
   ngOnDestroy(): void {
@@ -78,7 +59,8 @@ export class WelcomeComponent implements OnInit, OnDestroy{
       this.btnText.nativeElement.classList.add('animate__rollOut');
     }, 50)
     setTimeout(()=>{
-      this.route.navigateByUrl('/miqueas-gimenez');
+      // this.route.navigateByUrl('/miqueas-gimenez');
+      this.showWelcome.setHideWelcome(true);
     },2000)
   }
 }

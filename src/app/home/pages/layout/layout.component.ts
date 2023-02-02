@@ -1,5 +1,6 @@
+import { ShowWelcomeService } from './../../services/show-welcome.service';
 import { Component, ViewChild, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { fromEvent, Subscription, tap } from 'rxjs';
+import { fromEvent, Subscription, tap, Observable } from 'rxjs';
 
 import { LoadedComponentsService } from 'src/app/shared/services/loaded-components.service';
 // import * as AOS from 'aos';
@@ -27,10 +28,14 @@ export class LayoutComponent implements OnInit,  OnDestroy{
   private sub!:Subscription;
   private subSection!:Subscription;
 
+  hideWelcome$:Observable<boolean>
+
 //Hooks
 	constructor(
-    private loadComp:LoadedComponentsService
+    private loadComp:LoadedComponentsService,
+    private showWelcome:ShowWelcomeService
     ) {
+      this.hideWelcome$ = this.showWelcome.getHideWelcome();
     // this.getScreenWidth = window.innerWidth;
   }
 

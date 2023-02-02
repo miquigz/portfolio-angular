@@ -1,3 +1,4 @@
+import { ShowWelcomeService } from './home/services/show-welcome.service';
 import { Event, NavigationStart, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,12 +16,15 @@ export class AppComponent implements OnInit {
 
   routeAct:string = '';
   darkMode$!:Observable<Boolean>;
+  hideWelcome$:Observable<boolean>;
 
   constructor(
       private route:Router,
       private settingsService:SettingsService, 
-      translate:TranslateService
+      translate:TranslateService,
+      private showWelcome:ShowWelcomeService
     ){
+    this.hideWelcome$ = showWelcome.getHideWelcome();
     this.routeAct = route.url;  
     translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');

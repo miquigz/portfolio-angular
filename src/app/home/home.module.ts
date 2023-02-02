@@ -20,11 +20,15 @@ import { PercentageComponent } from './pages/layout/percentage/percentage.compon
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ParticlesComponent } from './pages/perfil/particles/particles.component';
 import { CarrouselProjectsComponent } from './pages/projects/carrousel-projects/carrousel-projects.component';
-
+import { NameComponent } from './pages/welcome-animation/name/name.component';
+import { WelcomeComponent } from './pages/welcome-animation/welcome/welcome.component';
+import { TimelineComponent } from './pages/projects/timeline/timeline.component';
 
 
 @NgModule({
   declarations: [
+    WelcomeComponent,
+    NameComponent,
     LayoutComponent,
     ProjectsComponent,
     AboutMeComponent,
@@ -32,7 +36,8 @@ import { CarrouselProjectsComponent } from './pages/projects/carrousel-projects/
     PercentageComponent,
     SkillsComponent,
     ParticlesComponent,
-    CarrouselProjectsComponent
+    CarrouselProjectsComponent,
+    TimelineComponent
   ],
   imports: [
     CommonModule,

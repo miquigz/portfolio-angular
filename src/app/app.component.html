@@ -1,12 +1,15 @@
 <div [class.dark]="darkMode$ | async">
     
-    <app-settings *ngIf="routeAct !== '/'"></app-settings>
+    <ng-container *ngIf="hideWelcome$ | async">
+        <app-settings></app-settings>
 
-    <app-navbar *ngIf="routeAct !== '/'"></app-navbar>
-
+        <app-navbar></app-navbar>
+    </ng-container>
+    
     <router-outlet></router-outlet>
 
-    <app-footer *ngIf="routeAct !== '/'"></app-footer>
-
+    <ng-container *ngIf="hideWelcome$ | async">
+        <app-footer></app-footer>
+    </ng-container>
 
 </div>

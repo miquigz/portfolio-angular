@@ -18,14 +18,14 @@
 <!-- Redes ocultas , y components no cargados tambien -->
             <li *ngFor="let item of navItems; index as i"
             class="li-item animate__fadeIn animate__animated animate__slow"
-            [class.hidden]="item.name === 'about' && !(loadedAbout$ | async) || routeActual !== '/miqueas-gimenez' && item.name === 'about' 
-            || item.name === 'projects' && !(loadedProjects$ | async) || routeActual !== '/miqueas-gimenez' && item.name === 'projects'
+            [class.hidden]="item.name === 'about' && !(loadedAbout$ | async) || routeActual !== '/' && item.name === 'about' 
+            || item.name === 'projects' && !(loadedProjects$ | async) || routeActual !== '/' && item.name === 'projects'
             || this.mobileResize && redesNavItem(item.name)">
 
                 <app-nav-item 
                 *ngIf="item.name !== 'about' && item.name !== 'projects'
-                || item.name === 'about' && (loadedAbout$ | async)!== null && routeActual === '/miqueas-gimenez'
-                || item.name === 'projects' && (loadedProjects$ | async) !== null && routeActual === '/miqueas-gimenez' "
+                || item.name === 'about' && (loadedAbout$ | async)!== null && routeActual === '/'
+                || item.name === 'projects' && (loadedProjects$ | async) !== null && routeActual === '/' "
                 [item]="item">
                 </app-nav-item>
 
