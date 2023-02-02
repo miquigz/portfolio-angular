@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       private route:Router,
       private settingsService:SettingsService, 
       translate:TranslateService,
-      private showWelcome:ShowWelcomeService
+      showWelcome:ShowWelcomeService
     ){
     this.hideWelcome$ = showWelcome.getHideWelcome();
     this.routeAct = route.url;  

@@ -1,0 +1,16 @@
+.span-timeline{
+    @apply absolute flex items-center justify-center
+    w-6 h-6 bg-indigo-200 rounded-full -left-3 ring-8
+    ring-white dark:ring-gray-900 dark:bg-indigo-400;
+}
+
+.subject-timeline{
+    @apply flex items-center mb-0.5 text-lg 
+    font-semibold text-gray-900 dark:text-white;
+}
+
+.latest-timeline{
+    @apply bg-indigo-100 text-blue-800 text-sm 
+    font-medium mr-2 px-2.5 py-0.5 rounded 
+    dark:bg-blue-200 dark:text-blue-800 ml-3;
+}

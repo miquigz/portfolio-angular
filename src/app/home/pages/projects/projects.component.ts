@@ -1,3 +1,5 @@
+import { TimelineItem } from './../../interfaces/timeline-item';
+import { TimelineService } from './../../services/timeline.service';
 import { Component, OnInit } from '@angular/core';
 
 import * as AOS from 'aos';
@@ -49,9 +51,18 @@ export class ProjectsComponent implements OnInit{
   ]
   hoverActual:string = '';
 
-  constructor() {    }
+  trainingsAndCourses:TimelineItem[] = [];
+  academic:TimelineItem[] = [];
+  
+
+  constructor(private timelineService:TimelineService) {   
+
+  }
 
   ngOnInit(){
+    this.trainingsAndCourses = this.timelineService.getTrainingsAndCourses();
+    this.academic = this.timelineService.getAcademic();
+
     this.calcularExpLaboral();
     AOS.init();
   }
