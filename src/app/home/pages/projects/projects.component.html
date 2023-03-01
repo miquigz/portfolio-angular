@@ -5,11 +5,11 @@
             <div class="col-span-12 w-full py-8 flex justify-center flex-wrap">
                 <div class="w-full flex justify-center mb-4 items-center">
                     <svg class="w-5 h-5 sm:w-7 sm:h-7 lg:w-[34px] lg:h-[34px]" width="34" height="34" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24"><path d="M20.705,8.313L18.242,5.85l1.241-3.803c0.207-0.634-0.409-1.227-1.034-0.996L6.902,5.305 c-0.277,0.102-0.495,0.32-0.597,0.597L2.051,17.448c-0.035,0.095-0.046,0.188-0.045,0.28L2,17.729V22h2v-3.829l2.85-0.93 l2.463,2.464c0.393,0.393,1.031,0.393,1.424,0l9.968-9.968C21.098,9.344,21.098,8.707,20.705,8.313z"></path></svg>
-                    <h2 class="text-2xl text-center font-bold">Educacion</h2>
+                    <h2 class="text-2xl text-center font-bold text-black dark:text-gray-100">Educacion</h2>
                 </div>
                 <div class="grid grid-cols-12">
                     <div class="timeline-education-left">
-                        <h3 class="text-xl font-['Oswald'] tracking-wider ml-4 mb-4 underline underline-offset-[3px]">Academic</h3>
+                        <h3 class="text-xl font-['Oswald'] tracking-wider ml-4 mb-4 underline underline-offset-[3px] text-black dark:text-gray-100">Academic</h3>
                         <ol class="ol-timeline">
                             <ng-container *ngFor="let item of academic">
                                 <app-timeline [item]="item"></app-timeline>
@@ -17,7 +17,7 @@
                         </ol>
                     </div>
                     <div class="timeline-education-right">
-                        <h3 class="text-xl font-['Oswald'] tracking-wider ml-4 mb-4 underline underline-offset-[3px]">Training - Courses</h3>
+                        <h3 class="text-xl font-['Oswald'] tracking-wider ml-4 mb-4 underline underline-offset-[3px] text-black dark:text-gray-50">Training - Courses</h3>
                         <ol class="ol-timeline">
                             <ng-container *ngFor="let item of trainingsAndCourses">
                                 <app-timeline [item]="item"></app-timeline>
@@ -31,7 +31,7 @@
 
                 <div class="w-full flex justify-center  items-center mb-4">
                     <svg class="w-4 h-4 sm:w-7 sm:h-7 mr-0.5 sm:mr-1.5 lg:w-[30px] lg:h-[30px]" width="30" height="30" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50"><path d="M 25 2 C 20.390625 2 16.703125 4.566406 16.09375 8 L 3 8 C 1.347656 8 0 9.347656 0 11 L 0 28 C 0 28.550781 0.449219 29 1 29 L 20 29 C 20 27.347656 21.347656 26 23 26 L 27 26 C 28.652344 26 30 27.347656 30 29 L 49 29 C 49.550781 29 50 28.550781 50 28 L 50 11 C 50 9.347656 48.652344 8 47 8 L 33.90625 8 C 33.296875 4.566406 29.609375 2 25 2 Z M 25 4 C 28.449219 4 31.25 5.6875 31.875 8 L 18.125 8 C 18.75 5.6875 21.550781 4 25 4 Z M 23 28 C 22.449219 28 22 28.449219 22 29 L 22 31 C 22 31.550781 22.449219 32 23 32 L 27 32 C 27.550781 32 28 31.550781 28 31 L 28 29 C 28 28.449219 27.550781 28 27 28 Z M 0 30.8125 L 0 45 C 0 46.652344 1.347656 48 3 48 L 47 48 C 48.652344 48 50 46.652344 50 45 L 50 30.8125 C 49.6875 30.925781 49.351563 31 49 31 L 30 31 C 30 32.652344 28.652344 34 27 34 L 23 34 C 21.347656 34 20 32.652344 20 31 L 1 31 C 0.648438 31 0.3125 30.925781 0 30.8125 Z"></path></svg>
-                    <h2 class="text-2xl text-center font-bold">Experiencia</h2>
+                    <h2 class="text-2xl text-center font-bold text-black dark:text-gray-100">Experiencia</h2>
                 </div>
                 <div class="flex justify-center">
                     <div class="timeline-exp pt-8">
@@ -54,7 +54,7 @@
         </div>
         <div>
             <div class="w-full justify-center flex">
-                <h2 class="md:translate-y-12 text-2xl bg-indigo-300/75 w-fit p-2 rounded-md font-bold mb-8">{{'MAIN.PROJECTS.TITLE' | translate}}</h2>
+                <h2 class="md:translate-y-12 text-2xl bg-indigo-300/75 w-fit p-2 rounded-md font-bold mb-8 text-black dark:text-gray-100">{{'MAIN.PROJECTS.TITLE' | translate}}</h2>
             </div>
             
             <app-carrousel-projects></app-carrousel-projects>

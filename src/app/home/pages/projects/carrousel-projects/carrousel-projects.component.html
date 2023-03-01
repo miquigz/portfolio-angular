@@ -16,10 +16,10 @@
             tracking-wider backdrop-blur absolute z-30 rounded-md p-1 text-white translate-y-6">{{item.name}}</h2>
         </div>
         <div [ngClass]="{'blur-[2.5px] brightness-75': item.index !==  carouselRef.slideIndex}"
-        class="flex justify-center py-8 select-none brightness-90
+        class="flex justify-center py-8 brightness-90
         relative mt-16 md:mx-4 sm:mt-5 lg:mt-8 border-2 border-indigo-200/50 rounded 
 dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-gray-100">
-            <img class="h-72 w-96 rounded-md select-none grayscale-[70%]"
+            <img class="h-72 w-96 rounded-md grayscale-[70%] select-none"
             [src]="item.image" alt="">
             <a target="_blank" [href]="item.hrefUrl" [ngClass]="{
                 'hidden': item.index !==  carouselRef.slideIndex}"
