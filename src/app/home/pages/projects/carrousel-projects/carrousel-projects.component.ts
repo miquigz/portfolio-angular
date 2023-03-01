@@ -54,6 +54,24 @@ export class CarrouselProjectsComponent {
         },
         {
           index: 1,
+          fecha: '2021',
+          name: 'Programming Practices',
+          description: 'Pascal, Java, Assembly WinMips, Assembly MSX88',
+          image: '../../../../../assets/winmipsAssembly.webp',
+          altimg: 'Imagen de proyecto 4',
+          hrefUrl: 'https://github.com/stars/miquigz/lists/practicas-facultad'
+        },
+        {
+          index: 2,
+          fecha: '2022',
+          name: 'Postcard App',
+          description: 'Monolitic Application - 2022 "Postcard App", Handlebars, NodeJS, ExpressJS, MongoDB, Mongoose, Deployed:RailWay',
+          image: '../../../../../assets/postcardApp.webp',
+          altimg: 'Imagen de proyecto 3',
+          hrefUrl: 'https://github.com/miquigz/final-project'
+        },
+        {
+          index: 3,
           fecha: '2022',
           name: 'Inventory Management',
           description: 'Angular(material, ng2-charts, tailwindcss), NodeJS, Expressjs, MongoDB',
@@ -63,46 +81,16 @@ export class CarrouselProjectsComponent {
 
         },
         {
-          index: 2,
-          fecha: '2020',
-          name: 'Postcard App',
-          description: 'Monolitic Application - 2022 "Postcard App", Handlebars, NodeJS, ExpressJS, MongoDB, Mongoose, Deployed:RailWay',
-          image: '../../../../../assets/postcardApp.webp',
-          altimg: 'Imagen de proyecto 3',
-          hrefUrl: 'https://github.com/miquigz/final-project'
-        },
-        {
-          index: 3,
-          fecha: '2020',
-          name: 'Programming Practices',
-          description: 'Pascal, Java, Assembly WinMips, Assembly MSX88',
-          image: '../../../../../assets/winmipsAssembly.webp',
-          altimg: 'Imagen de proyecto 4',
-          hrefUrl: 'https://github.com/stars/miquigz/lists/practicas-facultad'
-        },
-        {
           index: 4,
-          fecha: '2022',
-          name: 'Gifs App',
-          description: 'Angular 14, Bootstrap (+ Bootswatch), Giphy API',
-          image: '../../../../../assets/gifsapp.webp',
-          altimg: 'Imagen de proyecto 5',
-          hrefUrl: 'https://github.com/miquigz/buscarGifs'
-        },
-        {
-          index: 5,
-          fecha: '2022',
-          name: 'Search Country App',
-          description: 'Angular 14, Angular Material, Rest Countries API, TailwindCSS',
-          image: '../../../../../assets/searchCountry.webp',
-          altimg: 'Imagen de proyecto 6',
-          hrefUrl: 'https://github.com/miquigz/searchCountry.webp'
+          fecha: '2023',
+          name: 'E-Wallet, Finnegans - Alkemy',
+          description: 'Angular 14, NgRX, RxJS, TailwindCSS, Leaflet, Echarts, Karma, Jasmine, (SCRUM - JIRA - SLACK)',
+          image: '../../../../../assets/alkybank.webp',
+          altimg: 'Imagen del proyecto 5, e-wallet finnegans - alkemy',
+          hrefUrl: 'https://github.com/Finnegans-Angular-W1/ANGFIN-T2/tree/develop'
         }
-        // {name: 2},
-        // {name: 3},
       ],
     }
-
   }
 
   toSlideProject(index:number){

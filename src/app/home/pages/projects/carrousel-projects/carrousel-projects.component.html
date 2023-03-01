@@ -18,12 +18,13 @@
         <div [ngClass]="{'blur-[2.5px] brightness-75': item.index !==  carouselRef.slideIndex}"
         class="flex justify-center py-8 brightness-90
         relative mt-16 md:mx-4 sm:mt-5 lg:mt-8 border-2 border-indigo-200/50 rounded 
-dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-gray-100">
+        dark:bg-gray-800/50 dark:text-white dark:border-indigo-300/50 dark:border sm:bg-gray-100">
+            <span class="absolute shadow-xl z-30 px-1 py-0.5 text-black bg-gray-50 rounded translate-y-2 text-xl">{{item.fecha}}</span>
             <img class="h-72 w-96 rounded-md grayscale-[70%] select-none"
-            [src]="item.image" alt="">
+            [src]="item.image" [alt]="item.altimg">
             <a target="_blank" [href]="item.hrefUrl" [ngClass]="{
                 'hidden': item.index !==  carouselRef.slideIndex}"
-            class="button-about absolute text-center w-3/6 h-fit bottom-[15%] text-center self-bottom text-xs sm:text-md">{{item.description}}</a>
+            class="button-about absolute text-center w-5/6 sm:w-7/12 sm:hover:shadow-2xl shadow-lg sm:hover:text-indigo-400 sm:transition sm:duration-300 h-fit text-black bottom-[15%] sm:bottom-[10%] text-center self-bottom text-xs sm:text-md">{{item.description}}</a>
         </div>
     </ng-template>
 </ng-carousel>
