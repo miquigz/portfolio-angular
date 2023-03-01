@@ -69,7 +69,7 @@
     }
 
     .desc-timeline{
-        @apply text-base mb-4 text-gray-500 dark:text-gray-300;
+        @apply text-base mb-4 text-gray-500 dark:text-gray-200;
     }
 
     /* -------- */
