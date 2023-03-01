@@ -3,11 +3,7 @@
 [loadedAbout]="this.loadedAbout"
 [loadedProjects]="this.loadedProjects"
 (selectedSection)="smoothScroll($event)"></app-navbar> -->
-
-
 <!-- <app-projects (scroll)="scrollProjects($event)"></app-projects> -->
-
-
 
 <ng-container *ngIf="!(hideWelcome$ | async); else homeLayout">
     <app-welcome></app-welcome>
@@ -48,8 +44,6 @@
 display_block position_absolute top_0 left_0 z-index_1"></app-particles> -->
 
 <!-- <app-projects></app-projects> -->
-
-
 
 <!-- <app-footer [class.dark]="darkMode$ | async"
 ></app-footer> -->
