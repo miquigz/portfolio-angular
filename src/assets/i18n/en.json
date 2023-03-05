@@ -12,7 +12,8 @@
         "TITLE":"Options",
         "INFO":"Information about the application",
         "DARKMODE":"Dark Mode",
-        "LANGUAGE":"Change to Spanish"
+        "LANGUAGE":"Change to Spanish",
+        "FULLSCREEN": "Full Screen"
     },
     "MAIN": {
         "PERFIL": {

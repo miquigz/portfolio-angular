@@ -12,7 +12,8 @@
         "TITLE":"Opciones",
         "INFO":"Información acerca de la aplicación",
         "DARKMODE":"Modo oscuro",
-        "LANGUAGE":"Cambiar a inglés"
+        "LANGUAGE":"Cambiar a inglés",
+        "FULLSCREEN": "Pantalla Completa"
     },
     "MAIN": {
         "PERFIL": {

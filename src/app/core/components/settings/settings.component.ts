@@ -15,6 +15,8 @@ export class SettingsComponent implements OnInit {
 
   openSettings:boolean = false;
   darkMode:boolean;
+
+  fullscreen:boolean = false;
   
   @ViewChild('svgSettings') svgSettings!:ElementRef<SVGElement>;
 
@@ -49,6 +51,18 @@ export class SettingsComponent implements OnInit {
       this.translate.use('en');
     }
   }
+
+  toggleFullscreen(){
+    if (document.fullscreenElement) {
+      this.fullscreen = false;
+      document.exitFullscreen();
+    } else {
+      this.fullscreen = true;
+      document.documentElement.requestFullscreen();
+    }
+  }
+
+
   
   leaveSettings(){
     this.openSettings = false;

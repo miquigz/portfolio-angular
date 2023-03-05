@@ -43,7 +43,7 @@ export class TimelineService {
         spanLatest: true,
         date:'23 de Enero de 2023 - <span class="underline underline-offset-4">Presente</span>',
         desc:`Dentro de los 25 seleccionados entre 300 postulantes al Bootcamp <a href="https://www.finneg.com/ar/adw/bootcamp-crisalis/" target="_blank"
-        class="underline underline-offset-2">Crisalis</a>(Angular)ah, ofrecido por Finnegans en conjunto de Alkemy y CESSI.`,
+        class="underline underline-offset-2">Crisalis</a>(Angular), ofrecido por Finnegans en conjunto de Alkemy y CESSI.`,
         icon: `${timelineSvgs.academic}`
       },
       {

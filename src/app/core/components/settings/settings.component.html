@@ -43,6 +43,11 @@ class="fixed">
                 {{'SETTINGS.LANGUAGE' | translate}}
             </p>
             <!-- //TODO: Scroll Percentage On/Off -->
+            <p (click)="toggleFullscreen()" 
+            [ngClass]="{ 'text-indigo-400 font-semibold' : fullscreen, '': !fullscreen }"
+            class="cursor-pointer select-none hover:text-indigo-400 p-2 rounded-sm text-sm mx-2 sm:text-md sm:mx-6 my-2 text-center bg-nav">
+                {{'SETTINGS.FULLSCREEN' | translate}}
+            </p>
             <!-- //TODO: FullScreen page -->
             <small class="cursor-pointer text-white mt-12 md:mt-16 lg:mt-12 text-center"><a target="_blank" href="https://www.linkedin.com/in/miqueasgimenez/">Miqueas Gimenez</a></small>
         </div>
