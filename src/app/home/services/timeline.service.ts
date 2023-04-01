@@ -39,9 +39,16 @@ export class TimelineService {
 
     this.trainingsAndCourses = [
       {
-        title:'Bootcamp Crisalis, Finnegans<span class="latest-timeline">Latest</span>',
+        title:'XAcademy - Santex<span class="latest-timeline">Latest</span>',
         spanLatest: true,
-        date:'23 de Enero de 2023 - <span class="underline underline-offset-4">Presente</span>',
+        date:'15 de Marzo de 2023 - <span class="underline underline-offset-4">Presente</span>',
+        desc:`Santex and Technology With Purpose Foundation`,
+        icon: `${timelineSvgs.santex}`
+      },
+      {
+        title:'Bootcamp Crisalis, Finnegans',
+        spanLatest: false,
+        date:'23 de Enero de 2023 - 28 de Febrero de 2023',
         desc:`Dentro de los 25 seleccionados entre 300 postulantes al Bootcamp <a href="https://www.finneg.com/ar/adw/bootcamp-crisalis/" target="_blank"
         class="underline underline-offset-2">Crisalis</a>(Angular), ofrecido por Finnegans en conjunto de Alkemy y CESSI.`,
         icon: `${timelineSvgs.academic}`
@@ -53,13 +60,13 @@ export class TimelineService {
         desc:``,
         icon: `${timelineSvgs.academic}`
       },
-      {
-        title: 'Javascript Intensivo CILSA, La Plata',
-        spanLatest:false,
-        date: '2021 Mayo - Junio',
-        desc: '',
-        icon: `${timelineSvgs.school2}`
-      },
+      // {
+      //   title: 'Javascript Intensivo CILSA, La Plata',
+      //   spanLatest:false,
+      //   date: '2021 Mayo - Junio',
+      //   desc: '',
+      //   icon: `${timelineSvgs.school2}`
+      // },
       {
         title: 'Introduccion al Desarrollo Web FLACSO Argentina',
         spanLatest:false,
