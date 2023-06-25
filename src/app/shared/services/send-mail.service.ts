@@ -141,14 +141,14 @@ export class SendMailService {
     if(!voidArray){
         if(values[0].length < 3)
           errorsList.push('Nombre demasiado corto');
-        if(values[1].length < 4)
+        if(values[1].length < 3)
           errorsList.push('Apellido demasiado corto');
-        if (!(values[2].includes('@')) && values![2].length < 8)
+        if (!(values[2].includes('@')) && values![2].length < 7)
           errorsList.push('Email Invalido');
-        if((values[3]).length < 6)
-          errorsList.push('Campo "Asunto" cuenta con menos de 6 caracteres');
-        if((values[3]).length < 15)
-          errorsList.push('Cuerpo del correo cuenta con menos de 15 caracteres');
+        if((values[3]).length < 5)
+          errorsList.push('Campo "Asunto" cuenta con menos de 5 caracteres');
+        if((values[4]).length < 5)
+          errorsList.push('Cuerpo del correo cuenta con menos de 5 caracteres');
     }else{
       errorsList.push('Sin campos llenados del formulario.');
     }

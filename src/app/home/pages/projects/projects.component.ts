@@ -69,7 +69,7 @@ export class ProjectsComponent implements OnInit{
 
   calcularExpLaboral(){
     const fechaActual = new Date();
-    const fechaObjetivo = new Date(2023,3,3); //los meses empiezan en 0 en javascript, (2023 abril 3)
+    const fechaObjetivo = new Date(2023,6,1); //los meses empiezan en 0 en javascript, (2023 abril 3)
     const milisegundosDiferencia = fechaActual.getTime() - fechaObjetivo.getTime();
 
     this.mesesTotalExp = Math.floor(milisegundosDiferencia / (1000 * 60 * 60 * 24 * 30));

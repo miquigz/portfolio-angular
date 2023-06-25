@@ -5,7 +5,7 @@
             <div class="col-span-12 w-full py-8 flex justify-center flex-wrap">
                 <div class="w-full flex justify-center mb-4 items-center">
                     <svg class="w-5 dark:fill-gray-300 h-5 sm:w-7 sm:h-7 lg:w-[34px] lg:h-[34px]" width="34" height="34" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24"><path d="M20.705,8.313L18.242,5.85l1.241-3.803c0.207-0.634-0.409-1.227-1.034-0.996L6.902,5.305 c-0.277,0.102-0.495,0.32-0.597,0.597L2.051,17.448c-0.035,0.095-0.046,0.188-0.045,0.28L2,17.729V22h2v-3.829l2.85-0.93 l2.463,2.464c0.393,0.393,1.031,0.393,1.424,0l9.968-9.968C21.098,9.344,21.098,8.707,20.705,8.313z"></path></svg>
-                    <h2 class="text-2xl text-center font-bold text-black dark:text-gray-100">Educacion</h2>
+                    <h2 class="text-2xl text-center font-bold text-black dark:text-gray-100">{{'EDUCATION.TITLE' | translate}}</h2>
                 </div>
                 <div class="grid grid-cols-12">
                     <div class="timeline-education-left">
@@ -31,7 +31,7 @@
 
                 <div class="w-full flex justify-center  items-center mb-4">
                     <svg class="w-4 dark:fill-gray-300 h-4 sm:w-7 sm:h-7 mr-0.5 sm:mr-1.5 lg:w-[30px] lg:h-[30px]" width="30" height="30" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50"><path d="M 25 2 C 20.390625 2 16.703125 4.566406 16.09375 8 L 3 8 C 1.347656 8 0 9.347656 0 11 L 0 28 C 0 28.550781 0.449219 29 1 29 L 20 29 C 20 27.347656 21.347656 26 23 26 L 27 26 C 28.652344 26 30 27.347656 30 29 L 49 29 C 49.550781 29 50 28.550781 50 28 L 50 11 C 50 9.347656 48.652344 8 47 8 L 33.90625 8 C 33.296875 4.566406 29.609375 2 25 2 Z M 25 4 C 28.449219 4 31.25 5.6875 31.875 8 L 18.125 8 C 18.75 5.6875 21.550781 4 25 4 Z M 23 28 C 22.449219 28 22 28.449219 22 29 L 22 31 C 22 31.550781 22.449219 32 23 32 L 27 32 C 27.550781 32 28 31.550781 28 31 L 28 29 C 28 28.449219 27.550781 28 27 28 Z M 0 30.8125 L 0 45 C 0 46.652344 1.347656 48 3 48 L 47 48 C 48.652344 48 50 46.652344 50 45 L 50 30.8125 C 49.6875 30.925781 49.351563 31 49 31 L 30 31 C 30 32.652344 28.652344 34 27 34 L 23 34 C 21.347656 34 20 32.652344 20 31 L 1 31 C 0.648438 31 0.3125 30.925781 0 30.8125 Z"></path></svg>
-                    <h2 class="text-2xl text-center font-bold text-black dark:text-gray-100">Experiencia</h2>
+                    <h2 class="text-2xl text-center font-bold text-black dark:text-gray-100">{{'EXPERIENCE.TITLE' | translate}}</h2>
                 </div>
                 <div class="flex justify-center">
                     <div class="timeline-exp pt-8">
@@ -43,25 +43,36 @@
                             </li> -->
                             <li class="mb-5 ml-8">
                                 <span class="span-timeline">
+                                    <img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../assets/finnegans-logo.png" alt="">
+                                </span>
+                                <h3 class="subject-timeline">{{'EXPERIENCE.THIRD.TITLE' | translate}}<span class="latest-timeline">Latest</span></h3>
+                                <time class="time-desc-timeline">{{'EXPERIENCE.THIRD.DATE1' | translate}} - 
+                                    <span class="underline underline-offset-4">{{'EXPERIENCE.THIRD.DATE2' | translate}}</span>  
+                                    ({{'EXPERIENCE.THIRD.MONTHS' | translate}}:{{mesesTotalExp}},
+                                    {{'EXPERIENCE.THIRD.DAYS' | translate}}:{{diasTotalExp}})</time>
+                                <p class="desc-timeline">{{'EXPERIENCE.THIRD.DESC' | translate}}</p>
+                                <p class="text-black dark:text-gray-100">Angular, Golang</p>
+                            </li>
+                            <li class="mb-5 ml-8">
+                                <span class="span-timeline">
                                     <!-- <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg> -->
                                     <!-- <svg class="dark:fill-gray-300 w-[18px] h-5" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"><path d="M 14 3 C 12.895 3 12 3.895 12 5 L 4 5 C 2.895 5 2 5.895 2 7 L 2 16 C 2 17.105 2.895 18 4 18 L 26 18 C 27.105 18 28 17.105 28 16 L 28 7 C 28 5.895 27.105 5 26 5 L 18 5 C 18 3.895 17.105 3 16 3 L 14 3 z M 7 13 C 7.552 13 8 13.448 8 14 L 8 15 C 8 15.552 7.552 16 7 16 C 6.448 16 6 15.552 6 15 L 6 14 C 6 13.448 6.448 13 7 13 z M 23 13 C 23.552 13 24 13.448 24 14 L 24 15 C 24 15.552 23.552 16 23 16 C 22.448 16 22 15.552 22 15 L 22 14 C 22 13.448 22.448 13 23 13 z M 2 19.443359 L 2 23 C 2 24.105 2.895 25 4 25 L 26 25 C 27.105 25 28 24.105 28 23 L 28 19.443359 C 27.409 19.787359 26.732 20 26 20 L 4 20 C 3.268 20 2.591 19.787359 2 19.443359 z"></path></svg> -->
                                     <img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../assets/finnegans-logo.png" alt="">
                                 </span>
-                                <h3 class="subject-timeline">Desarrollador Fullstack - Finnegans <span class="latest-timeline">Latest</span></h3>
-                                <!-- ({{mesesTotalExp}}, {{diasTotalExp}}) -->
-                                <time class="time-desc-timeline">3 de Abril 2023 - <span class="underline underline-offset-4">Presente</span> </time>
-                                <p class="desc-timeline">Ingreso como Becario para realizar Practicas profesionales en Finnegans, como desarollador FullStack.</p>
-                                <p class="text-black dark:text-gray-100">Angular, Java, Springboot - Jira, Scrum, Slack</p>
+                                <h3 class="subject-timeline">Desarrollador Fullstack - Finnegans</h3>
+                                <!-- <time class="time-desc-timeline">3 de Abril 2023 - <span class="underline underline-offset-4">Presente</span> </time> -->
+                                <time class="time-desc-timeline">{{'EXPERIENCE.SECOND.DATE' | translate}}</time>
+                                <p class="desc-timeline">{{'EXPERIENCE.SECOND.DESC' | translate}}</p>
+                                <p class="text-black dark:text-gray-100">Angular, Java, Springboot, PostgreSQL - Jira, Scrum, Slack</p>
                             </li>
                             <li class="mb-5 ml-8">
                                 <span class="span-timeline">
                                     <!-- <svg class="w-3 h-3 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"></path></svg> -->
                                     <svg class="dark:fill-gray-300 w-[18px] h-5" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"><path d="M 14 3 C 12.895 3 12 3.895 12 5 L 4 5 C 2.895 5 2 5.895 2 7 L 2 16 C 2 17.105 2.895 18 4 18 L 26 18 C 27.105 18 28 17.105 28 16 L 28 7 C 28 5.895 27.105 5 26 5 L 18 5 C 18 3.895 17.105 3 16 3 L 14 3 z M 7 13 C 7.552 13 8 13.448 8 14 L 8 15 C 8 15.552 7.552 16 7 16 C 6.448 16 6 15.552 6 15 L 6 14 C 6 13.448 6.448 13 7 13 z M 23 13 C 23.552 13 24 13.448 24 14 L 24 15 C 24 15.552 23.552 16 23 16 C 22.448 16 22 15.552 22 15 L 22 14 C 22 13.448 22.448 13 23 13 z M 2 19.443359 L 2 23 C 2 24.105 2.895 25 4 25 L 26 25 C 27.105 25 28 24.105 28 23 L 28 19.443359 C 27.409 19.787359 26.732 20 26 20 L 4 20 C 3.268 20 2.591 19.787359 2 19.443359 z"></path></svg>
                                 </span>
-                                <h3 class="subject-timeline">Desarrollador Angular - Freelance</h3>
-                                <time class="time-desc-timeline">14 de Octubre 2022 - 27 de Enero 2023</time>
-                                <p class="desc-timeline">Poseo experiencia en la creación, desarrollo y mantención de una aplicación SPA, la misma consiste en gestión de URLs diarios, dichos urls son videos de YT, los cuales son plasmados en la aplicacion utilizando la API de YouTube; pueden ser accedidos mediante la selección de año, mes, y día, según ese criterio. 
-                                La aplicación cuenta con un Store, para evitar rehacer peticiones HTTP a la BD de recursos que ya están cargados, además cuenta con un módulo Admin(protegido vía Auth + Guards) para que pueda ser autogestionable.</p>
+                                <h3 class="subject-timeline">{{'EXPERIENCE.FIRST.TITLE' | translate}}</h3>
+                                <time class="time-desc-timeline">{{'EXPERIENCE.FIRST.DATE' | translate}}</time>
+                                <p class="desc-timeline">{{'EXPERIENCE.FIRST.DESC' | translate}}</p>
                                 <p class="text-black dark:text-gray-100">Angular, NgRX, RxJS, Angular Material, TailwindCSS, Firestore</p>
                             </li>
                         </ol>

@@ -26,11 +26,11 @@
         },
         "ABOUT": {
             "TITLE":"About me",
-            "DESC1":"Hello! I'm Miqueas, I'm 20 years old and I'm from La Plata, Buenos Aires, I started programming in 2020 (Plena Pandemia) with processing, then pascal (on paper), and in addition to this I was learning new technologies in a self-taught way, I'm passionate about the IT world and programming.",
+            "DESC1":"Hello! I'm Miqueas, I'm 21 years old and I'm from La Plata, Buenos Aires, I started programming in 2020 (Plena Pandemia) with processing, then pascal (on paper), and in addition to this I was learning new technologies in a self-taught way, I'm passionate about the IT world and programming.",
             "DESC2": "I like order and aesthetics, I try to replicate those tastes in the creation of attractive, friendly and accessible user interfaces (a11y).",
             "DESC3": "I try every day to pursue excellence in every project or job I have, as I believe that the perfect product/development does not exist, there is always room for improvement.",
             "DESC4": "I consider myself a calm, respectful, honest, curious and committed person.",
-            "DESC5": "I am currently programming, researching and investigating the whole Angular ecosystem, besides this is in my goals to learn cloud technologies.",
+            "DESC5": "I am currently working as a fullstack developer with Angular technologies on the front end, and on the backend with Golang and Java Springboot.",
             "CONTACT":"If you want to program something or have a chat, feel free to contact me.",
             "THANKS": "Thanks for view my portfolio!",
             "CVDOWNLOAD":"Download CV for more information",
@@ -46,6 +46,30 @@
     "FOOTER":{
         "DESC": "©2023 - Created by Miqueas Gimenez",
         "CONTACT ": "contact me"
+    },
+    "EDUCATION":{
+        "TITLE":"Education"
+    },
+    "EXPERIENCE":{
+        "TITLE":"Experience",
+        "FIRST":{
+            "TITLE":"Angular Developer - Freelance",
+            "DATE":"October 14, 2022 - January 27, 2023 (4 Months)",
+            "DESC": "Creation, maintenance and development of a SPA application; which consists of managing daily URLs (Videos); they are captured in the application using the YouTube API; they can be accessed by selecting year, month, and day, according to these criteria. Admin module, self-manageable application."
+        },
+        "SECOND":{
+            "TITLE":"Fullstack Developer - Finnegans",
+            "DATE":"3 April 2023 - 30 June 2023 (3 Months)",
+            "DESC": "Internship at Finnegans, as a Fullstack developer. Development of a management software; HCM (Human Capital Management)."
+        },
+        "THIRD":{
+            "TITLE":"Fullstack Developer - Finnegans",
+            "DATE1": "1 July 2023",
+            "DATE2": "Present",
+            "MONTHS": "Months",
+            "DAYS": "Days",
+            "DESC": "I started working full time as a developer at Finnegans, Buenos Aires, Argentina."
+        }
     }
 
 }
