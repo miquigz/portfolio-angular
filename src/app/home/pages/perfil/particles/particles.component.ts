@@ -187,7 +187,7 @@ export class ParticlesComponent implements OnInit, OnChanges {
           }
         },
         number: {
-          value: 150,
+          value: 300,
           density: {
             enable: true,
             valueArea: 789.1476416322727

@@ -25,7 +25,7 @@ export class SvgsProfileService {
     },
     {
       svg: SVG_DISCORD,
-      userId: "Miqui#1181",
+      userId: "miquigz",
       href: ""
     },
     {
