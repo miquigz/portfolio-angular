@@ -2,12 +2,16 @@ const academic = '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width=
 const school2 = '<svg class="w-[18px] h-5" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24"><path d="M20,8l-3,0.002V4.618c0-0.764-0.424-1.449-1.105-1.789L12,0.882L8.106,2.829C7.424,3.169,7,3.854,7,4.618V8H4	c-1.103,0-2,0.897-2,2v10c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V10C22,8.897,21.103,8,20,8z M7,16c0.55,0,1,0.45,1,1	s-0.45,1-1,1s-1-0.45-1-1S6.45,16,7,16z M6,13c0-0.55,0.45-1,1-1s1,0.45,1,1s-0.45,1-1,1S6,13.55,6,13z M12,8c-0.55,0-1-0.45-1-1	s0.45-1,1-1s1,0.45,1,1S12.55,8,12,8z M13,13c0,0.55-0.45,1-1,1s-1-0.45-1-1s0.45-1,1-1S13,12.45,13,13z M11,17c0-0.55,0.45-1,1-1	s1,0.45,1,1v3h-2V17z M17,14c-0.55,0-1-0.45-1-1s0.45-1,1-1s1,0.45,1,1S17.55,14,17,14z M18,17c0,0.55-0.45,1-1,1s-1-0.45-1-1	s0.45-1,1-1S18,16.45,18,17z"></path></svg>';
 const school1 = '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-5 h-6" width="30" height="30" viewBox="0 0 30 30"><path d="M 14.988281 3 A 1.0001 1.0001 0 0 0 14.457031 3.1601562 L 8.4570312 7.0429688 A 1.0001 1.0001 0 1 0 9.5429688 8.7207031 L 10 8.4257812 L 10 12.759766 L 2.4960938 17.136719 A 1.0001 1.0001 0 1 0 3.5039062 18.863281 L 4 18.574219 L 4 26 L 13 26 L 13 22 L 17 22 L 17 26 L 26 26 L 26 18.574219 L 26.496094 18.863281 A 1.0001 1.0001 0 1 0 27.503906 17.136719 L 20 12.759766 L 20 8.5351562 L 20.445312 8.8320312 A 1.0001 1.0001 0 1 0 21.554688 7.1679688 L 15.554688 3.1679688 A 1.0001 1.0001 0 0 0 14.988281 3 z M 12 8 L 14 8 L 14 10 L 12 10 L 12 8 z M 16 8 L 18 8 L 18 10 L 16 10 L 16 8 z M 8 17 L 10 17 L 10 19 L 8 19 L 8 17 z M 12 17 L 14 17 L 14 19 L 12 19 L 12 17 z M 16 17 L 18 17 L 18 19 L 16 19 L 16 17 z M 20 17 L 22 17 L 22 19 L 20 19 L 20 17 z M 8 21 L 10 21 L 10 23 L 8 23 L 8 21 z M 20 21 L 22 21 L 22 23 L 20 23 L 20 21 z"></path></svg>'
 const info = '<img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../../assets/info.png" alt="">';
-const santex = '<img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../../assets/santexlogo.png" alt="">'
+// const santex = '<img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../../assets/santexlogo.png" alt="">'
+const utn = '<img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../../assets/utnlogo.png" alt="">';
+
+
 
 export const timelineSvgs = {
     academic,
     school1,
     school2,
     info,
-    santex
+    utn
+    // santex
 }

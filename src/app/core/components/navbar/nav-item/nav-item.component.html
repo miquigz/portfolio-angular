@@ -13,12 +13,15 @@ class="animate-hover-svg"
 >
 </span>
 
-<span *ngIf="item.name === 'contact'"
-(click)="openFormMail()"
+<!-- (click)="openFormMail()" -->
+
+<a *ngIf="item.name === 'contact'"
 (mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()"
 class="animate-hover-svg"
-[innerHTML]="item.svgHTML | safe:'html'">
-</span>
+[innerHTML]="item.svgHTML | safe:'html'"
+href="mailto:miquigz02@gmail.com"
+>
+</a>
 
 <!-- Redes Links -->
 <!-- //TODO: Quitar correctamente -->
@@ -30,7 +33,7 @@ class="animate-hover-svg"
 <!-- CV Download -->
 <a
 *ngIf="item.name === 'cv'" [href]="item.href" download="Miqueas Gimenez CV"
-(mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()"
+(mouseenter)="mouseEnter(item.name)" (mouseleave)="mouseLeave()" [target]="item.blank !== undefined ? '_blank' : '_self'"
 (click)="successDownload()"
 [innerHTML]="item.svgHTML | safe: 'html'"></a>
 

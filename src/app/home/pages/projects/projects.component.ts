@@ -11,6 +11,7 @@ import * as AOS from 'aos';
 })
 export class ProjectsComponent implements OnInit{
 
+  aniosTotalExp:number = 0; //ExpLaboral, total de años
   mesesTotalExp:number = 0; //ExpLaboral, total de meses
   diasTotalExp:number = 0; //ExpLaboral, total de dias
 
@@ -39,8 +40,11 @@ export class ProjectsComponent implements OnInit{
 
     this.mesesTotalExp = Math.floor(milisegundosDiferencia / (1000 * 60 * 60 * 24 * 30));
     this.diasTotalExp = Math.floor((milisegundosDiferencia % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-    console.log(this.mesesTotalExp);
-    console.log(this.diasTotalExp);
+
+    this.aniosTotalExp = Math.floor(this.mesesTotalExp / 12);
+    this.mesesTotalExp = this.mesesTotalExp % 12;
+    // console.log(this.mesesTotalExp);
+    // console.log(this.diasTotalExp);
   }
 
 
