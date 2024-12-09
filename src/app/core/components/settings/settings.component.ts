@@ -45,11 +45,7 @@ export class SettingsComponent implements OnInit {
   }
 
   toggleLanguage(){
-    if(this.translate.currentLang === 'en'){
-      this.translate.use('es');
-    }else{
-      this.translate.use('en');
-    }
+    this.translate.use(this.translate.currentLang === 'en' ? 'es' : 'en');
   }
 
   toggleFullscreen(){
