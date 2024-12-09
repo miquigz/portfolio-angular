@@ -37,7 +37,7 @@ export class NavItemComponent implements OnInit {
   successDownload(){
     this.succesMessage.fire({
       icon: 'success',
-      title: 'Descargando CV!'
+      title: 'Redireccionando al CV!'
     })
   }
 
