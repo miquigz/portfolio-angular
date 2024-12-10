@@ -3,4 +3,5 @@ export interface NavItem {
     name: string;
     spanDesc:string;
     href:string;
+    blank?:boolean;
 }

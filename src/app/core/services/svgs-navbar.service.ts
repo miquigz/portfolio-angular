@@ -1,5 +1,3 @@
-
-
 import { Injectable } from '@angular/core';
 
 import { NavItem } from '../interfaces/nav-item';
@@ -11,41 +9,42 @@ import { SVG_CONTACT } from '../constants/svg-contact.constant';
 import { SVG_PROJECTS } from '../constants/svg-projects.constant';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SvgsNavbarService {
-//Data
-  navItems:NavItem[] = [
+  //Data
+  navItems: NavItem[] = [
     {
       svgHTML: SVG_HOME,
       name: 'perfil',
-      spanDesc:'Inicio',
-      href: ''
+      spanDesc: 'Inicio',
+      href: '',
     },
     {
       svgHTML: SVG_PROJECTS,
       name: 'projects',
-      spanDesc:'Proyectos',
-      href: ''
+      spanDesc: 'Proyectos',
+      href: '',
     },
     {
       svgHTML: SVG_ABOUT,
       name: 'about',
-      spanDesc:'Sobre mí',
-      href: ''
+      spanDesc: 'Sobre mí',
+      href: '',
     },
     {
       svgHTML: SVG_CONTACT,
       name: 'contact',
-      spanDesc:'Contactame',
-      href: ''
+      spanDesc: 'Contactame',
+      href: '',
     },
     {
       svgHTML: SVG_CV,
       name: 'cv',
-      spanDesc:'Descargar CV',
-      href: './../../../assets/CV.pdf'
-    },//TODO: Refactor tests, disminuir cant total de items
+      spanDesc: 'Descargar CV',
+      href: 'https://drive.google.com/file/d/1BduVNaA9EmwVpdddT2FahFwmFqx7vNzs/view?usp=sharing',
+      blank: true,
+    }, //TODO: Refactor tests, disminuir cant total de items
     // {
     //   svgHTML: SVG_LINKEDIN,
     //   name: 'linkedin',
@@ -58,21 +57,20 @@ export class SvgsNavbarService {
     //   spanDesc:'Github',
     //   href: 'https://github.com/miquigz'
     // }
-  ]
-  
-  constructor() { }
+  ];
 
-  getAllItems():NavItem[]{
-    return [... this.navItems];
+  constructor() {}
+
+  getAllItems(): NavItem[] {
+    return [...this.navItems];
   }
 
-  getItem(index:number):NavItem{
+  getItem(index: number): NavItem {
     if (index >= 0 && index < this.navItems.length) {
-      return { ... this.navItems[index] };
-    }else{
-      console.log("Index out of range");
-      return { ... this.navItems[0] };
+      return { ...this.navItems[index] };
+    } else {
+      console.log('Index out of range');
+      return { ...this.navItems[0] };
     }
   }
-  
 }

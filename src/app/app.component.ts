@@ -27,16 +27,15 @@ export class AppComponent implements OnInit {
     this.hideWelcome$ = showWelcome.getHideWelcome();
     this.routeAct = route.url;  
     translate.addLangs(['en', 'es']);
-    translate.setDefaultLang('en');
-    if(window.navigator.language === 'es-419')//Detect browser language
-      translate.use('es');
-    else
-      translate.use('en');
+    translate.setDefaultLang('es');
+    // if(window.navigator.language === 'es-419')//Detect browser language
+    //   translate.use('es');
+    // else
+    //   translate.use('en');
   }
 
   ngOnInit(){
-
-    //Detect dark mode browser
+    //TODO: Detect dark mode browser
 
     this.darkMode$ = this.settingsService.getDarkModeObservable();
 
