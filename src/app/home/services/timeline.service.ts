@@ -61,7 +61,7 @@ export class TimelineService {
         class="underline underline-offset-2">Crisalis</a>(Angular), ofrecido por Finnegans en conjunto de Alkemy y CESSI.`,
         icon: `${timelineSvgs.academic}`,
         rawStartDate: new Date(2023,0,23),
-        rawEndDate: new Date(2023,1,28)
+        rawEndDate: new Date(2023,2,0)
       },
       {
         title:'Bootcamp NodeJS Developer, Telecom - EducacionIT',

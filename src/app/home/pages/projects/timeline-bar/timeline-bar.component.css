@@ -19,8 +19,8 @@ transition: transform 0.3s ease-in-out;
     background-color:#ACB6E5;
     height: 100%;
     position: relative;
-    z-index: -1; /* Asegura que las líneas estén detrás del contenido */
-    pointer-events: none; /* Evita que las líneas interfieran con los clics */
+    z-index: -1; 
+    pointer-events: none;
 }
 
 .time-desc-timeline-bar{

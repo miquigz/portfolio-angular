@@ -26,15 +26,6 @@ export class TimelineBarComponent implements OnInit {
       }
     })
 
-    this.mergedData.sort((a:TimelineItem, b:TimelineItem) => {
-      if (a.rawStartDate < b.rawStartDate){
-        return -1;
-      }
-      if (a.rawStartDate > b.rawStartDate){
-        return 1;
-      }
-      return 0;
-    })
 
     this.mergedData.push({
       title:"Angular Developer - Freelance",
@@ -48,23 +39,24 @@ export class TimelineBarComponent implements OnInit {
 
     this.mergedData.push({
       title: "Fullstack Developer - Finnegans",
-      date: "3 de Abril 2023 - 30 de Junio 2023 (3 Meses)",
+      date: "3 Abril 2023 - Presente",
       desc: "Internship at Finnegans, as a Fullstack developer. Development of a management software; HCM (Human Capital Management).",
       rawStartDate: new Date(2023,3,3),
-      rawEndDate: new Date(2023,5,30),
-      spanLatest: false,
-      icon: '<img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../assets/finnegans-logo.png" alt="">',
-    })
-
-    this.mergedData.push({
-      title: "Fullstack Developer - Finnegans",
-      date: "1 Julio 2023 - Presente",
-      desc: "Internship at Finnegans, as a Fullstack developer. Development of a management software; HCM (Human Capital Management).",
-      rawStartDate: new Date(2023,6,1),
       rawEndDate: new Date(),
       spanLatest: true,
       icon: '<img class="w-8 h-6 text-blue-600 dark:text-blue-400" src="../../../../assets/finnegans-logo.png" alt="">',
     })
+
+    this.mergedData.sort((a:TimelineItem, b:TimelineItem) => {
+      if (a.rawStartDate < b.rawStartDate){
+        return -1;
+      }
+      if (a.rawStartDate > b.rawStartDate){
+        return 1;
+      }
+      return 0;
+    })
+
 
   }
 

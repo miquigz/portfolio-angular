@@ -5,8 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ShowWelcomeService {
-//NO PUSH
-  private _hideWelcome:BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
+  private _hideWelcome:BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor() { }
 
