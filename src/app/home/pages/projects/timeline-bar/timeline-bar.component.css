@@ -1,0 +1,28 @@
+.timeline-bar {
+    height: 40px; 
+    margin-bottom: 5px;
+    border-radius: 5px;
+    @apply flex items-center
+}
+
+.timeline-bar:hover{
+transform: scale(1.01) ;
+transition: transform 0.3s ease-in-out;
+}
+
+.span-timeline-bar{
+    @apply w-6 h-6 rounded-full pl-1
+}
+
+.vertical-line {
+    width: 1px;
+    background-color:#ACB6E5;
+    height: 100%;
+    position: relative;
+    z-index: -1; /* Asegura que las líneas estén detrás del contenido */
+    pointer-events: none; /* Evita que las líneas interfieran con los clics */
+}
+
+.time-desc-timeline-bar{
+    @apply block mb-2 text-sm leading-none text-white;
+}

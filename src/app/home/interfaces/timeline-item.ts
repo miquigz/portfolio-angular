@@ -4,4 +4,6 @@ export interface TimelineItem {
     date:string;
     desc:string;
     icon:string;
+    rawStartDate:Date
+    rawEndDate:Date
 }
