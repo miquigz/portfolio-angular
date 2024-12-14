@@ -13,7 +13,7 @@
             <div *ngFor="let _ of years" class="vertical-line"></div>
         </div>
     </div>
-    <div *ngFor="let item of mergedData" [matTooltip]="item.title" class="timeline-bar bg-[#443434e1] flex" style="z-index: 2;" 
+    <div *ngFor="let item of mergedData.slice().reverse()" [matTooltip]="item.title" class="timeline-bar bg-[#443434e1] flex" style="z-index: 2;" 
     [matTooltipPosition]="'right'"
     [style.marginLeft.%]="getPosition(item)" [style.width.%]="getWidth(item)">
         <span class="span-timeline-bar" [innerHTML]="item.icon | safeHTML">
