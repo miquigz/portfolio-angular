@@ -4,6 +4,9 @@ import { LayoutComponent } from './pages/layout/layout.component';
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog' 
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 
 import { ArrangementModule } from 'ngx-arrangement';
@@ -23,7 +26,7 @@ import { CarrouselProjectsComponent } from './pages/projects/carrousel-projects/
 import { NameComponent } from './pages/welcome-animation/name/name.component';
 import { WelcomeComponent } from './pages/welcome-animation/welcome/welcome.component';
 import { TimelineComponent } from './pages/projects/timeline/timeline.component';
-
+import { TimelineBarComponent } from './pages/projects/timeline-bar/timeline-bar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { TimelineComponent } from './pages/projects/timeline/timeline.component'
     SkillsComponent,
     ParticlesComponent,
     CarrouselProjectsComponent,
-    TimelineComponent
+    TimelineComponent,
+    TimelineBarComponent
   ],
   imports: [
     CommonModule,
@@ -45,8 +49,10 @@ import { TimelineComponent } from './pages/projects/timeline/timeline.component'
     NgxScrollTopModule,
     SharedModule,
     CarouselModule,
+    MatDialogModule,
     ArrangementModule,
     HomeRoutingModule,
+    MatTooltipModule,
     TranslateModule.forChild({
       extend: true
   })

@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~animate.css/animate.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&display=swap');
 @tailwind base;
@@ -101,7 +102,7 @@
     }
 
     .footerClass{
-        @apply w-full h-20 pt-2 sm:h-16 flex justify-center bg-gradient-to-r from-[#f1f1f1d5] to-[#ececece1] pb-12 text-xs sm:text-lg sm:pb-8 sm:pt-4 sm:items-center z-50
+        @apply w-full h-20 pt-2 sm:h-16 flex justify-center bg-gradient-to-r from-[#f1f1f1] to-[#ececec] pb-12 text-xs sm:text-lg sm:pb-8 sm:pt-4 sm:items-center z-50
         darkMode;
     }
 
